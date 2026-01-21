@@ -1,0 +1,98 @@
+.header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--spacing-md) 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo a:hover .logoText,
+.logo a:focus .logoText {
+  color: var(--color-accent);
+}
+
+.nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-lg);
+  margin: 0;
+  padding: 0;
+}
+
+.navList li {
+  margin: 0;
+}
+
+.navList a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navList a:hover,
+.navList a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.navList a[aria-current='page'] {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navList {
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logoText {
+    font-size: 1.25rem;
+  }
+}

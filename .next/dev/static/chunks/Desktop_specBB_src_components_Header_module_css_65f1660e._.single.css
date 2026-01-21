@@ -1,0 +1,99 @@
+/* [project]/Desktop/specBB/src/components/Header.module.css [client] (css) */
+.Header-module__UmTpLq__header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: var(--spacing-md) 0;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
+.Header-module__UmTpLq__headerContent {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.Header-module__UmTpLq__logo {
+  flex-shrink: 0;
+}
+
+.Header-module__UmTpLq__logoText {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: color .3s;
+}
+
+.Header-module__UmTpLq__logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Header-module__UmTpLq__logo a:hover .Header-module__UmTpLq__logoText, .Header-module__UmTpLq__logo a:focus .Header-module__UmTpLq__logoText {
+  color: var(--color-accent);
+}
+
+.Header-module__UmTpLq__nav {
+  flex-grow: 1;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.Header-module__UmTpLq__navList {
+  gap: var(--spacing-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.Header-module__UmTpLq__navList li {
+  margin: 0;
+}
+
+.Header-module__UmTpLq__navList a {
+  color: #fff;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.Header-module__UmTpLq__navList a:hover, .Header-module__UmTpLq__navList a:focus {
+  color: var(--color-accent);
+  background-color: #ffffff1a;
+  text-decoration: none;
+}
+
+.Header-module__UmTpLq__navList a[aria-current="page"] {
+  color: var(--color-accent);
+  background-color: #ffffff26;
+}
+
+@media (max-width: 768px) {
+  .Header-module__UmTpLq__headerContent {
+    gap: var(--spacing-sm);
+    flex-direction: column;
+  }
+
+  .Header-module__UmTpLq__nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .Header-module__UmTpLq__navList {
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Header-module__UmTpLq__logoText {
+    font-size: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=Desktop_specBB_src_components_Header_module_css_65f1660e._.single.css.map*/

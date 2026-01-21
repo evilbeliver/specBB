@@ -1,50 +1,68 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+
+# specBB Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### I. Accessibility First
+All user-facing features MUST meet or exceed WCAG 2.1 AA accessibility standards. Accessibility is non-negotiable and must be validated in all reviews and tests.
+Rationale: Ensures inclusivity and legal compliance for all users.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### II. Test-First Discipline
+All code MUST be developed using test-driven development (TDD). Unit, integration, and end-to-end tests are required for all features. No code is merged without passing tests and coverage review.
+Rationale: Guarantees reliability, prevents regressions, and enables safe refactoring.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### III. Security by Default
+Only use verified, actively maintained packages. All dependencies must be reviewed for security. Regular audits and prompt patching of vulnerabilities are mandatory.
+Rationale: Protects users and data, reduces risk of supply chain attacks.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### IV. Maintainability & Simplicity
+Prioritize MVP scope, minimalism, and clear, idiomatic code structure. Avoid over-engineering. Code must be easy to read, extend, and maintain.
+Rationale: Reduces technical debt, accelerates onboarding, and supports long-term project health.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+
+### V. Best Practices Compliance
+Codebase MUST follow modern development best practices for SPA projects, including modular structure, code reviews, and continuous integration. All code must be peer-reviewed before merging.
+Rationale: Ensures quality, consistency, and future-proofing.
+
+
+## Project Constraints & Standards
+
+- Single Page Application (SPA) architecture
+- Accessibility: WCAG 2.1 AA or better
+- Security: Only verified/maintained packages, regular audits
+- Testing: TDD, unit, integration, E2E, coverage enforcement
+- MVP focus: Simplicity, minimalism, clear structure
+- Code must follow idiomatic, modern best practices
+
+
+
+## Development Workflow & Quality Gates
+
+- All work begins with tests (TDD)
+- Code reviews required for all merges
+- CI must enforce accessibility, security, and test coverage gates
+- No code merged without passing all checks
+
+
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All PRs and reviews must verify compliance with these principles. Any complexity must be justified. Use runtime guidance docs for development reference.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+
+
+<!--
+Sync Impact Report
+- Version change: N/A → 1.0.0
+- Modified principles: All (template → concrete)
+- Added sections: Project Constraints & Standards, Development Workflow & Quality Gates
+- Removed sections: None
+- Templates requiring updates: plan-template.md (✅), spec-template.md (✅), tasks-template.md (✅)
+- Follow-up TODOs: None (all placeholders resolved)
+-->
+
+**Version**: 1.0.0 | **Ratified**: 2026-01-20 | **Last Amended**: 2026-01-20
