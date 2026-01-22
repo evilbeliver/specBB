@@ -12,6 +12,9 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/specBB',
+  },
 };
 
 module.exports = nextConfig;
