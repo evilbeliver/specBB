@@ -6,7 +6,7 @@ This is a Next.js web application for a hunt club website, built with TypeScript
 
 ## Tech Stack
 
-- **Framework**: Next.js (uses latest stable version)
+- **Framework**: Next.js
 - **Language**: TypeScript with strict mode enabled
 - **UI Library**: Material-UI (@mui/material) with Emotion for styling
 - **Testing**: Jest for unit tests, Cypress for E2E tests, axe-core for accessibility testing
@@ -49,7 +49,7 @@ npm run test:accessibility # Run axe accessibility tests
 ### React Components
 
 - Use functional components with hooks
-- Follow React best practices (React 17+ JSX transform configured - no React import needed)
+- Follow React best practices (React import not needed for JSX - automatic JSX transform is configured)
 - Components should be typed with proper TypeScript interfaces
 - Place component tests in `__tests__` directories alongside components
 
