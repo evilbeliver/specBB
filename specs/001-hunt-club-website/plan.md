@@ -110,7 +110,7 @@ No constitution violations or unnecessary complexity. All decisions align with M
 
 #### 4. Responsive Design
 - Use MUI breakpoint utilities: `{ xs: 12, sm: 6, md: 4 }` for Grid items
-- Apply responsive styles via sx prop: `sx={{ fontSize: { xs: 14, md: 16 } }}`
+- Apply responsive styles via sx prop: {% raw %}`sx={{ fontSize: { xs: 14, md: 16 } }}`{% endraw %}
 - Test on all breakpoints: mobile (xs), tablet (sm/md), desktop (lg/xl)
 
 #### 5. Accessibility
