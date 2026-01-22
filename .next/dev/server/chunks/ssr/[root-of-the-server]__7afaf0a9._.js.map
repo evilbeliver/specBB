@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 34, "column": 0}, "map": {"version":3,"sources":["file:///Users/davidcristinzio/Desktop/specBB/src/pages/_document.tsx"],"sourcesContent":["import { Html, Head, Main, NextScript } from 'next/document';\n\nexport default function Document() {\n  return (\n    <Html lang=\"en\">\n      <Head>\n        <meta charSet=\"utf-8\" />\n        <meta name=\"description\" content=\"Buck & Beard Hunt Club - A modern hunting experience\" />\n        <link rel=\"icon\" href=\"/favicon.ico\" />\n      </Head>\n      <body>\n        <a href=\"#main-content\" className=\"skip-to-main\">\n          Skip to main content\n        </a>\n        <Main />\n        <NextScript />\n      </body>\n    </Html>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBACE,qKAAC,sJAAI;QAAC,MAAK;;0BACT,qKAAC,sJAAI;;kCACH,qKAAC;wBAAK,SAAQ;;;;;;kCACd,qKAAC;wBAAK,MAAK;wBAAc,SAAQ;;;;;;kCACjC,qKAAC;wBAAK,KAAI;wBAAO,MAAK;;;;;;;;;;;;0BAExB,qKAAC;;kCACC,qKAAC;wBAAE,MAAK;wBAAgB,WAAU;kCAAe;;;;;;kCAGjD,qKAAC,sJAAI;;;;;kCACL,qKAAC,4JAAU;;;;;;;;;;;;;;;;;AAInB"}}]
-}
