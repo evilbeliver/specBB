@@ -14,8 +14,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.15.6",
     "@mui/icons-material": "^5.15.6",
+    "@mui/material": "^5.15.6",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
@@ -23,8 +23,8 @@
   "devDependencies": {
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
-    "@types/node": "latest",
-    "@types/react": "19.2.9",
+    "@types/node": "^25.0.10",
+    "@types/react": "^19.2.9",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "axe-core": "latest",
@@ -40,6 +40,6 @@
     "jest-environment-jsdom": "latest",
     "lint-staged": "latest",
     "prettier": "latest",
-    "typescript": "latest"
+    "typescript": "^5.9.3"
   }
 }
