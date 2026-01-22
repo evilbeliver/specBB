@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <meta name="description" content="Buck & Beard Hunt Club - A modern hunting experience" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/specBB/favicon.ico" />
       </Head>
       <body>
         <a href="#main-content" className="skip-to-main">
