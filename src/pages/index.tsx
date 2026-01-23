@@ -5,8 +5,14 @@ import Footer from '../components/Footer';
 import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
 
 export default function Home() {
-  const router = useRouter();
-  const basePath = router.basePath;
+  let basePath = '';
+  try {
+    const router = useRouter();
+    basePath = router.basePath;
+  } catch (e) {
+    // Router not available in test environment
+    basePath = '';
+  }
   
   const features = [
     {
