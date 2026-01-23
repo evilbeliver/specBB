@@ -44,7 +44,9 @@ jobs:
           timeout 60 bash -c 'until curl -f http://localhost:3000 > /dev/null 2>&1; do sleep 2; done' || exit 1
       
       - name: Run E2E tests
-        run: npm run test:e2e
+        run: TERM=xterm npm run test:e2e
+        env:
+          NO_COLOR: 1
         
       - name: Upload test coverage
         uses: codecov/codecov-action@v3
