@@ -36,12 +36,12 @@ jobs:
       - name: Build project
         run: npm run build
       
-      - name: Start dev server for E2E tests
-        run: npm run dev &
+      - name: Start server
+        run: npx serve out -l 3000 &
         
-      - name: Wait for dev server
+      - name: Wait for server
         run: |
-          timeout 60 bash -c 'until curl -f http://localhost:3000 > /dev/null 2>&1; do sleep 2; done' || exit 1
+          timeout 60 bash -c 'until curl -f http://localhost:3000/specBB > /dev/null 2>&1; do sleep 2; done' || exit 1
       
       - name: Run E2E tests
         run: TERM=xterm npm run test:e2e -- --reporter spec
