@@ -26,8 +26,8 @@ describe('Footer Component', () => {
     it('renders contact information', () => {
       render(<Footer />);
       expect(screen.getByRole('heading', { name: /^contact$/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /buckandbeard@gmail.com/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /\+1 \(803\) 727-5111/i })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: /info@buckandbeard.com/i })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: /\+1 \(555\) 123-4567/i })).toBeInTheDocument();
     });
 
     it('renders copyright notice with current year', () => {
@@ -58,14 +58,14 @@ describe('Footer Component', () => {
 
     it('email link has proper mailto href', () => {
       render(<Footer />);
-      const emailLink = screen.getByRole('link', { name: /buckandbeard@gmail.com/i });
-      expect(emailLink).toHaveAttribute('href', 'mailto:buckandbeard@gmail.com');
+      const emailLink = screen.getByRole('link', { name: /info@buckandbeard.com/i });
+      expect(emailLink).toHaveAttribute('href', 'mailto:info@buckandbeard.com');
     });
 
     it('phone link has proper tel href', () => {
       render(<Footer />);
-      const phoneLink = screen.getByRole('link', { name: /\+1 \(803\) 727-5111/i });
-      expect(phoneLink).toHaveAttribute('href', 'tel:+18037275111');
+      const phoneLink = screen.getByRole('link', { name: /\+1 \(555\) 123-4567/i });
+      expect(phoneLink).toHaveAttribute('href', 'tel:+15551234567');
     });
 
     it('uses semantic address element', () => {

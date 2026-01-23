@@ -65,25 +65,25 @@ export default function Footer() {
               <Typography variant="body2" sx={{ mb: 1 }}>
                 Email:{' '}
                 <MuiLink
-                  href="mailto:buckandbeard@gmail.com"
+                  href="mailto:info@buckandbeard.com"
                   sx={{
                     color: 'rgba(255, 255, 255, 0.8)',
                     '&:hover': { color: 'white' },
                   }}
                 >
-                  buckandbeard@gmail.com
+                  info@buckandbeard.com
                 </MuiLink>
               </Typography>
               <Typography variant="body2">
                 Phone:{' '}
                 <MuiLink
-                  href="tel:+18037275111"
+                  href="tel:+15551234567"
                   sx={{
                     color: 'rgba(255, 255, 255, 0.8)',
                     '&:hover': { color: 'white' },
                   }}
                 >
-                  +1 (803) 727-5111
+                  +1 (555) 123-4567
                 </MuiLink>
               </Typography>
             </Box>

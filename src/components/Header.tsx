@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, Container, Box } from '@mui/materi
 
 export default function Header() {
   return (
-    <AppBar position="static" component="header" role="banner">
+    <AppBar position="sticky" component="header" role="banner">
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
