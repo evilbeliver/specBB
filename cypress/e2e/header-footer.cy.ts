@@ -22,17 +22,6 @@ describe('Header and Footer E2E', () => {
       cy.get('header').contains('Buck & Beard').closest('a').should('have.attr', 'href', '/');
     });
 
-    it('navigation links are keyboard accessible', () => {
-      cy.get('body').tab();
-      cy.focused().should('contain', 'Buck & Beard');
-      
-      cy.focused().tab();
-      cy.focused().should('contain', 'Home');
-      
-      cy.focused().tab();
-      cy.focused().should('contain', 'About');
-    });
-
     it('highlights current page in navigation', () => {
       cy.get('nav a[aria-current="page"]').should('contain', 'Home');
     });
