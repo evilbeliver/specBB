@@ -65,7 +65,7 @@ export default function Footer() {
               <Typography variant="body2" sx={{ mb: 1 }}>
                 Email:{' '}
                 <MuiLink
-                  href="buckandbeard@gmail.com"
+                  href="mailto:buckandbeard@gmail.com"
                   sx={{
                     color: 'rgba(255, 255, 255, 0.8)',
                     '&:hover': { color: 'white' },

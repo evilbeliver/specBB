@@ -14,10 +14,11 @@ describe('Header Component', () => {
 
     it('renders all navigation links', () => {
       render(<Header />);
-      expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /hunts/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /contact/i })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: /^home$/i })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: /^about$/i })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: /^properties$/i })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: /^hunts$/i })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: /^contact$/i })).toBeInTheDocument();
     });
 
     it('renders as a banner landmark', () => {
@@ -57,9 +58,10 @@ describe('Header Component', () => {
     it('all links have proper href attributes', () => {
       render(<Header />);
       expect(screen.getByRole('link', { name: /^home$/i })).toHaveAttribute('href', '/');
-      expect(screen.getByRole('link', { name: /about/i })).toHaveAttribute('href', '/about');
-      expect(screen.getByRole('link', { name: /hunts/i })).toHaveAttribute('href', '/hunts');
-      expect(screen.getByRole('link', { name: /contact/i })).toHaveAttribute('href', '/contact');
+      expect(screen.getByRole('link', { name: /^about$/i })).toHaveAttribute('href', '/about');
+      expect(screen.getByRole('link', { name: /^properties$/i })).toHaveAttribute('href', '/properties');
+      expect(screen.getByRole('link', { name: /^hunts$/i })).toHaveAttribute('href', '/hunts');
+      expect(screen.getByRole('link', { name: /^contact$/i })).toHaveAttribute('href', '/contact');
     });
   });
 });
