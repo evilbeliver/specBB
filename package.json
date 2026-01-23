@@ -21,6 +21,7 @@
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@axe-core/cli": "latest",
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
     "@types/node": "latest",
