@@ -36,10 +36,10 @@ jobs:
       - name: Build project
         run: npm run build
       
-      - name: Start server
-        run: npx serve out -l 3000 &
+      - name: Start dev server for E2E tests
+        run: npm run dev &
         
-      - name: Wait for server
+      - name: Wait for dev server
         run: |
           timeout 60 bash -c 'until curl -f http://localhost:3000 > /dev/null 2>&1; do sleep 2; done' || exit 1
       
