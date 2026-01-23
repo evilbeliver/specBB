@@ -1,9 +1,13 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
 
 export default function Home() {
+  const router = useRouter();
+  const basePath = router.basePath;
+  
   const features = [
     {
       title: 'Prime Hunting Grounds',
@@ -37,7 +41,7 @@ export default function Home() {
           sx={{
             position: 'relative',
             height: { xs: '400px', md: '600px' },
-            backgroundImage: 'url(/heroimage.jpg)',
+            backgroundImage: `url(${basePath}/heroimage.jpg)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
