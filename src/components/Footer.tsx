@@ -18,7 +18,7 @@ export default function Footer() {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12} md={4}>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: 700 }}>
+            <Typography variant="h6" component="h3" gutterBottom sx={{ fontWeight: 700 }}>
               Buck & Beard Hunt Club
             </Typography>
             <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
@@ -27,7 +27,7 @@ export default function Footer() {
           </Grid>
           
           <Grid item xs={12} sm={6} md={4}>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
+            <Typography variant="h6" component="h3" gutterBottom sx={{ fontWeight: 600 }}>
               Quick Links
             </Typography>
             <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
@@ -58,7 +58,7 @@ export default function Footer() {
           </Grid>
           
           <Grid item xs={12} sm={6} md={4}>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
+            <Typography variant="h6" component="h3" gutterBottom sx={{ fontWeight: 600 }}>
               Contact
             </Typography>
             <Box component="address" sx={{ fontStyle: 'normal' }}>
