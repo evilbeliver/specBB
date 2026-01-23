@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import React, { useState } from 'react';
 import {
   Container,
   Typography,
@@ -7,26 +7,23 @@ import {
   CardContent,
   CardMedia,
   CardActionArea,
-  Box,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogActions,
   Button,
   Chip,
+  Box,
 } from '@mui/material';
-import { useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import TerrainIcon from '@mui/icons-material/Terrain';
-import NatureIcon from '@mui/icons-material/Nature';
+import { LocationOn, Terrain, Nature } from '@mui/icons-material';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 interface Property {
   id: number;
   name: string;
   location: string;
-  acreage: string;
+  acreage: number;
   description: string;
   features: string[];
   image: string;
@@ -36,240 +33,192 @@ interface Property {
 const properties: Property[] = [
   {
     id: 1,
-    name: 'Property Name 1',
-    location: 'Location, State',
-    acreage: '100 acres',
-    description: 'Brief description of the property highlighting key features.',
-    features: ['Deer', 'Turkey', 'Food Plots', 'Timber'],
-    image: '/images/property-placeholder.jpg',
-    fullDescription: 'Detailed description of Property 1. Include information about terrain, wildlife, accessibility, amenities, and any special features that make this property unique.',
+    name: 'North Ridge Property',
+    location: 'Northern Region',
+    acreage: 500,
+    description: 'Prime hunting land with diverse terrain and abundant wildlife.',
+    features: ['Deer', 'Turkey', 'Food Plots', 'Stand Sites'],
+    image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=North+Ridge+Property',
+    fullDescription:
+      'Our North Ridge property offers 500 acres of premier hunting land. Features include rolling hills, hardwood forests, and strategically placed food plots. Multiple stand sites are established throughout the property, providing excellent vantage points for deer and turkey hunting.',
   },
   {
     id: 2,
-    name: 'Property Name 2',
-    location: 'Location, State',
-    acreage: '150 acres',
-    description: 'Brief description of the property highlighting key features.',
-    features: ['Deer', 'Turkey', 'Creek', 'Hardwoods'],
-    image: '/images/property-placeholder.jpg',
-    fullDescription: 'Detailed description of Property 2. Include information about terrain, wildlife, accessibility, amenities, and any special features that make this property unique.',
+    name: 'Creek Bottom Property',
+    location: 'Eastern Region',
+    acreage: 350,
+    description: 'Featuring creek corridors and hardwood bottoms ideal for big game.',
+    features: ['Deer', 'Turkey', 'Waterfowl', 'Creek Access'],
+    image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=Creek+Bottom+Property',
+    fullDescription:
+      'The Creek Bottom property spans 350 acres along a pristine creek corridor. This property is known for trophy whitetail deer and spring turkey. The creek provides natural funnels and travel corridors that make this an exceptional hunting location.',
   },
   {
     id: 3,
-    name: 'Property Name 3',
-    location: 'Location, State',
-    acreage: '200 acres',
-    description: 'Brief description of the property highlighting key features.',
-    features: ['Deer', 'Turkey', 'Cabin', 'Ponds'],
-    image: '/images/property-placeholder.jpg',
-    fullDescription: 'Detailed description of Property 3. Include information about terrain, wildlife, accessibility, amenities, and any special features that make this property unique.',
+    name: 'Pine Hill Property',
+    location: 'Southern Region',
+    acreage: 425,
+    description: 'Mixed pine and hardwood with established food plots and trails.',
+    features: ['Deer', 'Small Game', 'Food Plots', 'ATV Trails'],
+    image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=Pine+Hill+Property',
+    fullDescription:
+      'Pine Hill encompasses 425 acres of mixed pine and hardwood forest. Well-maintained ATV trails provide easy access to all corners of the property. Multiple food plots are planted annually to support a healthy deer population and provide excellent hunting opportunities.',
   },
   {
     id: 4,
-    name: 'Property Name 4',
-    location: 'Location, State',
-    acreage: '120 acres',
-    description: 'Brief description of the property highlighting key features.',
-    features: ['Deer', 'Turkey', 'Rolling Hills', 'Food Plots'],
-    image: '/images/property-placeholder.jpg',
-    fullDescription: 'Detailed description of Property 4. Include information about terrain, wildlife, accessibility, amenities, and any special features that make this property unique.',
+    name: 'Big Woods Property',
+    location: 'Western Region',
+    acreage: 600,
+    description: 'Expansive mature forest with minimal hunting pressure.',
+    features: ['Deer', 'Turkey', 'Bear', 'Primitive Camping'],
+    image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=Big+Woods+Property',
+    fullDescription:
+      'Our largest property at 600 acres, Big Woods offers a true wilderness hunting experience. This remote property features old-growth hardwoods and sees minimal hunting pressure. Trophy bucks and bears are regularly spotted. Primitive camping is available for multi-day hunts.',
   },
   {
     id: 5,
-    name: 'Property Name 5',
-    location: 'Location, State',
-    acreage: '180 acres',
-    description: 'Brief description of the property highlighting key features.',
-    features: ['Deer', 'Turkey', 'River Access', 'Mixed Timber'],
-    image: '/images/property-placeholder.jpg',
-    fullDescription: 'Detailed description of Property 5. Include information about terrain, wildlife, accessibility, amenities, and any special features that make this property unique.',
+    name: 'River Bend Property',
+    location: 'Central Region',
+    acreage: 275,
+    description: 'River frontage with excellent waterfowl and deer hunting.',
+    features: ['Deer', 'Waterfowl', 'Turkey', 'River Access'],
+    image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=River+Bend+Property',
+    fullDescription:
+      'River Bend provides 275 acres with over a mile of river frontage. This unique property offers both excellent deer hunting in the timber and outstanding waterfowl hunting along the river. Spring turkey hunting is also exceptional due to the diverse habitat.',
   },
 ];
 
-export default function PropertiesPage() {
+export default function Properties() {
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
 
-  const handleCardClick = (property: Property) => {
+  const handleOpenDialog = (property: Property) => {
     setSelectedProperty(property);
   };
 
-  const handleClose = () => {
+  const handleCloseDialog = () => {
     setSelectedProperty(null);
   };
 
   return (
     <>
-      <Head>
-        <title>Our Properties | Buck & Beard Hunt Club</title>
-        <meta
-          name="description"
-          content="Explore our 5 premier hunting properties featuring diverse terrain, abundant wildlife, and excellent hunting opportunities."
-        />
-      </Head>
-
       <Header />
+      <Container maxWidth="lg" sx={{ py: 8 }}>
+        <Typography variant="h2" component="h1" gutterBottom align="center" sx={{ mb: 2 }}>
+          Our Properties
+        </Typography>
+        <Typography variant="h6" component="p" align="center" color="text.secondary" sx={{ mb: 6 }}>
+          Explore our premium hunting properties across the region
+        </Typography>
 
-      <Box
-        sx={{
-          bgcolor: 'background.default',
-          minHeight: '100vh',
-          py: 8,
-        }}
-      >
-        <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 6 }}>
-            <Typography
-              variant="h2"
-              component="h1"
-              gutterBottom
-              sx={{
-                fontWeight: 'bold',
-                color: 'primary.main',
-              }}
-            >
-              Our Properties
-            </Typography>
-            <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 800, mx: 'auto' }}>
-              Explore our collection of premier hunting properties. Click on any property to learn
-              more about its unique features and opportunities.
-            </Typography>
-          </Box>
-
-          <Grid container spacing={4}>
-            {properties.map((property) => (
-              <Grid item xs={12} sm={6} md={4} key={property.id}>
-                <Card
-                  sx={{
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    transition: 'transform 0.2s, box-shadow 0.2s',
-                    '&:hover': {
-                      transform: 'translateY(-4px)',
-                      boxShadow: 6,
-                    },
-                  }}
-                >
-                  <CardActionArea onClick={() => handleCardClick(property)}>
-                    <CardMedia
-                      component="div"
-                      sx={{
-                        height: 200,
-                        bgcolor: 'grey.300',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                      }}
-                    >
-                      <NatureIcon sx={{ fontSize: 80, color: 'grey.500' }} />
-                    </CardMedia>
-                    <CardContent sx={{ flexGrow: 1 }}>
-                      <Typography gutterBottom variant="h5" component="h2" sx={{ fontWeight: 'bold' }}>
-                        {property.name}
+        <Grid container spacing={4}>
+          {properties.map((property) => (
+            <Grid item key={property.id} xs={12} sm={6} md={4}>
+              <Card
+                sx={{
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  transition: 'transform 0.2s',
+                  '&:hover': {
+                    transform: 'scale(1.02)',
+                  },
+                }}
+              >
+                <CardActionArea onClick={() => handleOpenDialog(property)}>
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={property.image}
+                    alt={property.name}
+                    sx={{ objectFit: 'cover' }}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {property.name}
+                    </Typography>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                      <LocationOn fontSize="small" sx={{ mr: 0.5 }} />
+                      <Typography variant="body2" color="text.secondary">
+                        {property.location}
                       </Typography>
-
-                      <Box sx={{ display: 'flex', alignItems: 'center', mb: 1, color: 'text.secondary' }}>
-                        <LocationOnIcon sx={{ fontSize: 18, mr: 0.5 }} />
-                        <Typography variant="body2">{property.location}</Typography>
-                      </Box>
-
-                      <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, color: 'text.secondary' }}>
-                        <TerrainIcon sx={{ fontSize: 18, mr: 0.5 }} />
-                        <Typography variant="body2">{property.acreage}</Typography>
-                      </Box>
-
-                      <Typography variant="body2" color="text.secondary" paragraph>
-                        {property.description}
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                      <Terrain fontSize="small" sx={{ mr: 0.5 }} />
+                      <Typography variant="body2" color="text.secondary">
+                        {property.acreage} acres
                       </Typography>
+                    </Box>
+                    <Typography variant="body2" sx={{ mb: 2 }}>
+                      {property.description}
+                    </Typography>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                      {property.features.map((feature, index) => (
+                        <Chip
+                          key={index}
+                          label={feature}
+                          size="small"
+                          icon={<Nature />}
+                          color="primary"
+                          variant="outlined"
+                        />
+                      ))}
+                    </Box>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
 
-                      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-                        {property.features.map((feature, index) => (
-                          <Chip
-                            key={index}
-                            label={feature}
-                            size="small"
-                            color="primary"
-                            variant="outlined"
-                          />
-                        ))}
-                      </Box>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </Box>
-
-      {/* Property Details Dialog */}
       <Dialog
-        open={!!selectedProperty}
-        onClose={handleClose}
+        open={Boolean(selectedProperty)}
+        onClose={handleCloseDialog}
         maxWidth="md"
         fullWidth
       >
         {selectedProperty && (
           <>
-            <DialogTitle>
-              <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', color: 'primary.main' }}>
-                {selectedProperty.name}
-              </Typography>
-            </DialogTitle>
-            <DialogContent dividers>
-              <Box
-                sx={{
-                  width: '100%',
-                  height: 300,
-                  bgcolor: 'grey.300',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  mb: 3,
-                  borderRadius: 1,
-                }}
-              >
-                <NatureIcon sx={{ fontSize: 120, color: 'grey.500' }} />
+            <DialogTitle>{selectedProperty.name}</DialogTitle>
+            <DialogContent>
+              <Box sx={{ mb: 2 }}>
+                <img
+                  src={selectedProperty.image}
+                  alt={selectedProperty.name}
+                  style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+                />
               </Box>
-
-              <Box sx={{ display: 'flex', gap: 3, mb: 3 }}>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <LocationOnIcon sx={{ mr: 1, color: 'primary.main' }} />
-                  <Typography variant="body1">
-                    <strong>Location:</strong> {selectedProperty.location}
-                  </Typography>
-                </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <TerrainIcon sx={{ mr: 1, color: 'primary.main' }} />
-                  <Typography variant="body1">
-                    <strong>Size:</strong> {selectedProperty.acreage}
-                  </Typography>
-                </Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                <LocationOn fontSize="small" sx={{ mr: 0.5 }} />
+                <Typography variant="body1" color="text.secondary">
+                  {selectedProperty.location}
+                </Typography>
               </Box>
-
-              <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', mt: 3 }}>
-                Features
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <Terrain fontSize="small" sx={{ mr: 0.5 }} />
+                <Typography variant="body1" color="text.secondary">
+                  {selectedProperty.acreage} acres
+                </Typography>
+              </Box>
+              <Typography variant="body1" paragraph>
+                {selectedProperty.fullDescription}
               </Typography>
-              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 3 }}>
+              <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
+                Features:
+              </Typography>
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                 {selectedProperty.features.map((feature, index) => (
                   <Chip
                     key={index}
                     label={feature}
+                    icon={<Nature />}
                     color="primary"
-                    variant="outlined"
                   />
                 ))}
               </Box>
-
-              <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
-                About This Property
-              </Typography>
-              <Typography variant="body1" paragraph>
-                {selectedProperty.fullDescription}
-              </Typography>
             </DialogContent>
             <DialogActions>
-              <Button onClick={handleClose} color="primary" variant="contained">
+              <Button onClick={handleCloseDialog} color="primary">
                 Close
               </Button>
             </DialogActions>
