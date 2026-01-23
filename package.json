@@ -39,6 +39,7 @@
     "jest-axe": "latest",
     "jest-environment-jsdom": "latest",
     "prettier": "latest",
+    "serve": "latest",
     "typescript": "latest"
   },
   "overrides": {

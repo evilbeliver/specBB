@@ -35,7 +35,7 @@ jobs:
         run: npm run build
       
       - name: Start server
-        run: npm start &
+        run: npx serve out -l 3000 &
         
       - name: Wait for server
         run: |
