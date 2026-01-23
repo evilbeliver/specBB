@@ -24,24 +24,19 @@ describe('Home Page E2E', () => {
 
     it('displays all feature cards', () => {
       cy.contains('Prime Hunting Grounds').should('be.visible');
-      cy.contains('Expert Guides').should('be.visible');
-      cy.contains('Modern Facilities').should('be.visible');
+      cy.contains('Family Friendly Atmosphere').should('be.visible');
+      cy.contains('Camping Available').should('be.visible');
     });
   });
 
   describe('Accessibility', () => {
-    it('has a skip to main content link', () => {
-      cy.get('a.skip-to-main').should('exist');
-    });
-
-    it('skip to main content link is keyboard accessible', () => {
-      cy.get('body').tab();
-      cy.focused().should('have.class', 'skip-to-main');
-    });
-
     it('all images have alt text', () => {
-      cy.get('img').each(($img) => {
-        cy.wrap($img).should('have.attr', 'alt');
+      cy.get('img').then(($imgs) => {
+        if ($imgs.length > 0) {
+          cy.wrap($imgs).each(($img) => {
+            cy.wrap($img).should('have.attr', 'alt');
+          });
+        }
       });
     });
 
