@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "test": "jest",
     "test:e2e": "cypress run",
     "test:accessibility": "axe --dir src/pages"
