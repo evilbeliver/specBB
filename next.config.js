@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/specBB',
+  basePath: process.env.GITHUB_PAGES === 'true' ? '/specBB' : '',
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
     unoptimized: true,
