@@ -35,23 +35,50 @@ export default function Home() {
           component="section"
           aria-labelledby="hero-heading"
           sx={{
-            bgcolor: 'primary.main',
+            position: 'relative',
+            height: { xs: '400px', md: '600px' },
+            backgroundImage: 'url(/heroimage.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             color: 'white',
-            py: { xs: 8, md: 12 },
             textAlign: 'center',
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            },
           }}
         >
-          <Container maxWidth="lg">
+          <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
             <Typography
               id="hero-heading"
               variant="h1"
               component="h1"
               gutterBottom
-              sx={{ mb: 2 }}
+              sx={{ 
+                mb: 2,
+                textShadow: '2px 2px 4px rgba(0,0,0,0.7)',
+                fontSize: { xs: '2.5rem', md: '3.5rem' },
+              }}
             >
               Welcome to Buck & Beard Hunt Club
             </Typography>
-            <Typography variant="h5" component="p" sx={{ opacity: 0.9 }}>
+            <Typography 
+              variant="h5" 
+              component="p" 
+              sx={{ 
+                textShadow: '1px 1px 3px rgba(0,0,0,0.7)',
+                fontSize: { xs: '1.25rem', md: '1.5rem' },
+              }}
+            >
               A modern hunting experience built on tradition and excellence
             </Typography>
           </Container>
