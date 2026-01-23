@@ -31,10 +31,11 @@ describe('Home Page E2E', () => {
 
   describe('Accessibility', () => {
     it('all images have alt text', () => {
-      cy.get('img').then(($imgs) => {
-        if ($imgs.length > 0) {
-          cy.wrap($imgs).each(($img) => {
-            cy.wrap($img).should('have.attr', 'alt');
+      cy.get('body').then(($body) => {
+        const images = $body.find('img');
+        if (images.length > 0) {
+          images.each((i, img) => {
+            cy.wrap(img).should('have.attr', 'alt');
           });
         }
       });
