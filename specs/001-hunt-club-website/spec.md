@@ -51,6 +51,23 @@ A visitor accesses the site on a mobile device and experiences a touch-friendly,
 
 ---
 
+### User Story 4 - Browse Properties Directory (Priority: P2)
+
+A visitor navigates to the Properties page to browse all 5 hunting properties owned by the club. Each property displays as a card with key information, and clicking a card opens a detailed view with full property information.
+
+**Why this priority**: Showcasing properties is core to the club's value proposition and member recruitment.
+
+**Independent Test**: Can be fully tested by navigating to `/properties`, viewing all property cards, and clicking each card to verify detail modals open correctly.
+
+**Acceptance Scenarios**:
+
+1. **Given** a visitor on the Properties page, **When** they view the page, **Then** all 5 properties are displayed as cards in a responsive grid (1 column on mobile, 2 on tablet, 3 on desktop).
+2. **Given** a visitor viewing a property card, **When** they click on any card, **Then** a modal dialog opens displaying full property details including name, location, acreage, features, and extended description.
+3. **Given** a visitor viewing the property detail modal, **When** they click the close button, **Then** the modal closes and returns them to the properties grid.
+4. **Given** a visitor using keyboard navigation, **When** they interact with property cards and modals, **Then** all elements are keyboard accessible and properly focused.
+
+---
+
 ### Edge Cases
 
 - What happens if a user visits on an unsupported or very old browser?
@@ -70,9 +87,13 @@ A visitor accesses the site on a mobile device and experiences a touch-friendly,
 - **FR-007**: System MUST be testable with unit, integration, and end-to-end tests.
 - **FR-008**: System MUST load quickly and perform well on both desktop and mobile.
 - **FR-009**: System MUST degrade gracefully if assets fail to load or on slow networks.
-
-### Key Entities
-
+- **FR-010**: System MUST display all 5 hunting properties in an interactive, card-based directory.
+- **FR-011**: System MUST provide detailed property information via click-to-expand modal dialogs.
+- **FR-012**: System MUST include "Properties" navigation link in the header menu.
+, Properties), with content, layout, and metadata.
+- **Header**: Contains logo, navigation links (Home, About, Properties, Hunts, Contact), and branding.
+- **Footer**: Contains contact info, copyright, and external links.
+- **Property**: Represents a hunting property with attributes: name, location, acreage, brief description, features array, image, and full description
 - **Page**: Represents a single view (e.g., Home), with content, layout, and metadata.
 - **Header**: Contains logo, navigation links, and branding.
 - **Footer**: Contains contact info, copyright, and external links.
@@ -84,5 +105,6 @@ A visitor accesses the site on a mobile device and experiences a touch-friendly,
 - **SC-001**: 100% of pages pass automated accessibility tests (WCAG 2.1 AA).
 - **SC-002**: Home page loads in under 2 seconds on 4G mobile.
 - **SC-003**: 95%+ of users rate the site as "modern" and "easy to use" in feedback.
-- **SC-004**: Header and footer are present and consistent on 100% of pages.
+- **SC-004**: Header and footer are present and consistent on 100% of
+- **SC-006**: Properties page displays all 5 properties with correct information and functional modal interactions. pages.
 - **SC-005**: 100% of core user flows are covered by automated tests.

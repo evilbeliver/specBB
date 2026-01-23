@@ -14,8 +14,8 @@
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.6",
     "@mui/material": "^5.15.6",
+    "@mui/icons-material": "^5.15.6",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
@@ -23,8 +23,8 @@
   "devDependencies": {
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
-    "@types/node": "^25.0.10",
-    "@types/react": "^19.2.9",
+    "@types/node": "latest",
+    "@types/react": "19.2.9",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "axe-core": "latest",
@@ -34,12 +34,14 @@
     "eslint-config-next": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-jsx-a11y": "latest",
-    "husky": "latest",
     "jest": "latest",
     "jest-axe": "latest",
     "jest-environment-jsdom": "latest",
-    "lint-staged": "latest",
     "prettier": "latest",
-    "typescript": "^5.9.3"
+    "typescript": "latest"
+  },
+  "overrides": {
+    "glob": "^10.0.0",
+    "inflight": "npm:@isaacs/inflight@^1.0.0"
   }
 }

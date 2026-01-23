@@ -37,6 +37,10 @@ Rationale: Ensures quality, consistency, and future-proofing.
 - Testing: TDD, unit, integration, E2E, coverage enforcement
 - MVP focus: Simplicity, minimalism, clear structure
 - Code must follow idiomatic, modern best practices
+- Material-UI (MUI) v5+ for all UI components and styling
+- Responsive design: Mobile-first approach with breakpoints (xs/sm/md/lg/xl)
+- Interactive features: Modal dialogs for detailed content views
+- Navigation: Consistent header/footer across all pages
 
 
 
@@ -63,6 +67,7 @@ Sync Impact Report
 - Removed sections: None
 - Templates requiring updates: plan-template.md (✅), spec-template.md (✅), tasks-template.md (✅)
 - Follow-up TODOs: None (all placeholders resolved)
+- Added: MUI v5+ standard, responsive design requirements, modal interactions, navigation consistency (2026-01-23)
 -->
 
-**Version**: 1.0.0 | **Ratified**: 2026-01-20 | **Last Amended**: 2026-01-20
+**Version**: 1.0.1 | **Ratified**: 2026-01-20 | **Last Amended**: 2026-01-23

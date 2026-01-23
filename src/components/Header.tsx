@@ -10,7 +10,7 @@ export default function Header() {
             <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
               <Typography
                 variant="h6"
-                component="h1"
+                component="div"
                 sx={{
                   fontWeight: 700,
                   color: 'inherit',
@@ -48,6 +48,14 @@ export default function Header() {
               sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
             >
               About
+            </Button>
+            <Button
+              component={Link}
+              href="/properties"
+              color="inherit"
+              sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
+            >
+              Properties
             </Button>
             <Button
               component={Link}
