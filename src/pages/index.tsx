@@ -7,15 +7,15 @@ export default function Home() {
   const features = [
     {
       title: 'Prime Hunting Grounds',
-      description: 'Acres of pristine wilderness managed for optimal wildlife habitat',
+      description: 'We have 5 properties in the Saluda and Edgefield areas totaling over 2000 acres',
     },
     {
-      title: 'Expert Guides',
-      description: 'Experienced guides to ensure a safe and successful hunt',
+      title: 'Family Friendly Atmosphere',
+      description: 'Our club fosters a welcoming environment for hunters of all ages and experience levels',
     },
     {
-      title: 'Modern Facilities',
-      description: 'Comfortable lodging and amenities for your hunting trip',
+      title: 'Camping Available',
+      description: 'We have multiple camp sites available on club properties for members',
     },
   ];
 
@@ -113,8 +113,7 @@ export default function Home() {
                 lineHeight: 1.8,
               }}
             >
-              Buck & Beard Hunt Club combines traditional hunting values with modern amenities.
-              Experience the thrill of the hunt in a safe, sustainable, and welcoming environment.
+              Welcome to Buck & Beard and thank you for taking the time to check us out. We are a family-oriented organization of men and women dedicated to constantly learning, improving and expanding our passion for the outdoors and the opportunities to enjoy safe successful deer and turkey hunting. If you are seeking a new experience, we encourage you to read on to determine if we offer what you are looking for. For more information and to schedule a tour of our properties, contact us and we will get back to you.
             </Typography>
           </Container>
         </Box>
