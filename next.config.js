@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
-const basePath = process.env.NODE_ENV === 'production' ? '/specBB' : '';
-
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: basePath,
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
     unoptimized: true,
@@ -22,9 +19,6 @@ const nextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-  },
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 };
 
