@@ -55,10 +55,10 @@ describe('Header and Footer E2E', () => {
 
     it('displays contact information', () => {
       cy.get('footer').contains('Contact').should('be.visible');
-      cy.get('footer').contains('a', 'info@buckandbeard.com')
-        .should('have.attr', 'href', 'mailto:info@buckandbeard.com');
-      cy.get('footer').contains('a', '+1 (555) 123-4567')
-        .should('have.attr', 'href', 'tel:+15551234567');
+      cy.get('footer').contains('a', 'buckandbeard@gmail.com')
+        .should('have.attr', 'href', 'mailto:buckandbeard@gmail.com');
+      cy.get('footer').contains('a', '+1 (803) 727-5111')
+        .should('have.attr', 'href', 'tel:+18037275111');
     });
 
     it('displays copyright with current year', () => {
