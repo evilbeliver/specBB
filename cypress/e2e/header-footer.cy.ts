@@ -114,8 +114,8 @@ describe('Header and Footer E2E', () => {
         cy.get('header').should('be.visible');
         cy.get('footer').should('be.visible');
         
-        // On mobile, check for hamburger menu; on desktop, check for nav
-        if (width < 768) {
+        // On mobile/tablet (< md breakpoint 900px), check for hamburger menu; on desktop, check for nav
+        if (width < 900) {
           cy.get('button[aria-label="open navigation menu"]').should('be.visible');
         } else {
           cy.get('nav[aria-label="Main navigation"]').should('be.visible');
