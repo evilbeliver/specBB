@@ -33,12 +33,12 @@ interface Property {
 const properties: Property[] = [
   {
     id: 1,
-    name: 'North Ridge Property',
+    name: 'Long Cane Property',
     location: 'Northern Region',
     acreage: 500,
     description: 'Prime hunting land with diverse terrain and abundant wildlife.',
     features: ['Deer', 'Turkey', 'Food Plots', 'Stand Sites'],
-    image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=North+Ridge+Property',
+    image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=Long+Cane+Property',
     fullDescription:
       'Our North Ridge property offers 500 acres of premier hunting land. Features include rolling hills, hardwood forests, and strategically placed food plots. Multiple stand sites are established throughout the property, providing excellent vantage points for deer and turkey hunting.',
   },
