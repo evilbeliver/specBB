@@ -28,10 +28,11 @@ describe('Header and Footer E2E', () => {
     });
 
     it('logo is clickable and links to home', () => {
-      cy.get('header').contains('Buck & Beard').closest('a').should('have.attr', 'href', '/');
+      cy.get('header').contains('Buck & Beard').parent('a').should('have.attr', 'href', '/');
     });
 
     it('highlights current page in navigation', () => {
+      cy.viewport(1280, 720);
       cy.get('nav a[aria-current="page"]').should('contain', 'Home');
     });
 
