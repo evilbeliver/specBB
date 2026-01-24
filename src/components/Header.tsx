@@ -1,7 +1,23 @@
+import { useState } from 'react';
 import Link from 'next/link';
-import { AppBar, Toolbar, Typography, Button, Container, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Container, Box, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const navItems = [
+    { label: 'Home', href: '/', current: true },
+    { label: 'About', href: '/about' },
+    { label: 'Properties', href: '/properties' },
+    { label: 'Hunts', href: '/hunts' },
+    { label: 'Contact', href: '/contact' },
+  ];
+
   return (
     <AppBar position="sticky" component="header" role="banner">
       <Container maxWidth="lg">
@@ -16,6 +32,7 @@ export default function Header() {
                   color: 'inherit',
                   textDecoration: 'none',
                   cursor: 'pointer',
+                  fontSize: { xs: '1rem', sm: '1.25rem' },
                 }}
                 aria-label="Buck & Beard Hunt Club - Home"
               >
@@ -23,59 +40,78 @@ export default function Header() {
               </Typography>
             </Link>
           </Box>
+
+          {/* Desktop Navigation */}
           <Box
             component="nav"
             role="navigation"
             aria-label="Main navigation"
             sx={{
-              display: 'flex',
-              gap: { xs: 1, sm: 2 },
+              display: { xs: 'none', md: 'flex' },
+              gap: 2,
             }}
           >
-            <Button
-              component={Link}
-              href="/"
-              color="inherit"
-              aria-current="page"
-              sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
-            >
-              Home
-            </Button>
-            <Button
-              component={Link}
-              href="/about"
-              color="inherit"
-              sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
-            >
-              About
-            </Button>
-            <Button
-              component={Link}
-              href="/properties"
-              color="inherit"
-              sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
-            >
-              Properties
-            </Button>
-            <Button
-              component={Link}
-              href="/hunts"
-              color="inherit"
-              sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
-            >
-              Hunts
-            </Button>
-            <Button
-              component={Link}
-              href="/contact"
-              color="inherit"
-              sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}
-            >
-              Contact
-            </Button>
+            {navItems.map((item) => (
+              <Button
+                key={item.label}
+                component={Link}
+                href={item.href}
+                color="inherit"
+                aria-current={item.current ? 'page' : undefined}
+              >
+                {item.label}
+              </Button>
+            ))}
           </Box>
+
+          {/* Mobile Menu Button */}
+          <IconButton
+            color="inherit"
+            aria-label="open navigation menu"
+            edge="end"
+            onClick={handleDrawerToggle}
+            sx={{ display: { xs: 'block', md: 'none' } }}
+          >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </Container>
+
+      {/* Mobile Drawer */}
+      <Drawer
+        anchor="right"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        sx={{
+          display: { xs: 'block', md: 'none' },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: 240 },
+        }}
+      >
+        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+          <Typography variant="h6" sx={{ my: 2 }}>
+            Buck & Beard
+          </Typography>
+          <List>
+            {navItems.map((item) => (
+              <ListItem key={item.label} disablePadding>
+                <Button
+                  component={Link}
+                  href={item.href}
+                  fullWidth
+                  sx={{ 
+                    py: 2,
+                    justifyContent: 'center',
+                    color: 'text.primary',
+                  }}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  <ListItemText primary={item.label} />
+                </Button>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
     </AppBar>
   );
 }
