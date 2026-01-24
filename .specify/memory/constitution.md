@@ -10,8 +10,17 @@ Rationale: Ensures inclusivity and legal compliance for all users.
 
 
 ### II. Test-First Discipline
-All code MUST be developed using test-driven development (TDD). Unit, integration, and end-to-end tests are required for all features. No code is merged without passing tests and coverage review.
-Rationale: Guarantees reliability, prevents regressions, and enables safe refactoring.
+All code MUST be developed using test-driven development (TDD). Write tests BEFORE implementation. The following test suites are mandatory for all features:
+- **Unit Tests**: Component logic, utilities, pure functions
+- **Integration Tests**: Component interactions, data flow
+- **UI Tests**: Visual regression, layout validation
+- **Component Tests**: User interactions, event handling
+- **E2E Tests**: Critical user paths, complete workflows
+- **Accessibility Tests**: WCAG 2.1 AA compliance with axe-core
+
+**Pre-Commit Requirements**: ALL test suites must pass before ANY commit is allowed. No exceptions. Use git hooks to enforce this requirement.
+
+Rationale: Guarantees reliability, prevents regressions, enables safe refactoring, and ensures broken code never enters the repository.
 
 
 ### III. Security by Default
@@ -46,10 +55,23 @@ Rationale: Ensures quality, consistency, and future-proofing.
 
 ## Development Workflow & Quality Gates
 
-- All work begins with tests (TDD)
-- Code reviews required for all merges
-- CI must enforce accessibility, security, and test coverage gates
-- No code merged without passing all checks
+- **TDD Workflow**: All work begins with failing tests, then implementation to pass those tests
+- **Test Types Required**:
+  - Unit tests (Jest + React Testing Library)
+  - Component tests (user interactions, props validation)
+  - Integration tests (component interactions)
+  - UI tests (responsive design, visual validation)
+  - E2E tests (Cypress for critical user paths)
+  - Accessibility tests (jest-axe unit tests + @axe-core/cli scans)
+- **Pre-Commit Enforcement**: Git hooks MUST run all test suites before allowing commits
+  - `npm test` (Jest unit tests)
+  - `npm run test:e2e` (Cypress E2E tests)
+  - `npm run test:accessibility` (axe-core scans)
+  - All must pass with zero failures
+- **Code Coverage**: Maintain test coverage standards, track in CI
+- **Code Reviews**: Required for all merges, verify TDD adherence
+- **CI Quality Gates**: Must enforce linting, testing, accessibility, and build success
+- **No Exceptions**: Broken tests = blocked commit/merge, no overrides allowed
 
 
 
@@ -68,6 +90,7 @@ Sync Impact Report
 - Templates requiring updates: plan-template.md (✅), spec-template.md (✅), tasks-template.md (✅)
 - Follow-up TODOs: None (all placeholders resolved)
 - Added: MUI v5+ standard, responsive design requirements, modal interactions, navigation consistency (2026-01-23)
+- Enhanced TDD requirements with explicit test suite types and pre-commit enforcement (2026-01-23)
 -->
 
-**Version**: 1.0.1 | **Ratified**: 2026-01-20 | **Last Amended**: 2026-01-23
+**Version**: 1.0.2 | **Ratified**: 2026-01-20 | **Last Amended**: 2026-01-23
