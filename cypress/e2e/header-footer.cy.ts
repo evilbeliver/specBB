@@ -10,12 +10,21 @@ describe('Header and Footer E2E', () => {
     });
 
     it('displays all navigation links', () => {
+      // On desktop viewport, check navigation is visible
+      cy.viewport(1280, 720);
+      cy.get('nav[aria-label="Main navigation"]').should('be.visible');
       cy.get('nav[aria-label="Main navigation"]').within(() => {
         cy.contains('Home').should('be.visible');
         cy.contains('About').should('be.visible');
+        cy.contains('Properties').should('be.visible');
         cy.contains('Hunts').should('be.visible');
         cy.contains('Contact').should('be.visible');
       });
+    });
+
+    it('displays mobile menu button on small screens', () => {
+      cy.viewport(375, 667);
+      cy.get('button[aria-label="open navigation menu"]').should('be.visible');
     });
 
     it('logo is clickable and links to home', () => {
