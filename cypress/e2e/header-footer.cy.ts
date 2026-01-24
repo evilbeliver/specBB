@@ -28,7 +28,8 @@ describe('Header and Footer E2E', () => {
     });
 
     it('logo is clickable and links to home', () => {
-      cy.get('header').contains('Buck & Beard').parent('a').should('have.attr', 'href', '/');
+      cy.get('header a').contains('Buck & Beard').should('exist');
+      cy.get('header a[href="/"]').contains('Buck & Beard').should('exist');
     });
 
     it('highlights current page in navigation', () => {
@@ -112,7 +113,13 @@ describe('Header and Footer E2E', () => {
         cy.viewport(width, height);
         cy.get('header').should('be.visible');
         cy.get('footer').should('be.visible');
-        cy.get('nav[aria-label="Main navigation"]').should('be.visible');
+        
+        // On mobile, check for hamburger menu; on desktop, check for nav
+        if (width < 768) {
+          cy.get('button[aria-label="open navigation menu"]').should('be.visible');
+        } else {
+          cy.get('nav[aria-label="Main navigation"]').should('be.visible');
+        }
       });
     });
   });
