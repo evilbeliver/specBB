@@ -28,6 +28,7 @@ interface Property {
   features: string[];
   image: string;
   fullDescription: string;
+  mapLink?: string;
 }
 
 const properties: Property[] = [
@@ -38,20 +39,21 @@ const properties: Property[] = [
     acreage: 675,
     description: 'Our Edgefield Tract,is roughly 675 acres with a mix of hardwoods, pine stands, clear cuts and creek bottoms.',
     features: ['Deer', 'Turkey', 'Rabbits', 'Quail','Food Plots', 'Clear Cuts'],
-    image: '/images/long-cane-deer.jpg',
+    image: '/images/long-cane-deer.jpeg',
     fullDescription:
       'Our Long Cane Tract, aka Edgefield Tract, is located off of Long Cane Rd (State HWy S-19-21) in Edgefield County. The main check in and parking areas are located across the street from a white house. This roughly 675 acre property has 30+ permanant stand locations with a mix of hardwoods, pine stands, and creek bottoms. We have multiple food plots throughout the property to help attract and retain the deer and turkey. We are also starting to see a comeback of wild quail as well. Camping is allowed on this property (campers, tents), but there are no hookups.',
+    mapLink: 'https://www.google.com/maps/place/33%C2%B055\'08.2%22N+81%C2%B055\'37.0%22W/@33.9147641,-81.9319122,2370m/data=!3m1!1e3!4m4!3m3!8m2!3d33.918944!4d-81.926944?entry=tts&shorturl=1',
   },
   {
     id: 2,
     name: 'Chappells Ferry Property',
     location: 'Eastern Region',
-    acreage: 350,
-    description: 'Featuring creek corridors and hardwood bottoms ideal for big game.',
-    features: ['Deer', 'Turkey', 'Waterfowl', 'Creek Access'],
+    acreage: 766,
+    description: 'Our Chappells Ferry Tract is located off of Old Chappells Ferry Rd, and Pinckney Road. The main check in and parking area is located off of Pinckney Rd. This roughly 766 acre property has 30+ stands and is broken up into 4 differnet areas.',
+    features: ['Deer', 'Turkey', 'Rabbits', 'Quail', 'Food Plots', 'Creek Bottoms'],
     image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=Creek+Bottom+Property',
     fullDescription:
-      'The Creek Bottom property spans 350 acres along a pristine creek corridor. This property is known for trophy whitetail deer and spring turkey. The creek provides natural funnels and travel corridors that make this an exceptional hunting location.',
+      'Our Chappells Ferry Tract is located off of Old Chappells Ferry Rd, and Pinckney Road. The main check in and parking area is located off of Pinckney Rd. This roughly 766 acre property has 30+ stands and is broken up into 4 differnet areas with roughly 250 acres being off of Country Pond Rd. This property has some of the larger foodplots on the property as you can see in the picture with a few smaller ones as well. This property has great deer, turky and some wild pig opportunities as well. We are seeing more quail also show up on this property as well.',
   },
   {
     id: 3,
@@ -192,6 +194,19 @@ export default function Properties() {
                 <LocationOn fontSize="small" sx={{ mr: 0.5 }} />
                 <Typography variant="body1" color="text.secondary">
                   {selectedProperty.location}
+                  {selectedProperty.mapLink && (
+                    <>
+                      {' - '}
+                      <a 
+                        href={selectedProperty.mapLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        style={{ color: '#2c5f2d', textDecoration: 'underline' }}
+                      >
+                        Driving Directions
+                      </a>
+                    </>
+                  )}
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
