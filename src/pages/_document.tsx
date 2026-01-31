@@ -7,7 +7,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <meta name="description" content="Buck & Beard Hunt Club - A modern hunting experience" />
         <link rel="icon" href={`${basePath}/favicon.ico`} />
       </Head>
       <body>
