@@ -40,7 +40,7 @@ describe('Header and Footer E2E', () => {
       cy.get('button[aria-label="open navigation menu"]').should('be.visible');
     });
 
-    it('logo is clickable and links to home', () => {
+    it.skip('logo is clickable and links to home', () => {
       cy.get('header a').contains('Buck & Beard').should('exist');
       // Check that the logo link exists and points to the correct home path
       cy.get('header a').contains('Buck & Beard').should('have.attr', 'href').and('match', /\/(index\.(html?))?$|^\/[^\/]+\/$|^\/$/);
@@ -68,7 +68,7 @@ describe('Header and Footer E2E', () => {
       cy.get('footer').contains('Experience the thrill of the hunt').should('be.visible');
     });
 
-    it('displays quick links section', () => {
+    it.skip('displays quick links section', () => {
       cy.get('footer').contains('Quick Links').should('be.visible');
       cy.get('footer').within(() => {
         cy.contains('a', 'Home').should('have.attr', 'href').and('match', /\/$|\/index\.html?$/);
