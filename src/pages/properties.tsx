@@ -63,7 +63,7 @@ const properties: Property[] = [
     acreage: 520,
     description: 'Our Hollywood Tract is 520 acre, property with a mix of hardwoods, pine stands, and creek bottoms with multiple smaller food plots throughout the property.',
     features: ['Deer', 'Turkey', 'Food Plots', 'Pigs'],
-    image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=Hollywood+Property',
+    image: 'images/hollywood-deer.jpeg',
     fullDescription:
       'Our Hollywood Tract is located off of Old Town Road. The main parking and check in area is at the end of the road on the left hand side. We are the first drive way with a large red gate. The property spans both sides of the road as well as part of Crossroad Church Road. This 520 acre property has 20+ permanant stand locations with a mix of hardwoods, pine stands, and creek bottoms. We have multiple smaller food plots throughout the property to help attract and retain the deer and turkey. This property is also known to have pigs around as well.',
     mapLink: 'https://maps.app.goo.gl/GGozqkXsDeVTKq7D8',
