@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { Box, Container, Grid, Typography, Link as MuiLink } from '@mui/material';
 
 export default function Footer() {

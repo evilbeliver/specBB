@@ -5,7 +5,6 @@ import {
   Typography,
   Grid,
   Card,
-  CardContent,
   Box,
   Accordion,
   AccordionSummary,
@@ -89,7 +88,7 @@ export default function About() {
   try {
     const router = useRouter();
     basePath = router.basePath || '';
-  } catch (e) {
+  } catch {
     // Router not available in test environment, use default path
     basePath = '';
   }

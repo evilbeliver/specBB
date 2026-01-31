@@ -6,7 +6,6 @@ import {
   Typography,
   Grid,
   Card,
-  CardContent,
   Box,
   TextField,
   Button,
@@ -18,8 +17,7 @@ import {
   Phone, 
   LocationOn, 
   Schedule,
-  Send,
-  ContactMail 
+  Send
 } from '@mui/icons-material';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -44,7 +42,7 @@ const contactInfo = [
     title: 'Service Area',
     content: 'Saluda & Edgefield Counties',
     link: null,
-    description: 'Our hunting properties span across South Carolina\'s premier hunting regions',
+    description: 'Our hunting properties span across South Carolina&rsquo;s premier hunting regions',
   },
   
 ];
@@ -64,12 +62,12 @@ export default function Contact() {
   try {
     const router = useRouter();
     basePath = router.basePath || '';
-  } catch (e) {
+  } catch {
     // Router not available in test environment, use default path
     basePath = '';
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -105,7 +103,7 @@ export default function Contact() {
     });
 
     // Hide success message after 5 seconds
-    setTimeout(() => setShowSuccess(false), 5000);
+    window.setTimeout(() => setShowSuccess(false), 5000);
   };
 
   return (
@@ -221,14 +219,14 @@ export default function Contact() {
                 </Typography>
                 <Typography variant="body1" paragraph sx={{ fontSize: '1.125rem', lineHeight: 1.8, mb: 4 }}>
                   Ready to join Buck & Beard Hunt Club or have questions about our properties? 
-                  Fill out the form below and we'll get back to you as soon as possible. We look 
+                  Fill out the form below and we&rsquo;ll get back to you as soon as possible. We look 
                   forward to hearing from you and potentially welcoming you to our hunting family.
                 </Typography>
                 
                 {showSuccess && (
                   <Alert severity="success" sx={{ mb: 3 }}>
                     Thank you for your message! Your email client should open with the pre-filled message. 
-                    We'll respond within 24 hours.
+                    We&rsquo;ll respond within 24 hours.
                   </Alert>
                 )}
 
@@ -290,7 +288,7 @@ export default function Contact() {
                           multiline
                           rows={6}
                           variant="outlined"
-                          placeholder="Tell us about your hunting experience, questions about membership, or anything else you'd like us to know..."
+                          placeholder="Tell us about your hunting experience, questions about membership, or anything else you&rsquo;d like us to know..."
                         />
                       </Grid>
                       <Grid item xs={12}>
@@ -318,7 +316,7 @@ export default function Contact() {
                   What to Expect
                 </Typography>
                 <Typography variant="body1" paragraph sx={{ fontSize: '1.125rem', lineHeight: 1.8 }}>
-                  When you contact Buck & Beard Hunt Club, here's what you can expect from us:
+                  When you contact Buck & Beard Hunt Club, here&rsquo;s what you can expect from us:
                 </Typography>
 
                 <Box sx={{ mt: 4 }}>
@@ -329,7 +327,7 @@ export default function Contact() {
                         Property Tours
                       </Typography>
                       <Typography variant="body1" color="text.secondary">
-                        We're happy to arrange tours of our properties so you can see firsthand what we offer.
+                        We&rsquo;re happy to arrange tours of our properties so you can see firsthand what we offer.
                       </Typography>
                     </Box>
                   </Box>

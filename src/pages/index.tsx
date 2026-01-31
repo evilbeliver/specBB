@@ -10,7 +10,7 @@ export default function Home() {
   try {
     const router = useRouter();
     heroImageUrl = `${router.basePath || ''}/heroimage.jpg`;
-  } catch (e) {
+  } catch {
     // Router not available in test environment, use default path
     heroImageUrl = '/heroimage.jpg';
   }
