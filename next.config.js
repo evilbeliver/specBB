@@ -22,5 +22,11 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
 };
+const repoSubpath = '001-hunt-club-website';
+module.exports = {
+  reactStrictMode: true,
+  assetPrefix: `/${repoSubpath}/`,
+  basePath: `/${repoSubpath}`,
+};
 
 module.exports = nextConfig;
