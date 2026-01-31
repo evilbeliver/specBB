@@ -42,7 +42,7 @@ const contactInfo = [
     title: 'Service Area',
     content: 'Saluda & Edgefield Counties',
     link: null,
-    description: 'Our hunting properties span across South Carolina&rsquo;s premier hunting regions',
+    description: 'Our hunting properties span across South Carolinas premier hunting regions',
   },
   
 ];

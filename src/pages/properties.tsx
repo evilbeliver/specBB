@@ -37,7 +37,7 @@ const properties: Property[] = [
     name: 'Long Cane Property',
     location: 'Edgefield County',
     acreage: 675,
-    description: 'Our Edgefield Tract,is roughly 675 acres with a mix of hardwoods, pine stands, clear cuts and creek bottoms.',
+    description: 'Our Long Cane Tract,is roughly 675 acres with a mix of hardwoods, pine stands, clear cuts and creek bottoms.',
     features: ['Deer', 'Turkey', 'Rabbits', 'Quail','Food Plots', 'Clear Cuts', 'Camping'],
     image: 'images/long-cane-deer.jpeg',
     fullDescription:
