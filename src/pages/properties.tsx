@@ -75,7 +75,7 @@ const properties: Property[] = [
     acreage: 440,
     description: 'Our Old Charleston Tract is 440 acre property has 10+ stands and is broken up into multiple sections',
     features: ['Deer', 'Turkey', 'Camping'],
-    image: 'https://placehold.co/600x400/2c5f2d/ffffff?text=Old+Charleston+Property',
+    image: 'images/old-charleston-turkey.jpeg',
     fullDescription:
       'Our Old Charlston Tract is located off of Old Charleston Rd, and Red Hawk Dr.(State Rd S-41-66) The main check in area is located off of Old Charleston Rd were an old yellow school bus is parked This roughly 440 acre property has 10+ stands and is broken up into multiple sections with part of the property located off of Magnolia Ln. This property has multiple food plots with a mix of hardwoods, pines, and creak bottoms. Camping is also allowed on this property as well, there are currently no hookups at this property.',
     mapLink: 'https://maps.app.goo.gl/CFvJRsXiHYddxu5k9',
