@@ -44,8 +44,7 @@ export default function Home() {
         <Box
           component="section"
           aria-labelledby="hero-heading"
-          role="img"
-          aria-label="Buck and Beard Hunt Club hero image showing hunting grounds"
+          aria-describedby="hero-description"
           sx={{
             position: 'relative',
             height: { xs: '400px', md: '600px' },
@@ -84,6 +83,7 @@ export default function Home() {
               Welcome to Buck & Beard Hunt Club
             </Typography>
             <Typography 
+              id="hero-description"
               variant="h5" 
               component="p" 
               sx={{ 
@@ -92,6 +92,19 @@ export default function Home() {
               }}
             >
               A modern hunting experience built on tradition and excellence
+            </Typography>
+            {/* Hidden description for background image accessibility */}
+            <Typography
+              component="span"
+              sx={{
+                position: 'absolute',
+                left: '-10000px',
+                width: '1px',
+                height: '1px',
+                overflow: 'hidden',
+              }}
+            >
+              Background image shows scenic hunting grounds with natural forest landscape
             </Typography>
           </Container>
         </Box>
