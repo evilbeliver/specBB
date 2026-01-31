@@ -71,7 +71,7 @@ const properties: Property[] = [
   {
     id: 4,
     name: 'Old Charleston Property',
-    location: 'Western Region',
+    location: 'Edgefield County',
     acreage: 440,
     description: 'Our Old Charleston Tract is 440 acre property has 10+ stands and is broken up into multiple sections',
     features: ['Deer', 'Turkey', 'Camping'],
@@ -86,7 +86,7 @@ const properties: Property[] = [
     location: 'Saluda County',
     acreage: 275,
     description: 'Our Piney Wood Tract is 130 acre property has 12+ stands and has a few food plots on the property..',
-    features: ['Deer', 'Waterfowl', 'Turkey', 'River Access'],
+    features: ['Deer', 'Turkey',],
     image: 'images/piney-wood-deer.jpeg',
     fullDescription:
       'Our Piney Wood Tract is located around the corner from our Hollywood Tract and is off of Pineywood Rd. The main check in area is located across the streat from a farm and house. This roughly 130 acre property has 12+ stands and has a few food plots on the property.',
