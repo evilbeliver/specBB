@@ -6,35 +6,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  
-  let basePath = '';
-  try {
-    const router = useRouter();
-    // Only use basePath in production
-    basePath = process.env.NODE_ENV === 'production' ? (router.basePath || '') : '';
-  } catch (e) {
-    // Router not available in test environment
-    basePath = '';
-  }
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
-  const navItems = [
-    { label: 'Home', href: `${basePath}/`, current: true },
-    { label: 'About', href: `${basePath}/about` },
-    { label: 'Properties', href: `${basePath}/properties` },
-    { label: 'Hunts', href: `${basePath}/hunts` },
-    { label: 'Contact', href: `${basePath}/contact` },
-  ];
 
   return (
     <AppBar position="sticky" component="header" role="banner">
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Link href={`${basePath}/`} passHref style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
               <Typography
                 variant="h6"
                 component="div"
@@ -62,17 +44,21 @@ export default function Header() {
               gap: 2,
             }}
           >
-            {navItems.map((item) => (
-              <Button
-                key={item.label}
-                component={Link}
-                href={item.href}
-                color="inherit"
-                aria-current={item.current ? 'page' : undefined}
-              >
-                {item.label}
-              </Button>
-            ))}
+            <Button component={Link} href="/" color="inherit" aria-current="page">
+              Home
+            </Button>
+            <Button component={Link} href="/about" color="inherit">
+              About
+            </Button>
+            <Button component={Link} href="/properties" color="inherit">
+              Properties
+            </Button>
+            <Button component={Link} href="/hunts" color="inherit">
+              Hunts
+            </Button>
+            <Button component={Link} href="/contact" color="inherit">
+              Contact
+            </Button>
           </Box>
 
           {/* Mobile Menu Button */}
@@ -103,23 +89,77 @@ export default function Header() {
             Buck & Beard
           </Typography>
           <List>
-            {navItems.map((item) => (
-              <ListItem key={item.label} disablePadding>
-                <Button
-                  component={Link}
-                  href={item.href}
-                  fullWidth
-                  sx={{ 
-                    py: 2,
-                    justifyContent: 'center',
-                    color: 'text.primary',
-                  }}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  <ListItemText primary={item.label} />
-                </Button>
-              </ListItem>
-            ))}
+            <ListItem disablePadding>
+              <Button
+                component={Link}
+                href="/"
+                fullWidth
+                sx={{ 
+                  py: 2,
+                  justifyContent: 'center',
+                  color: 'text.primary',
+                }}
+                aria-current="page"
+              >
+                <ListItemText primary="Home" />
+              </Button>
+            </ListItem>
+            <ListItem disablePadding>
+              <Button
+                component={Link}
+                href="/about"
+                fullWidth
+                sx={{ 
+                  py: 2,
+                  justifyContent: 'center',
+                  color: 'text.primary',
+                }}
+              >
+                <ListItemText primary="About" />
+              </Button>
+            </ListItem>
+            <ListItem disablePadding>
+              <Button
+                component={Link}
+                href="/properties"
+                fullWidth
+                sx={{ 
+                  py: 2,
+                  justifyContent: 'center',
+                  color: 'text.primary',
+                }}
+              >
+                <ListItemText primary="Properties" />
+              </Button>
+            </ListItem>
+            <ListItem disablePadding>
+              <Button
+                component={Link}
+                href="/hunts"
+                fullWidth
+                sx={{ 
+                  py: 2,
+                  justifyContent: 'center',
+                  color: 'text.primary',
+                }}
+              >
+                <ListItemText primary="Hunts" />
+              </Button>
+            </ListItem>
+            <ListItem disablePadding>
+              <Button
+                component={Link}
+                href="/contact"
+                fullWidth
+                sx={{ 
+                  py: 2,
+                  justifyContent: 'center',
+                  color: 'text.primary',
+                }}
+              >
+                <ListItemText primary="Contact" />
+              </Button>
+            </ListItem>
           </List>
         </Box>
       </Drawer>

@@ -4,16 +4,6 @@ import { Box, Container, Grid, Typography, Link as MuiLink } from '@mui/material
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
-  let basePath = '';
-  try {
-    const router = useRouter();
-    // Only use basePath in production
-    basePath = process.env.NODE_ENV === 'production' ? (router.basePath || '') : '';
-  } catch (e) {
-    // Router not available in test environment
-    basePath = '';
-  }
 
   return (
     <Box
@@ -43,10 +33,10 @@ export default function Footer() {
             </Typography>
             <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
               {[
-                { href: `${basePath}/`, label: 'Home' },
-                { href: `${basePath}/about`, label: 'About' },
-                { href: `${basePath}/hunts`, label: 'Hunts' },
-                { href: `${basePath}/contact`, label: 'Contact' },
+                { href: '/', label: 'Home' },
+                { href: '/about', label: 'About' },
+                { href: '/hunts', label: 'Hunts' },
+                { href: '/contact', label: 'Contact' },
               ].map((link) => (
                 <Box component="li" key={link.href} sx={{ mb: 1 }}>
                   <MuiLink
@@ -119,7 +109,7 @@ export default function Footer() {
           <Box sx={{ display: 'flex', gap: 2 }}>
             <MuiLink
               component={Link}
-              href={`${basePath}/privacy`}
+              href="/privacy"
               sx={{
                 color: 'rgba(255, 255, 255, 0.8)',
                 textDecoration: 'none',
@@ -134,7 +124,7 @@ export default function Footer() {
             </MuiLink>
             <MuiLink
               component={Link}
-              href={`${basePath}/terms`}
+              href="/terms"
               sx={{
                 color: 'rgba(255, 255, 255, 0.8)',
                 textDecoration: 'none',

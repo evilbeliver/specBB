@@ -5,15 +5,7 @@ import Footer from '../components/Footer';
 import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
 
 export default function Home() {
-  let basePath = '';
-  try {
-    const router = useRouter();
-    // Only use basePath in production
-    basePath = process.env.NODE_ENV === 'production' ? (router.basePath || '') : '';
-  } catch (e) {
-    // Router not available in test environment
-    basePath = '';
-  }
+  const heroImageUrl = '/heroimage.jpg';
   
   const features = [
     {
@@ -49,7 +41,7 @@ export default function Home() {
           sx={{
             position: 'relative',
             height: { xs: '400px', md: '600px' },
-            backgroundImage: `url(${basePath}/heroimage.jpg)`,
+            backgroundImage: `url(${heroImageUrl})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
