@@ -4,8 +4,15 @@ import { Box, Container, Grid, Typography, Link as MuiLink } from '@mui/material
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const router = useRouter();
-  const basePath = router.basePath || '';
+  
+  let basePath = '';
+  try {
+    const router = useRouter();
+    basePath = router.basePath || '';
+  } catch (e) {
+    // Router not available in test environment
+    basePath = '';
+  }
 
   return (
     <Box

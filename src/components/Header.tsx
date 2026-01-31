@@ -6,8 +6,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const router = useRouter();
-  const basePath = router.basePath || '';
+  
+  let basePath = '';
+  try {
+    const router = useRouter();
+    basePath = router.basePath || '';
+  } catch (e) {
+    // Router not available in test environment
+    basePath = '';
+  }
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

@@ -2,6 +2,15 @@ import { render, screen } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import Footer from '../Footer';
 
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter: () => ({
+    basePath: '',
+    asPath: '/',
+    pathname: '/',
+  }),
+}));
+
 expect.extend(toHaveNoViolations);
 
 describe('Footer Component', () => {

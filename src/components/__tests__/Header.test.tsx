@@ -2,6 +2,15 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import Header from '../Header';
 
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter: () => ({
+    basePath: '',
+    asPath: '/',
+    pathname: '/',
+  }),
+}));
+
 expect.extend(toHaveNoViolations);
 
 describe('Header Component', () => {
