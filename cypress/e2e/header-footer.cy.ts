@@ -30,7 +30,7 @@ describe('Header and Footer E2E', () => {
         cy.contains('Home').should('be.visible');
         cy.contains('About').should('be.visible');
         cy.contains('Properties').should('be.visible');
-        cy.contains('Hunts').should('be.visible');
+        cy.contains('Resources').should('be.visible');
         cy.contains('Contact').should('be.visible');
       });
     });
@@ -73,7 +73,6 @@ describe('Header and Footer E2E', () => {
       cy.get('footer').within(() => {
         cy.contains('a', 'Home').should('have.attr', 'href').and('match', /\/$|\/index\.html?$/);
         cy.contains('a', 'About').should('have.attr', 'href').and('include', 'about');
-        cy.contains('a', 'Hunts').should('have.attr', 'href').and('include', 'hunts');
         cy.contains('a', 'Contact').should('have.attr', 'href').and('include', 'contact');
       });
     });

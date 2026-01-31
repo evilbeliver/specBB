@@ -36,7 +36,6 @@ export default function Footer() {
                 { href: '/about', label: 'About' },
                 { href: '/properties', label: 'Properties' },
                 { href: '/resources', label: 'Resources' },
-                { href: '/hunts', label: 'Hunts' },
                 { href: '/contact', label: 'Contact' },
               ].map((link) => (
                 <Box component="li" key={link.href} sx={{ mb: 1 }}>

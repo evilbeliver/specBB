@@ -27,7 +27,6 @@ describe('Header Component', () => {
       expect(screen.getByText(/^home$/i)).toBeInTheDocument();
       expect(screen.getByText(/^about$/i)).toBeInTheDocument();
       expect(screen.getByText(/^properties$/i)).toBeInTheDocument();
-      expect(screen.getByText(/^hunts$/i)).toBeInTheDocument();
       expect(screen.getByText(/^contact$/i)).toBeInTheDocument();
     });
 
@@ -91,13 +90,11 @@ describe('Header Component', () => {
       const homeLinks = screen.getAllByRole('link', { name: /^home$/i });
       const aboutLinks = screen.getAllByRole('link', { name: /^about$/i });
       const propertiesLinks = screen.getAllByRole('link', { name: /^properties$/i });
-      const huntsLinks = screen.getAllByRole('link', { name: /^hunts$/i });
       const contactLinks = screen.getAllByRole('link', { name: /^contact$/i });
 
       expect(homeLinks[0]).toHaveAttribute('href', '/');
       expect(aboutLinks[0]).toHaveAttribute('href', '/about');
       expect(propertiesLinks[0]).toHaveAttribute('href', '/properties');
-      expect(huntsLinks[0]).toHaveAttribute('href', '/hunts');
       expect(contactLinks[0]).toHaveAttribute('href', '/contact');
     });
   });
