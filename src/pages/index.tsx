@@ -44,6 +44,8 @@ export default function Home() {
         <Box
           component="section"
           aria-labelledby="hero-heading"
+          role="img"
+          aria-label="Buck and Beard Hunt Club hero image showing hunting grounds"
           sx={{
             position: 'relative',
             height: { xs: '400px', md: '600px' },
