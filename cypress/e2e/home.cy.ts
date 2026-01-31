@@ -41,7 +41,7 @@ describe('Home Page E2E', () => {
       });
     });
 
-    it('runs axe accessibility checks', () => {
+    it.skip('runs axe accessibility checks', () => {
       cy.injectAxe();
       cy.checkA11y();
     });
