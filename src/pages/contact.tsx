@@ -67,7 +67,7 @@ export default function Contact() {
     basePath = '';
   }
 
-  const handleInputChange = (e: React.ChangeEvent<React.HTMLInputElement | React.HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<{ name?: string; value: unknown }>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
