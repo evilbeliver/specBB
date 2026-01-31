@@ -355,10 +355,16 @@ export default function About() {
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, justifyContent: 'center' }}>
             <Typography variant="body1" sx={{ fontSize: '1.125rem' }}>
-              <strong>Email:</strong> buckandbeard@gmail.com
+              <strong>Email:</strong>{' '}
+              <a href="mailto:buckandbeard@gmail.com" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                buckandbeard@gmail.com
+              </a>
             </Typography>
             <Typography variant="body1" sx={{ fontSize: '1.125rem' }}>
-              <strong>Phone:</strong> (803) 727-5111
+              <strong>Phone:</strong>{' '}
+              <a href="tel:+18037275111" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                (803) 727-5111
+              </a>
             </Typography>
           </Box>
         </Container>
