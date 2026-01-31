@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
-const repoSubpath = '001-hunt-club-website';
+const repoSubpath = 'specBB';
 
 const nextConfig = {
   reactStrictMode: true,

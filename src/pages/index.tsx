@@ -5,7 +5,8 @@ import Footer from '../components/Footer';
 import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
 
 export default function Home() {
-  const heroImageUrl = '/heroimage.jpg';
+  const router = useRouter();
+  const heroImageUrl = `${router.basePath || ''}/heroimage.jpg`;
   
   const features = [
     {
