@@ -69,6 +69,8 @@ export default function Contact() {
 
   const handleInputChange = (e: React.ChangeEvent<{ name?: string; value: unknown }>) => {
     const { name, value } = e.target;
+    if (!name) return;
+    
     setFormData(prev => ({
       ...prev,
       [name]: value,
@@ -175,7 +177,7 @@ export default function Contact() {
                   }}
                   component={info.link ? 'a' : 'div'}
                   href={info.link || undefined}
-                  onClick={info.link ? undefined : (e) => e.preventDefault()}
+                  onClick={info.link ? undefined : (e: React.MouseEvent) => e.preventDefault()}
                 >
                   <Box
                     sx={{
