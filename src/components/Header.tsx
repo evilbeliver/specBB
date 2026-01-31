@@ -52,6 +52,9 @@ export default function Header() {
             <Button component={Link} href="/properties" color="inherit">
               Properties
             </Button>
+            <Button component={Link} href="/resources" color="inherit">
+              Resources
+            </Button>
             <Button component={Link} href="/hunts" color="inherit">
               Hunts
             </Button>
@@ -129,6 +132,20 @@ export default function Header() {
                 }}
               >
                 <ListItemText primary="Properties" />
+              </Button>
+            </ListItem>
+            <ListItem disablePadding>
+              <Button
+                component={Link}
+                href="/resources"
+                fullWidth
+                sx={{ 
+                  py: 2,
+                  justifyContent: 'center',
+                  color: 'text.primary',
+                }}
+              >
+                <ListItemText primary="Resources" />
               </Button>
             </ListItem>
             <ListItem disablePadding>
