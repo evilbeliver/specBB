@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import {
   Container,
   Typography,
@@ -83,6 +84,16 @@ const faqs = [
 ];
 
 export default function About() {
+  let basePath = '';
+  
+  try {
+    const router = useRouter();
+    basePath = router.basePath || '';
+  } catch (e) {
+    // Router not available in test environment, use default path
+    basePath = '';
+  }
+
   return (
     <>
       <Head>
@@ -161,7 +172,7 @@ export default function About() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  backgroundImage: 'url(/images/long-cane-deer.jpeg)',
+                  backgroundImage: `url(${basePath}/images/long-cane-deer.jpeg)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   position: 'relative',
@@ -267,7 +278,7 @@ export default function About() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  backgroundImage: 'url(/images/chappells-ferry-deer.jpeg)',
+                  backgroundImage: `url(${basePath}/images/chappells-ferry-deer.jpeg)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   position: 'relative',
