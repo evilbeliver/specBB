@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import {
   Container,
   Typography,
@@ -107,16 +108,57 @@ export default function Properties() {
 
   return (
     <>
-      <Header />
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h2" component="h1" gutterBottom align="center" sx={{ mb: 2 }}>
-          Our Properties
-        </Typography>
-        <Typography variant="h6" component="p" align="center" color="text.secondary" sx={{ mb: 6 }}>
-          Explore our premium hunting properties across the region
-        </Typography>
+      <Head>
+        <title>Properties | Buck & Beard Hunt Club</title>
+        <meta 
+          name="description" 
+          content="Explore Buck & Beard Hunt Club's 5 premium hunting properties across South Carolina, totaling over 2,600 acres of prime deer and turkey hunting land." 
+        />
+      </Head>
 
-        <Grid container spacing={4}>
+      <Header />
+      
+      <main>
+        {/* Hero Section */}
+        <Box
+          sx={{
+            bgcolor: 'primary.main',
+            color: 'white',
+            py: { xs: 8, md: 12 },
+            textAlign: 'center',
+          }}
+        >
+          <Container maxWidth="lg">
+            <Typography
+              variant="h1"
+              component="h1"
+              gutterBottom
+              sx={{
+                fontSize: { xs: '2.5rem', md: '3.5rem' },
+                fontWeight: 700,
+                mb: 2,
+              }}
+            >
+              Our Properties
+            </Typography>
+            <Typography
+              variant="h5"
+              component="p"
+              sx={{
+                maxWidth: 800,
+                mx: 'auto',
+                fontSize: { xs: '1.25rem', md: '1.5rem' },
+                opacity: 0.9,
+              }}
+            >
+              Explore our premium hunting properties across South Carolina, totaling over 2,600 acres of prime hunting land
+            </Typography>
+          </Container>
+        </Box>
+
+        {/* Properties Grid */}
+        <Container maxWidth="lg" sx={{ py: 8 }}>
+          <Grid container spacing={4}>
           {properties.map((property) => (
             <Grid item key={property.id} xs={12} sm={6} md={4}>
               <Card
@@ -244,6 +286,7 @@ export default function Properties() {
           </>
         )}
       </Dialog>
+      </main>
 
       <Footer />
     </>
