@@ -10,7 +10,8 @@ export default function Header() {
   let basePath = '';
   try {
     const router = useRouter();
-    basePath = router.basePath || '';
+    // Only use basePath in production
+    basePath = process.env.NODE_ENV === 'production' ? (router.basePath || '') : '';
   } catch (e) {
     // Router not available in test environment
     basePath = '';
