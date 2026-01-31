@@ -1,21 +1,24 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { AppBar, Toolbar, Typography, Button, Container, Box, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const router = useRouter();
+  const basePath = router.basePath || '';
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const navItems = [
-    { label: 'Home', href: '/', current: true },
-    { label: 'About', href: '/about' },
-    { label: 'Properties', href: '/properties' },
-    { label: 'Hunts', href: '/hunts' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Home', href: `${basePath}/`, current: true },
+    { label: 'About', href: `${basePath}/about` },
+    { label: 'Properties', href: `${basePath}/properties` },
+    { label: 'Hunts', href: `${basePath}/hunts` },
+    { label: 'Contact', href: `${basePath}/contact` },
   ];
 
   return (
@@ -23,7 +26,7 @@ export default function Header() {
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link href={`${basePath}/`} passHref style={{ textDecoration: 'none', color: 'inherit' }}>
               <Typography
                 variant="h6"
                 component="div"
