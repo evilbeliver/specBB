@@ -2,142 +2,206 @@ import { screen } from '@testing-library/react';
 import { axe } from 'jest-axe';
 
 /**
- * Comprehensive quality test suite for all pages
+ * Comprehensive quality test suite utilities for all pages
  * Ensures consistent accessibility, SEO, and performance standards
  */
-export const runQualityTests = async (container: HTMLElement, pageName: string) => {
-  // Accessibility Tests
-  describe(`${pageName} - Accessibility Quality`, () => {
-    it('has no accessibility violations', async () => {
-      const results = await axe(container);
-      expect(results).toHaveNoViolations();
-    });
 
-    it('has proper heading hierarchy', () => {
-      const headings = Array.from(container.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-      if (headings.length > 0) {
-        expect(headings[0].tagName).toBe('H1');
-        
-        // Ensure no heading levels are skipped
-        const levels = headings.map(h => parseInt(h.tagName.charAt(1)));
-        for (let i = 1; i < levels.length; i++) {
-          expect(levels[i] - levels[i-1]).toBeLessThanOrEqual(1);
-        }
-      }
-    });
+/**
+ * Run accessibility tests on a container
+ */
+export const runAccessibilityTests = async (container: Element) => {
+  const results = await axe(container);
+  return results;
+};
 
-    it('has proper landmark structure', () => {
-      expect(screen.getByRole('main')).toBeInTheDocument();
-      expect(screen.getByRole('navigation')).toBeInTheDocument();
-      expect(screen.getByRole('contentinfo')).toBeInTheDocument();
-    });
+/**
+ * Check heading hierarchy in container
+ */
+export const checkHeadingHierarchy = (container: Element) => {
+  const headings = Array.from(container.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+  
+  if (headings.length === 0) return { valid: true, message: 'No headings found' };
+  
+  // First heading should be H1
+  if (headings[0].tagName !== 'H1') {
+    return { valid: false, message: 'First heading should be H1' };
+  }
+  
+  // Ensure no heading levels are skipped
+  const levels = headings.map(h => parseInt(h.tagName.charAt(1)));
+  for (let i = 1; i < levels.length; i++) {
+    if (levels[i] - levels[i-1] > 1) {
+      return { valid: false, message: `Heading level skipped: from H${levels[i-1]} to H${levels[i]}` };
+    }
+  }
+  
+  return { valid: true, message: 'Heading hierarchy is correct' };
+};
 
-    it('has accessible images', () => {
-      const images = screen.getAllByRole('img');
-      images.forEach(img => {
-        expect(img).toHaveAttribute('alt');
-        const altText = img.getAttribute('alt');
-        expect(altText).not.toBe('');
-      });
-    });
+/**
+ * Check for proper landmark structure
+ */
+export const checkLandmarks = () => {
+  try {
+    const main = screen.getByRole('main');
+    const nav = screen.getByRole('navigation');
+    const footer = screen.getByRole('contentinfo');
+    
+    return {
+      valid: true,
+      landmarks: { main: !!main, nav: !!nav, footer: !!footer }
+    };
+  } catch (error) {
+    return {
+      valid: false,
+      message: 'Missing required landmarks',
+      error: error instanceof Error ? error.message : 'Unknown error'
+    };
+  }
+};
 
-    it('has accessible links', () => {
-      const links = screen.getAllByRole('link');
-      links.forEach(link => {
-        const linkText = link.textContent || link.getAttribute('aria-label');
-        expect(linkText).toBeTruthy();
-      });
-    });
+/**
+ * Check image accessibility
+ */
+export const checkImageAccessibility = (container: Element) => {
+  const images = container.querySelectorAll('img');
+  const issues: string[] = [];
+  
+  images.forEach((img, index) => {
+    const alt = img.getAttribute('alt');
+    if (alt === null) {
+      issues.push(`Image ${index + 1} missing alt attribute`);
+    } else if (alt.trim() === '') {
+      issues.push(`Image ${index + 1} has empty alt text`);
+    }
   });
+  
+  return {
+    valid: issues.length === 0,
+    issues,
+    totalImages: images.length
+  };
+};
 
-  // Performance & Quality Tests
-  describe(`${pageName} - Performance Quality`, () => {
-    it('renders without errors', () => {
-      expect(container).toBeTruthy();
-      expect(container.children.length).toBeGreaterThan(0);
-    });
-
-    it('has semantic HTML structure', () => {
-      const semanticElements = container.querySelectorAll(
-        'main, section, article, nav, header, footer, aside'
-      );
-      expect(semanticElements.length).toBeGreaterThan(0);
-    });
-
-    it('has no empty headings', () => {
-      const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      headings.forEach(heading => {
-        expect(heading.textContent?.trim()).toBeTruthy();
-      });
-    });
-
-    it('has proper focus management', () => {
-      const focusableElements = container.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      // Ensure focusable elements exist for interactive pages
-      if (focusableElements.length > 0) {
-        focusableElements.forEach(element => {
-          expect(element).not.toHaveAttribute('tabindex', '-1');
-        });
-      }
-    });
+/**
+ * Check link accessibility
+ */
+export const checkLinkAccessibility = (container: Element) => {
+  const links = container.querySelectorAll('a');
+  const issues: string[] = [];
+  
+  links.forEach((link, index) => {
+    const linkText = link.textContent?.trim() ||
+                    link.getAttribute('aria-label') ||
+                    link.getAttribute('title');
+    
+    if (!linkText) {
+      issues.push(`Link ${index + 1} has no accessible name`);
+    }
   });
+  
+  return {
+    valid: issues.length === 0,
+    issues,
+    totalLinks: links.length
+  };
 };
 
 /**
  * Test for proper responsive design elements
  */
-export const testResponsiveDesign = (container: HTMLElement) => {
-  // Check for responsive images
+export const checkResponsiveDesign = (container: Element) => {
   const images = container.querySelectorAll('img');
-  images.forEach(img => {
-    // Images should have proper sizing attributes or CSS classes
-    const hasResponsiveClass = img.className.includes('responsive') || 
+  const issues: string[] = [];
+  
+  images.forEach((img, index) => {
+    const hasResponsiveClass = img.className.includes('responsive') ||
                                img.style.maxWidth === '100%' ||
                                img.hasAttribute('sizes');
-    expect(hasResponsiveClass || img.getAttribute('width') || img.getAttribute('height')).toBeTruthy();
+    
+    const hasFixedDimensions = img.getAttribute('width') || img.getAttribute('height');
+    
+    if (!hasResponsiveClass && !hasFixedDimensions) {
+      issues.push(`Image ${index + 1} may not be responsive`);
+    }
   });
+  
+  return {
+    valid: issues.length === 0,
+    issues,
+    totalImages: images.length
+  };
 };
 
 /**
- * Test for proper SEO elements
+ * Check SEO elements
  */
-export const testSEOElements = () => {
-  // These tests verify the structure exists
-  // Next.js handles the actual meta tag injection
+export const checkSEOElements = (container: Element) => {
+  const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  const h1Elements = container.querySelectorAll('h1');
   
-  it('has proper document structure for SEO', () => {
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    expect(headings.length).toBeGreaterThan(0);
-    
-    // Should have exactly one H1
-    const h1Elements = document.querySelectorAll('h1');
-    expect(h1Elements.length).toBe(1);
-  });
+  return {
+    hasHeadings: headings.length > 0,
+    h1Count: h1Elements.length,
+    hasUniqueH1: h1Elements.length === 1,
+    h1Text: h1Elements[0]?.textContent?.trim() || null
+  };
 };
 
 /**
  * Utility to test form accessibility (when forms are present)
  */
-export const testFormAccessibility = (container: HTMLElement) => {
+export const checkFormAccessibility = (container: Element) => {
   const forms = container.querySelectorAll('form');
+  const issues: string[] = [];
   
-  forms.forEach(form => {
+  forms.forEach((form, formIndex) => {
     const inputs = form.querySelectorAll('input, select, textarea');
     
-    inputs.forEach(input => {
-      // Each input should have a label or aria-label
+    inputs.forEach((input, inputIndex) => {
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
       
+      let hasLabel = false;
+      
       if (id) {
         const label = form.querySelector(`label[for="${id}"]`);
-        expect(label || ariaLabel || ariaLabelledBy).toBeTruthy();
-      } else {
-        expect(ariaLabel || ariaLabelledBy).toBeTruthy();
+        hasLabel = !!label;
+      }
+      
+      if (!hasLabel && !ariaLabel && !ariaLabelledBy) {
+        issues.push(`Form ${formIndex + 1}, Input ${inputIndex + 1} has no accessible label`);
       }
     });
   });
+  
+  return {
+    valid: issues.length === 0,
+    issues,
+    totalForms: forms.length
+  };
+};
+
+/**
+ * Run all quality checks
+ */
+export const runAllQualityChecks = async (container: Element) => {
+  const [accessibilityResults] = await Promise.all([
+    runAccessibilityTests(container)
+  ]);
+  
+  return {
+    accessibility: {
+      violations: accessibilityResults.violations,
+      hasViolations: accessibilityResults.violations.length > 0
+    },
+    headingHierarchy: checkHeadingHierarchy(container),
+    landmarks: checkLandmarks(),
+    images: checkImageAccessibility(container),
+    links: checkLinkAccessibility(container),
+    responsive: checkResponsiveDesign(container),
+    seo: checkSEOElements(container),
+    forms: checkFormAccessibility(container)
+  };
 };

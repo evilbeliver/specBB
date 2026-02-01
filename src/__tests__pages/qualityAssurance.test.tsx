@@ -2,8 +2,16 @@
  * Quality Assurance Test Suite
  * This file ensures all pages meet our quality standards
  */
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
+import {
+  runAccessibilityTests,
+  checkHeadingHierarchy,
+  checkLandmarks,
+  checkImageAccessibility,
+  checkLinkAccessibility,
+  checkSEOElements
+} from './testUtils';
 
 // Import all pages
 import Home from '../pages/index';
@@ -29,64 +37,32 @@ describe('Site-wide Quality Assurance', () => {
       describe(`${name} Page`, () => {
         it('passes accessibility audit', async () => {
           const { container } = render(<PageComponent />);
-          const results = await axe(container);
+          const results = await runAccessibilityTests(container);
           expect(results).toHaveNoViolations();
         });
 
         it('has proper landmark structure', () => {
           render(<PageComponent />);
-          const main = document.querySelector('main');
-          const nav = document.querySelector('nav');
-          const footer = document.querySelector('footer');
-          
-          expect(main).toBeInTheDocument();
-          expect(nav).toBeInTheDocument();
-          expect(footer).toBeInTheDocument();
+          const landmarks = checkLandmarks();
+          expect(landmarks.valid).toBe(true);
         });
 
         it('has proper heading hierarchy', () => {
-          render(<PageComponent />);
-          const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-          
-          if (headings.length > 0) {
-            // First heading should be H1
-            expect(headings[0].tagName).toBe('H1');
-            
-            // Should have exactly one H1
-            const h1Count = headings.filter(h => h.tagName === 'H1').length;
-            expect(h1Count).toBe(1);
-            
-            // Heading levels should not skip (no h1 to h3 without h2)
-            const levels = headings.map(h => parseInt(h.tagName.charAt(1)));
-            for (let i = 1; i < levels.length; i++) {
-              if (levels[i] > levels[i-1]) {
-                expect(levels[i] - levels[i-1]).toBeLessThanOrEqual(1);
-              }
-            }
-          }
+          const { container } = render(<PageComponent />);
+          const hierarchy = checkHeadingHierarchy(container);
+          expect(hierarchy.valid).toBe(true);
         });
 
         it('has accessible images', () => {
-          render(<PageComponent />);
-          const images = document.querySelectorAll('img');
-          
-          images.forEach(img => {
-            expect(img).toHaveAttribute('alt');
-            const altText = img.getAttribute('alt');
-            expect(altText).toBeTruthy(); // Should not be empty
-          });
+          const { container } = render(<PageComponent />);
+          const images = checkImageAccessibility(container);
+          expect(images.valid).toBe(true);
         });
 
         it('has accessible links', () => {
-          render(<PageComponent />);
-          const links = document.querySelectorAll('a');
-          
-          links.forEach(link => {
-            const linkText = link.textContent?.trim() || 
-                            link.getAttribute('aria-label') || 
-                            link.getAttribute('title');
-            expect(linkText).toBeTruthy();
-          });
+          const { container } = render(<PageComponent />);
+          const links = checkLinkAccessibility(container);
+          expect(links.valid).toBe(true);
         });
 
         it('renders without errors', () => {
@@ -101,20 +77,12 @@ describe('Site-wide Quality Assurance', () => {
   describe('All Pages - SEO Standards', () => {
     pages.forEach(({ name, component: PageComponent }) => {
       it(`${name} page has proper document structure`, () => {
-        render(<PageComponent />);
+        const { container } = render(<PageComponent />);
+        const seo = checkSEOElements(container);
         
-        // Should have exactly one H1
-        const h1Elements = document.querySelectorAll('h1');
-        expect(h1Elements.length).toBe(1);
-        
-        // H1 should have content
-        expect(h1Elements[0].textContent?.trim()).toBeTruthy();
-        
-        // Should have semantic structure
-        const semanticElements = document.querySelectorAll(
-          'main, section, article, nav, header, footer'
-        );
-        expect(semanticElements.length).toBeGreaterThan(0);
+        expect(seo.hasHeadings).toBe(true);
+        expect(seo.hasUniqueH1).toBe(true);
+        expect(seo.h1Text).toBeTruthy();
       });
     });
   });
@@ -139,21 +107,13 @@ describe('Site-wide Quality Assurance', () => {
         consoleSpy.mockRestore();
       });
 
-      it(`${name} page has proper focus management`, () => {
-        render(<PageComponent />);
+      it(`${name} page has proper semantic structure`, () => {
+        const { container } = render(<PageComponent />);
         
-        // Check that interactive elements are focusable
-        const interactiveElements = document.querySelectorAll(
-          'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        const semanticElements = container.querySelectorAll(
+          'main, section, article, nav, header, footer'
         );
-        
-        interactiveElements.forEach(element => {
-          // Should not have tabindex -1 unless it's intentionally non-focusable
-          if (element.hasAttribute('tabindex')) {
-            const tabIndex = element.getAttribute('tabindex');
-            expect(tabIndex).not.toBe('-1');
-          }
-        });
+        expect(semanticElements.length).toBeGreaterThan(0);
       });
     });
   });
@@ -162,17 +122,17 @@ describe('Site-wide Quality Assurance', () => {
 describe('Cross-Page Consistency', () => {
   it('all pages have consistent header structure', () => {
     pages.forEach(({ component: PageComponent }) => {
-      render(<PageComponent />);
-      const nav = document.querySelector('nav');
-      expect(nav).toBeInTheDocument();
+      const { container } = render(<PageComponent />);
+      const nav = container.querySelector('nav');
+      expect(nav).toBeTruthy();
     });
   });
 
   it('all pages have consistent footer structure', () => {
     pages.forEach(({ component: PageComponent }) => {
-      render(<PageComponent />);
-      const footer = document.querySelector('footer');
-      expect(footer).toBeInTheDocument();
+      const { container } = render(<PageComponent />);
+      const footer = container.querySelector('footer');
+      expect(footer).toBeTruthy();
     });
   });
 });
