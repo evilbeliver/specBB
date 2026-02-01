@@ -36,6 +36,12 @@ describe('Home Page', () => {
       expect(screen.getByText(/family friendly atmosphere/i)).toBeInTheDocument();
       expect(screen.getByText(/camping available/i)).toBeInTheDocument();
     });
+
+    it('renders hero image with proper accessibility', () => {
+      render(<Home />);
+      // Check for background image accessibility description
+      expect(screen.getByText(/background image shows scenic hunting grounds/i)).toBeInTheDocument();
+    });
   });
 
   describe('Accessibility', () => {
@@ -66,21 +72,46 @@ describe('Home Page', () => {
       expect(screen.getByRole('heading', { name: /about our club/i })).toHaveAttribute('id', 'about-heading');
       expect(screen.getByRole('heading', { name: /what we offer/i })).toHaveAttribute('id', 'features-heading');
     });
+
+    it('has proper navigation structure', () => {
+      render(<Home />);
+      const nav = screen.getByRole('navigation');
+      expect(nav).toBeInTheDocument();
+    });
+
+    it('has proper landmark structure', () => {
+      render(<Home />);
+      expect(screen.getByRole('main')).toBeInTheDocument();
+      expect(screen.getByRole('navigation')).toBeInTheDocument();
+      expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+    });
+  });
   });
 
-  describe('SEO', () => {
-    it('has a title in Head component', () => {
+  describe('SEO & Quality', () => {
+    it('renders without errors', () => {
       const { container } = render(<Home />);
-      // Next.js Head component is rendered but title is managed by Next.js
-      // We can verify the component renders without errors
       expect(container).toBeTruthy();
     });
 
-    it('has a meta description in Head component', () => {
-      const { container } = render(<Home />);
-      // Next.js Head component is rendered but meta tags are managed by Next.js
-      // We can verify the component renders without errors
-      expect(container).toBeTruthy();
+    it('has semantic HTML structure', () => {
+      render(<Home />);
+      expect(screen.getByRole('main')).toBeInTheDocument();
+      expect(screen.getByRole('navigation')).toBeInTheDocument();
+      expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+    });
+
+    it('has proper section structure', () => {
+      render(<Home />);
+      const main = screen.getByRole('main');
+      const sections = main.querySelectorAll('section');
+      expect(sections.length).toBeGreaterThan(0);
+    });
+
+    it('has feature cards with proper structure', () => {
+      render(<Home />);
+      const featureCards = screen.getAllByRole('listitem');
+      expect(featureCards.length).toBe(3);
     });
   });
 });
