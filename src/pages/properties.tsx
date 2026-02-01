@@ -50,7 +50,7 @@ const properties: Property[] = [
     name: 'Chappells Ferry Property',
     location: 'Saluda County',
     acreage: 766,
-    description: 'Our Chappells Ferry Tract is roughly 766 acres broken up into 4 different areas with diverse terrain including hardwoods, pine stands, and creek bottoms.',
+    description: 'Our Chappells Ferry Tract is roughly 766 acres broken up into 4 different areas with diverse terrain.',
     features: ['Deer', 'Turkey', 'Rabbits', 'Quail', 'Food Plots', 'Creek Bottoms', 'Pigs'],
     image: 'images/chappells-ferry-deer.png',
     fullDescription:
