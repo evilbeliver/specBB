@@ -38,8 +38,8 @@ const properties: Property[] = [
     name: 'Long Cane Property',
     location: 'Edgefield County',
     acreage: 675,
-    description: 'Our Long Cane Tract,is roughly 675 acres with a mix of hardwoods, pine stands, clear cuts and creek bottoms.',
-    features: ['Deer', 'Turkey', 'Rabbits', 'Quail','Food Plots', 'Clear Cuts', 'Camping'],
+    description: 'Our Long Cane Tract is roughly 675 acres with a mix of hardwoods, pine stands, clear cuts and creek bottoms.',
+    features: ['Deer', 'Turkey', 'Rabbits', 'Quail', 'Food Plots', 'Clear Cuts', 'Camping'],
     image: 'images/long-cane-deer.jpg',
     fullDescription:
       'Our Long Cane Tract, aka Edgefield Tract, is located off of Long Cane Rd (State HWy S-19-21) in Edgefield County. The main check in and parking areas are located across the street from a white house. This roughly 675 acre property has 30+ permanant stand locations with a mix of hardwoods, pine stands, and creek bottoms. We have multiple food plots throughout the property to help attract and retain the deer and turkey. We are also starting to see a comeback of wild quail as well. Camping is allowed on this property (campers, tents), but there are no hookups.',
@@ -51,7 +51,7 @@ const properties: Property[] = [
     location: 'Saluda County',
     acreage: 766,
     description: 'Our Chappells Ferry Tract is roughly 766 acres broken up into 4 different areas with diverse terrain including hardwoods, pine stands, and creek bottoms.',
-    features: ['Deer', 'Turkey', 'Rabbits', 'Quail', 'Food Plots', 'Creek Bottoms'],
+    features: ['Deer', 'Turkey', 'Rabbits', 'Quail', 'Food Plots', 'Creek Bottoms', 'Pigs'],
     image: 'images/chappells-ferry-deer.png',
     fullDescription:
       'Our Chappells Ferry Tract is located off of Old Chappells Ferry Rd, and Pinckney Road. The main check in and parking area is located off of Pinckney Rd. This roughly 766 acre property has 30+ stands and is broken up into 4 differnet areas with roughly 250 acres being off of Country Pond Rd. This property has some of the larger foodplots on the property as you can see in the picture with a few smaller ones as well. This property has great deer, turky and some wild pig opportunities as well. We are seeing more quail also show up on this property as well.',
@@ -62,8 +62,8 @@ const properties: Property[] = [
     name: 'Hollywood Property',
     location: 'Saluda County',
     acreage: 520,
-    description: 'Our Hollywood Tract is 520 acre, property with a mix of hardwoods, pine stands, and creek bottoms with multiple smaller food plots throughout the property.',
-    features: ['Deer', 'Turkey', 'Food Plots', 'Pigs'],
+    description: 'Our Hollywood Tract is 520 acres with a mix of hardwoods, pine stands, and creek bottoms with multiple smaller food plots throughout the property.',
+    features: ['Deer', 'Turkey', 'Food Plots', 'Pigs', 'Creek Bottoms', 'Pine Stands'],
     image: 'images/hollywood-deer.jpg',
     fullDescription:
       'Our Hollywood Tract is located off of Old Town Road. The main parking and check in area is at the end of the road on the left hand side. We are the first drive way with a large red gate. The property spans both sides of the road as well as part of Crossroad Church Road. This 520 acre property has 20+ permanant stand locations with a mix of hardwoods, pine stands, and creek bottoms. We have multiple smaller food plots throughout the property to help attract and retain the deer and turkey. This property is also known to have pigs around as well.',
