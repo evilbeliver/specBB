@@ -88,7 +88,7 @@ const properties: Property[] = [
     acreage: 275,
     description: 'Our Piney Wood Tract is 130 acre property has 12+ stands and has a few food plots on the property..',
     features: ['Deer', 'Turkey',],
-    image: 'images/piney-wood-deer.jpeg',
+    image: 'images/piney-wood-deer.jpg',
     fullDescription:
       'Our Piney Wood Tract is located around the corner from our Hollywood Tract and is off of Pineywood Rd. The main check in area is located across the streat from a farm and house. This roughly 130 acre property has 12+ stands and has a few food plots on the property.',
     mapLink: 'https://maps.app.goo.gl/cHvK85Uecx5Hq6Af8',
