@@ -277,7 +277,7 @@ export default function About() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  backgroundImage: `url(${basePath}/images/chappells-ferry-deer.jpeg)`,
+                  backgroundImage: `url(${basePath}/images/about-deer-rifle.png)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   position: 'relative',
