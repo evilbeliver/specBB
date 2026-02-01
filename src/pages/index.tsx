@@ -5,14 +5,14 @@ import Footer from '../components/Footer';
 import { Box, Container, Typography, Grid, Card, CardContent } from '@mui/material';
 
 export default function Home() {
-  let heroImageUrl = '/heroimage.jpg';
+  let heroImageUrl = '/heroimage.png';
   
   try {
     const router = useRouter();
-    heroImageUrl = `${router.basePath || ''}/heroimage.jpg`;
+    heroImageUrl = `${router.basePath || ''}/heroimage.png`;
   } catch {
     // Router not available in test environment, use default path
-    heroImageUrl = '/heroimage.jpg';
+    heroImageUrl = '/heroimage.png';
   }
   
   const features = [
