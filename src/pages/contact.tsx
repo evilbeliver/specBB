@@ -387,7 +387,7 @@ export default function Contact() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundImage: `url(${basePath}/images/hollywood-deer.jpeg)`,
+              backgroundImage: `url(${basePath}/images/hollywood-deer.jpg)`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               position: 'relative',
