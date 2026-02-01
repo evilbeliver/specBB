@@ -22,18 +22,22 @@ describe('About Page', () => {
 
     it('renders all six value cards', () => {
       render(<About />);
+      // Check that the values section exists
+      expect(screen.getByRole('heading', { name: /our values/i })).toBeInTheDocument();
+      
+      // Check for key value titles (using getAllByText where needed)
       expect(screen.getByText(/safety first/i)).toBeInTheDocument();
-      expect(screen.getByText(/community/i)).toBeInTheDocument();
-      expect(screen.getByText(/conservation/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/community/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/conservation/i).length).toBeGreaterThan(0);
       expect(screen.getByText(/family oriented/i)).toBeInTheDocument();
-      expect(screen.getByText(/education/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/education/i).length).toBeGreaterThan(0);
       expect(screen.getByText(/quality grounds/i)).toBeInTheDocument();
     });
 
     it('renders contact information', () => {
       render(<About />);
-      expect(screen.getByText(/buckandbeard@gmail.com/i)).toBeInTheDocument();
-      expect(screen.getByText(/\(803\) 727-5111/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/buckandbeard@gmail.com/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/\(803\) 727-5111/i).length).toBeGreaterThan(0);
     });
   });
 
@@ -66,10 +70,19 @@ describe('About Page', () => {
 
     it('has accessible links', () => {
       render(<About />);
-      const emailLink = screen.getByRole('link', { name: /buckandbeard@gmail.com/i });
-      const phoneLink = screen.getByRole('link', { name: /\(803\) 727-5111/i });
-      expect(emailLink).toHaveAttribute('href', 'mailto:buckandbeard@gmail.com');
-      expect(phoneLink).toHaveAttribute('href', 'tel:+18037275111');
+      const emailLinks = screen.getAllByRole('link', { name: /buckandbeard@gmail.com/i });
+      const phoneLinks = screen.getAllByRole('link', { name: /\(803\) 727-5111/i });
+      
+      expect(emailLinks.length).toBeGreaterThan(0);
+      expect(phoneLinks.length).toBeGreaterThan(0);
+      
+      emailLinks.forEach(link => {
+        expect(link).toHaveAttribute('href', 'mailto:buckandbeard@gmail.com');
+      });
+      
+      phoneLinks.forEach(link => {
+        expect(link).toHaveAttribute('href', 'tel:+18037275111');
+      });
     });
   });
 

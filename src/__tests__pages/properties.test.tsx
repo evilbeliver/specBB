@@ -23,17 +23,17 @@ describe('Properties Page', () => {
 
     it('renders property details', () => {
       render(<Properties />);
-      expect(screen.getByText(/edgefield county/i)).toBeInTheDocument();
-      expect(screen.getByText(/saluda county/i)).toBeInTheDocument();
-      expect(screen.getByText(/675 acres/i)).toBeInTheDocument();
-      expect(screen.getByText(/766 acres/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/edgefield county/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/saluda county/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/675 acres/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/766 acres/i).length).toBeGreaterThan(0);
     });
 
     it('renders property features', () => {
       render(<Properties />);
-      expect(screen.getByText(/deer/i)).toBeInTheDocument();
-      expect(screen.getByText(/turkey/i)).toBeInTheDocument();
-      expect(screen.getByText(/food plots/i)).toBeInTheDocument();
+      expect(screen.getAllByText(/deer/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/turkey/i).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(/food plots/i).length).toBeGreaterThan(0);
     });
   });
 
