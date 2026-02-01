@@ -58,7 +58,7 @@ export default [
   },
   {
     // Test files configuration
-    files: ['**/__tests__/**/*.{js,jsx,ts,tsx}', '**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}'],
+    files: ['**/__tests__/**/*.{js,jsx,ts,tsx}', '**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}', '**/testUtils.{js,ts}'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -85,6 +85,9 @@ export default [
         HTMLElement: 'readonly',
         Element: 'readonly',
         Node: 'readonly',
+        DocumentFragment: 'readonly',
+        NodeList: 'readonly',
+        HTMLCollection: 'readonly',
         // Node/React globals
         React: 'readonly',
         JSX: 'readonly',

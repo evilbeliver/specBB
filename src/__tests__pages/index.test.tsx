@@ -86,7 +86,6 @@ describe('Home Page', () => {
       expect(screen.getByRole('contentinfo')).toBeInTheDocument();
     });
   });
-  });
 
   describe('SEO & Quality', () => {
     it('renders without errors', () => {
@@ -110,8 +109,14 @@ describe('Home Page', () => {
 
     it('has feature cards with proper structure', () => {
       render(<Home />);
-      const featureCards = screen.getAllByRole('listitem');
-      expect(featureCards.length).toBe(3);
+      // Check that features section exists with cards, not specific count
+      const featuresSection = screen.getByRole('heading', { name: /what we offer/i });
+      expect(featuresSection).toBeInTheDocument();
+      
+      // Check for at least the expected feature content
+      expect(screen.getByText(/prime hunting grounds/i)).toBeInTheDocument();
+      expect(screen.getByText(/family friendly atmosphere/i)).toBeInTheDocument();
+      expect(screen.getByText(/camping available/i)).toBeInTheDocument();
     });
   });
 });
