@@ -52,7 +52,7 @@ const properties: Property[] = [
     acreage: 766,
     description: 'Our Chappells Ferry Tract is roughly 766 acre property broken up into 4 differnet areas.',
     features: ['Deer', 'Turkey', 'Rabbits', 'Quail', 'Food Plots', 'Creek Bottoms'],
-    image: 'images/chappells-ferry-deer.jpeg',
+    image: 'images/chappells-ferry-deer.png',
     fullDescription:
       'Our Chappells Ferry Tract is located off of Old Chappells Ferry Rd, and Pinckney Road. The main check in and parking area is located off of Pinckney Rd. This roughly 766 acre property has 30+ stands and is broken up into 4 differnet areas with roughly 250 acres being off of Country Pond Rd. This property has some of the larger foodplots on the property as you can see in the picture with a few smaller ones as well. This property has great deer, turky and some wild pig opportunities as well. We are seeing more quail also show up on this property as well.',
     mapLink: 'https://maps.app.goo.gl/Lx3N1cWP3Vm86DCu6',
