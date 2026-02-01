@@ -40,7 +40,7 @@ const properties: Property[] = [
     acreage: 675,
     description: 'Our Long Cane Tract,is roughly 675 acres with a mix of hardwoods, pine stands, clear cuts and creek bottoms.',
     features: ['Deer', 'Turkey', 'Rabbits', 'Quail','Food Plots', 'Clear Cuts', 'Camping'],
-    image: 'images/long-cane-deer.jpeg',
+    image: 'images/long-cane-deer.jpg',
     fullDescription:
       'Our Long Cane Tract, aka Edgefield Tract, is located off of Long Cane Rd (State HWy S-19-21) in Edgefield County. The main check in and parking areas are located across the street from a white house. This roughly 675 acre property has 30+ permanant stand locations with a mix of hardwoods, pine stands, and creek bottoms. We have multiple food plots throughout the property to help attract and retain the deer and turkey. We are also starting to see a comeback of wild quail as well. Camping is allowed on this property (campers, tents), but there are no hookups.',
     mapLink: 'https://maps.app.goo.gl/TkEnAkVd1ZZVN9XY7',

@@ -171,7 +171,7 @@ export default function About() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  backgroundImage: `url(${basePath}/images/long-cane-deer.jpeg)`,
+                  backgroundImage: `url(${basePath}/images/long-cane-deer.jpg)`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   position: 'relative',
