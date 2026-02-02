@@ -1,8 +1,14 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages - TEMPORARILY DISABLED
 
 on:
-  push:
-    branches: [main, 001-hunt-club-website]
+  # Temporarily disabled to clear stuck queue
+  workflow_dispatch:
+    inputs:
+      force_deploy:
+        description: 'Force deploy despite being disabled'
+        required: true
+        default: 'false'
+        type: boolean
   workflow_dispatch:
 
 permissions:

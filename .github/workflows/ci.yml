@@ -1,10 +1,14 @@
-name: CI
+name: CI - TEMPORARILY DISABLED
 
 on:
-  push:
-    branches: [main, '001-hunt-club-website', 'develop', 'feature/*']
-  pull_request:
-    branches: [main, '001-hunt-club-website']
+  # Temporarily disabled to clear stuck queue
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Force run CI despite being disabled'
+        required: true
+        default: 'false'
+        type: boolean
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}

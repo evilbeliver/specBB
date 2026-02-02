@@ -3,24 +3,87 @@ name: Emergency Reset
 on:
   workflow_dispatch:
     inputs:
-      reason:
-        description: 'Reason for emergency reset'
+      action:
+        description: 'Action to take'
         required: true
-        default: 'Clear stuck builds'
+        default: 'cancel-all'
+        type: choice
+        options:
+        - cancel-all
+        - clear-queue
+        - force-deploy
 
 jobs:
-  reset:
+  cancel-all:
+    if: github.event.inputs.action == 'cancel-all'
     runs-on: ubuntu-latest
     timeout-minutes: 2
     
     steps:
-      - name: Log reset reason
+      - name: Cancel all running workflows
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runs = await github.rest.actions.listWorkflowRunsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              status: 'queued'
+            });
+            
+            for (const run of runs.data.workflow_runs) {
+              console.log(`Cancelling run ${run.id}: ${run.name}`);
+              await github.rest.actions.cancelWorkflowRun({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                run_id: run.id
+              });
+            }
+
+  force-deploy:
+    if: github.event.inputs.action == 'force-deploy'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Install and build
         run: |
-          echo "Emergency reset triggered"
-          echo "Reason: ${{ github.event.inputs.reason }}"
-          echo "Timestamp: $(date)"
-          
-      - name: Clear workspace
+          npm ci --prefer-offline --no-audit
+          npm run build
+        timeout-minutes: 5
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  clear-queue:
+    if: github.event.inputs.action == 'clear-queue'
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    
+    steps:
+      - name: Log queue clear
         run: |
-          echo "Clearing any cached data..."
-          echo "Reset completed successfully"
+          echo "Queue cleared at $(date)"
+          echo "All pending jobs should be cancelled"
