@@ -1,0 +1,41 @@
+name: Simple CI
+
+on:
+  push:
+    branches: [main, '001-hunt-club-website']
+  pull_request:
+    branches: [main, '001-hunt-club-website']
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit
+        timeout-minutes: 3
+      
+      - name: Lint
+        run: npm run lint
+        timeout-minutes: 2
+      
+      - name: Test
+        run: npm test
+        timeout-minutes: 5
+      
+      - name: Build
+        run: npm run build
+        timeout-minutes: 3
+        
+      - name: Verify build output
+        run: ls -la out/

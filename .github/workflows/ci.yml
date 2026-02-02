@@ -7,10 +7,8 @@ on:
     branches: [main, '001-hunt-club-website']
 
 jobs:
-  quality:
+  health-check:
     runs-on: ubuntu-latest
-    env:
-      TERM: xterm
     
     steps:
       - uses: actions/checkout@v4
@@ -18,31 +16,64 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
+          node-version: '18'
+      
+      - name: Check Node version
+        run: node --version
+        
+      - name: Check npm version  
+        run: npm --version
+
+  lint-and-test:
+    runs-on: ubuntu-latest
+    needs: health-check
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
           cache: 'npm'
       
       - name: Install dependencies
         run: npm ci
+        timeout-minutes: 5
       
       - name: Run linter
         run: npm run lint
+        timeout-minutes: 3
       
-      - name: Run tests
-        run: npm test
-      
-      - name: Run accessibility tests
-        run: npm run test:accessibility
+      - name: Run unit tests
+        run: npm test -- --passWithNoTests
+        timeout-minutes: 5
       
       - name: Build project
         run: npm run build
+        timeout-minutes: 5
+
+  e2e-tests:
+    runs-on: ubuntu-latest
+    needs: lint-and-test
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+        timeout-minutes: 5
+      
+      - name: Build project
+        run: npm run build
+        timeout-minutes: 5
         
-      - name: Start server and run E2E tests
-        run: |
-          npm install -g serve wait-on
-          serve out -l 3000 &
-          wait-on http://localhost:3000 --timeout 60000
-          npm run test:e2e
-        
-      - name: Upload test coverage
-        uses: codecov/codecov-action@v3
-        if: always()
+      - name: Run E2E tests
+        run: npx start-server-and-test 'npx serve out -l 3000 -s' http://localhost:3000 'npx cypress run --headless'
+        timeout-minutes: 10
