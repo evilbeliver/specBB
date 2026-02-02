@@ -27,7 +27,7 @@ jobs:
         run: npm --version
 
   lint-and-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: health-check
     
     steps:
@@ -56,7 +56,7 @@ jobs:
         timeout-minutes: 5
 
   e2e-tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: lint-and-test
     
     steps:
