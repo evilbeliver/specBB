@@ -1,0 +1,10 @@
+# Disable automatic GitHub Pages deployment
+# This file tells GitHub to not create automatic Pages workflows
+# We use custom workflows instead
+
+# Our deployment is handled by:
+# - .github/workflows/deploy.yml (main deployment)
+# - .github/workflows/deploy-only.yml (manual deployment)
+
+# This prevents GitHub from creating its own ubuntu-latest workflow
+# that gets stuck waiting for runners
