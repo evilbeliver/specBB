@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { AppBar, Toolbar, Typography, Button, Container, Box, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -16,20 +17,30 @@ export default function Header() {
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Typography
-                variant="h6"
-                component="div"
-                sx={{
-                  fontWeight: 700,
-                  color: 'inherit',
-                  textDecoration: 'none',
-                  cursor: 'pointer',
-                  fontSize: { xs: '1rem', sm: '1.25rem' },
-                }}
-                aria-label="Buck & Beard Hunt Club - Home"
-              >
-                Buck & Beard
-              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer' }}>
+                <Image
+                  src="/images/logo.svg"
+                  alt="Buck & Beard Hunt Club Logo"
+                  width={40}
+                  height={40}
+                  style={{
+                    display: 'block',
+                  }}
+                />
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    fontWeight: 700,
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    fontSize: { xs: '1rem', sm: '1.25rem' },
+                  }}
+                  aria-label="Buck & Beard Hunt Club - Home"
+                >
+                  Buck & Beard
+                </Typography>
+              </Box>
             </Link>
           </Box>
 
@@ -84,9 +95,20 @@ export default function Header() {
         }}
       >
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-          <Typography variant="h6" sx={{ my: 2 }}>
-            Buck & Beard
-          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, my: 2 }}>
+            <Image
+              src="/images/logo.svg"
+              alt="Buck & Beard Hunt Club Logo"
+              width={30}
+              height={30}
+              style={{
+                display: 'block',
+              }}
+            />
+            <Typography variant="h6">
+              Buck & Beard
+            </Typography>
+          </Box>
           <List>
             <ListItem disablePadding>
               <Button
