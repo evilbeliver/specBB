@@ -13,7 +13,7 @@ export default function Header() {
   // Use the basePath from the Next.js config for production builds
   const isProduction = process.env.NODE_ENV === 'production';
   const basePath = isProduction ? '/specBB' : '';
-  const logoSrc = `${basePath}/images/logo.png`;
+  const logoSrc = `${basePath}/images/logo.svg`;
 
   return (
     <AppBar position="sticky" component="header" role="banner">

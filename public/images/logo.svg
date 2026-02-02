@@ -1,81 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <!-- Deer head in gold/yellow -->
-  <g>
-    <!-- Main head outline -->
-    <path d="M200 120c-35 0-60 25-60 60v40c0 15 12 27 27 27h66c15 0 27-12 27-27v-40c0-35-25-60-60-60z" 
-          fill="#DAA520" stroke="#B8860B" stroke-width="2"/>
+  <!-- Deer head silhouette in gold -->
+  <g fill="#DAA520">
+    <!-- Main deer head outline -->
+    <path d="M200 120c-40 0-70 30-70 70v50c0 15 12 25 25 25h90c13 0 25-10 25-25v-50c0-40-30-70-70-70z"/>
     
-    <!-- Inner head details -->
-    <path d="M175 160c0-20 11-35 25-35s25 15 25 35v20c0 8-11 15-25 15s-25-7-25-15v-20z" 
-          fill="#FFD700"/>
+    <!-- Snout area -->
+    <path d="M185 210c0-8 7-15 15-15s15 7 15 15v12c0 4-7 8-15 8s-15-4-15-8v-12z"/>
     
-    <!-- Snout -->
-    <ellipse cx="200" cy="210" rx="12" ry="8" fill="#DAA520"/>
-    
-    <!-- Eyes -->
-    <circle cx="185" cy="175" r="4" fill="white"/>
-    <circle cx="215" cy="175" r="4" fill="white"/>
-    <circle cx="185" cy="175" r="2" fill="black"/>
-    <circle cx="215" cy="175" r="2" fill="black"/>
+    <!-- Eye area highlights -->
+    <circle cx="180" cy="175" r="3" fill="#FFD700"/>
+    <circle cx="220" cy="175" r="3" fill="#FFD700"/>
     
     <!-- Ears -->
-    <ellipse cx="165" cy="135" rx="8" ry="15" fill="#DAA520"/>
-    <ellipse cx="235" cy="135" rx="8" ry="15" fill="#DAA520"/>
+    <ellipse cx="155" cy="135" rx="10" ry="20" fill="#DAA520"/>
+    <ellipse cx="245" cy="135" rx="10" ry="20" fill="#DAA520"/>
     
-    <!-- Antlers in gold -->
-    <g stroke="#DAA520" stroke-width="4" fill="none">
-      <!-- Left antler main beam -->
-      <path d="M180 110 L160 80 L145 50"/>
-      <!-- Left antler points -->
-      <path d="M170 95 L155 75"/>
-      <path d="M160 80 L140 65"/>
-      <path d="M150 65 L135 45"/>
+    <!-- Antlers with multiple points -->
+    <g fill="#E6C200">
+      <!-- Left main antler beam -->
+      <path d="M170 110 L150 85 L135 50 Q132 45 135 45 Q140 50 145 55 L160 90 L180 115z"/>
       
-      <!-- Right antler main beam -->
-      <path d="M220 110 L240 80 L255 50"/>
+      <!-- Left antler points -->
+      <path d="M158 95 L142 75 Q140 72 142 72 Q145 75 148 80 L160 98z"/>
+      <path d="M148 80 L132 60 Q130 57 132 57 Q135 60 138 65 L150 83z"/>
+      <path d="M140 65 L125 45 Q123 42 125 42 Q128 45 131 50 L142 68z"/>
+      
+      <!-- Right main antler beam -->
+      <path d="M230 110 L250 85 L265 50 Q268 45 265 45 Q260 50 255 55 L240 90 L220 115z"/>
+      
       <!-- Right antler points -->
-      <path d="M230 95 L245 75"/>
-      <path d="M240 80 L260 65"/>
-      <path d="M250 65 L265 45"/>
-    </g>
-    
-    <!-- Filled antler tips -->
-    <g fill="#FFD700">
-      <circle cx="145" cy="50" r="3"/>
-      <circle cx="155" cy="75" r="2"/>
-      <circle cx="140" cy="65" r="2"/>
-      <circle cx="135" cy="45" r="2"/>
-      <circle cx="255" cy="50" r="3"/>
-      <circle cx="245" cy="75" r="2"/>
-      <circle cx="260" cy="65" r="2"/>
-      <circle cx="265" cy="45" r="2"/>
+      <path d="M242 95 L258 75 Q260 72 258 72 Q255 75 252 80 L240 98z"/>
+      <path d="M252 80 L268 60 Q270 57 268 57 Q265 60 262 65 L250 83z"/>
+      <path d="M260 65 L275 45 Q277 42 275 42 Q272 45 269 50 L258 68z"/>
     </g>
   </g>
   
-  <!-- Feather in beige/tan -->
+  <!-- Feather in beige/tan with gradient effect -->
+  <defs>
+    <linearGradient id="featherGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5DEB3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DEB887;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D2B48C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
   <g>
     <!-- Main feather shape -->
-    <path d="M240 200 Q280 180 320 220 Q300 280 260 300 Q250 250 240 200z" 
-          fill="#D2B48C" stroke="#CD853F" stroke-width="2"/>
+    <path d="M250 200 Q290 180 330 220 Q310 280 270 300 Q260 250 250 200z" 
+          fill="url(#featherGradient)" stroke="#CD853F" stroke-width="1.5"/>
     
-    <!-- Feather shaft -->
-    <path d="M250 210 Q285 190 310 230" stroke="#8B7355" stroke-width="3" fill="none"/>
+    <!-- Feather center shaft -->
+    <path d="M260 210 Q295 190 320 235" stroke="#8B7355" stroke-width="2.5" fill="none"/>
     
-    <!-- Feather barbs -->
-    <g stroke="#A0826D" stroke-width="1.5" fill="none">
-      <path d="M255 220 Q275 210 290 225"/>
-      <path d="M260 235 Q275 225 285 240"/>
-      <path d="M265 250 Q275 240 280 255"/>
-      <path d="M270 265 Q275 255 278 270"/>
-      <path d="M275 280 Q278 270 280 285"/>
+    <!-- Feather barb details -->
+    <g stroke="#A0826D" stroke-width="1" fill="none" opacity="0.8">
+      <path d="M265 220 Q285 210 305 225"/>
+      <path d="M270 235 Q285 225 300 240"/>
+      <path d="M275 250 Q285 240 295 255"/>
+      <path d="M280 265 Q285 255 290 270"/>
+      <path d="M285 280 Q288 270 290 285"/>
     </g>
     
-    <!-- Feather texture lines -->
-    <g stroke="#BC9A6A" stroke-width="1" fill="none" opacity="0.7">
-      <path d="M250 215 Q270 205 285 220"/>
-      <path d="M258 230 Q270 220 280 235"/>
-      <path d="M263 245 Q270 235 275 250"/>
-      <path d="M268 260 Q270 250 273 265"/>
+    <!-- Additional feather texture -->
+    <g stroke="#BC9A6A" stroke-width="0.8" fill="none" opacity="0.6">
+      <path d="M262 215 Q280 205 295 220"/>
+      <path d="M268 230 Q280 220 290 235"/>
+      <path d="M273 245 Q280 235 285 250"/>
+      <path d="M278 260 Q280 250 283 265"/>
+      <path d="M283 275 Q285 265 287 280"/>
     </g>
   </g>
 </svg>
