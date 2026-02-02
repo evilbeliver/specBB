@@ -10,7 +10,10 @@ permissions:
   pages: write
   id-token: write
 
-# Concurrency removed to prevent queue locks
+# Simple concurrency for manual deployments
+concurrency:
+  group: deploy-manual
+  cancel-in-progress: false
 
 jobs:
   deploy:
