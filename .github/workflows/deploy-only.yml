@@ -10,10 +10,7 @@ permissions:
   pages: write
   id-token: write
 
-# Simple concurrency for manual deployments
-concurrency:
-  group: deploy-manual
-  cancel-in-progress: false
+# No concurrency - allow parallel runs
 
 jobs:
   deploy:

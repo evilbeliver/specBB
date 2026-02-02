@@ -9,10 +9,7 @@ permissions:
   pages: write
   id-token: write
 
-# Improved concurrency - GitHub Pages specific
-concurrency:
-  group: pages
-  cancel-in-progress: false
+# No concurrency - allow parallel runs
 
 jobs:
   build:
