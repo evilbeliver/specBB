@@ -16,9 +16,7 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages-${{ github.ref }}"
-  cancel-in-progress: true
+# Concurrency removed to prevent queue locks
 
 jobs:
   build:
