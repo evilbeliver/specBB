@@ -36,14 +36,12 @@ jobs:
       - name: Build project
         run: npm run build
         
-      - name: Start server for E2E tests
+      - name: Start server and run E2E tests
         run: |
-          npm install -g serve
+          npm install -g serve wait-on
           serve out -l 3000 &
-          npx wait-on http://localhost:3000 --timeout 60000
-        
-      - name: Run E2E tests
-        run: npm run test:e2e
+          wait-on http://localhost:3000 --timeout 60000
+          npm run test:e2e
         
       - name: Upload test coverage
         uses: codecov/codecov-action@v3
