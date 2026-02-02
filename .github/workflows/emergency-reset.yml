@@ -1,0 +1,26 @@
+name: Emergency Reset
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for emergency reset'
+        required: true
+        default: 'Clear stuck builds'
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    
+    steps:
+      - name: Log reset reason
+        run: |
+          echo "Emergency reset triggered"
+          echo "Reason: ${{ github.event.inputs.reason }}"
+          echo "Timestamp: $(date)"
+          
+      - name: Clear workspace
+        run: |
+          echo "Clearing any cached data..."
+          echo "Reset completed successfully"

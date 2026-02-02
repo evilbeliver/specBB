@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main, '001-hunt-club-website']
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   health-check:
     runs-on: ubuntu-latest
