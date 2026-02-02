@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { AppBar, Toolbar, Typography, Button, Container, Box, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -11,6 +10,11 @@ export default function Header() {
     setMobileOpen(!mobileOpen);
   };
 
+  // Use the basePath from the Next.js config for production builds
+  const isProduction = process.env.NODE_ENV === 'production';
+  const basePath = isProduction ? '/specBB' : '';
+  const logoSrc = `${basePath}/images/logo.svg`;
+
   return (
     <AppBar position="sticky" component="header" role="banner">
       <Container maxWidth="lg">
@@ -18,8 +22,8 @@ export default function Header() {
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer' }}>
-                <Image
-                  src="/images/logo.svg"
+                <img
+                  src={logoSrc}
                   alt="Buck & Beard Hunt Club Logo"
                   width={40}
                   height={40}
@@ -96,8 +100,8 @@ export default function Header() {
       >
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, my: 2 }}>
-            <Image
-              src="/images/logo.svg"
+            <img
+              src={logoSrc}
               alt="Buck & Beard Hunt Club Logo"
               width={30}
               height={30}
