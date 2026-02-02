@@ -10,41 +10,26 @@ export default function Header() {
     setMobileOpen(!mobileOpen);
   };
 
-  // Use the basePath from the Next.js config for production builds
-  const isProduction = process.env.NODE_ENV === 'production';
-  const basePath = isProduction ? '/specBB' : '';
-  const logoSrc = `${basePath}/images/logo.svg`;
-
   return (
     <AppBar position="sticky" component="header" role="banner">
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer' }}>
-                <img
-                  src={logoSrc}
-                  alt="Buck & Beard Hunt Club Logo"
-                  width={40}
-                  height={40}
-                  style={{
-                    display: 'block',
-                  }}
-                />
-                <Typography
-                  variant="h6"
-                  component="div"
-                  sx={{
-                    fontWeight: 700,
-                    color: 'inherit',
-                    textDecoration: 'none',
-                    fontSize: { xs: '1rem', sm: '1.25rem' },
-                  }}
-                  aria-label="Buck & Beard Hunt Club - Home"
-                >
-                  Buck & Beard
-                </Typography>
-              </Box>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{
+                  fontWeight: 700,
+                  color: 'inherit',
+                  textDecoration: 'none',
+                  fontSize: { xs: '1rem', sm: '1.25rem' },
+                  cursor: 'pointer',
+                }}
+                aria-label="Buck & Beard Hunt Club - Home"
+              >
+                Buck & Beard
+              </Typography>
             </Link>
           </Box>
 
@@ -99,20 +84,9 @@ export default function Header() {
         }}
       >
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, my: 2 }}>
-            <img
-              src={logoSrc}
-              alt="Buck & Beard Hunt Club Logo"
-              width={30}
-              height={30}
-              style={{
-                display: 'block',
-              }}
-            />
-            <Typography variant="h6">
-              Buck & Beard
-            </Typography>
-          </Box>
+          <Typography variant="h6" sx={{ my: 2 }}>
+            Buck & Beard
+          </Typography>
           <List>
             <ListItem disablePadding>
               <Button
