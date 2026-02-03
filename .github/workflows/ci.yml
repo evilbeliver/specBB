@@ -76,6 +76,9 @@ jobs:
         run: npm run build
         timeout-minutes: 5
         
+      - name: Install serve globally
+        run: npm install -g serve
+        
       - name: Run E2E tests
-        run: npx start-server-and-test 'npx serve out -l 3000 -s' http://localhost:3000 'npx cypress run --headless'
+        run: npx start-server-and-test 'serve -s out -l 3000' http://localhost:3000 'npx cypress run --headless'
         timeout-minutes: 10
