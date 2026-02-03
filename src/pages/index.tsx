@@ -48,11 +48,12 @@ export default function Home() {
           aria-describedby="hero-description"
           sx={{
             position: 'relative',
-            height: { xs: '400px', md: '600px' },
+            height: { xs: '400px', sm: '450px', md: '500px', lg: '550px' },
             backgroundImage: `url(${heroImageUrl})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
+            backgroundColor: '#2c5530', // Forest green background to complement the image
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -65,7 +66,7 @@ export default function Home() {
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.6)',
+              backgroundColor: 'rgba(0, 0, 0, 0.4)', // Reduced opacity to let more image show through
             },
           }}
         >
