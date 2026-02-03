@@ -72,16 +72,13 @@ jobs:
         run: npm ci
         timeout-minutes: 5
       
-      - name: Build project
+      - name: Build project (for production validation)
         run: npm run build
         timeout-minutes: 5
         
-      - name: List build output
+      - name: List build output (for debugging)
         run: ls -la out/
         
-      - name: Install serve globally
-        run: npm install -g serve
-        
-      - name: Run E2E tests
-        run: npx start-server-and-test 'serve -s out -l 3000 --no-clipboard' http://localhost:3000 'npx cypress run --headless --env failOnStatusCode=false'
+      - name: Run E2E tests against development server
+        run: npx start-server-and-test 'npm run dev -- --hostname 0.0.0.0 --port 3000' http://localhost:3000 'npx cypress run --headless'
         timeout-minutes: 10

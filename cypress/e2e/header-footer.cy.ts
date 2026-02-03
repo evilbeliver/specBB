@@ -2,17 +2,8 @@ describe('Header and Footer E2E', () => {
   let basePath = '';
   
   before(() => {
-    // Handle uncaught exceptions from app
-    cy.on('uncaught:exception', (err, runnable) => {
-      // Return false to prevent the error from failing this test
-      if (err.message.includes('Unexpected token')) {
-        return false;
-      }
-      return true;
-    });
-    
     // Detect if we're running with a basePath (like GitHub Pages)
-    cy.visit('/', { failOnStatusCode: false });
+    cy.visit('/');
     cy.window().then((win) => {
       basePath = win.location.pathname.replace(/\/$/, '');
       if (basePath && !basePath.endsWith('/')) {
