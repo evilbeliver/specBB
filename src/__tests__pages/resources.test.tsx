@@ -52,7 +52,9 @@ describe('Resources Page', () => {
       links.forEach(link => {
         // Ensure links have accessible names
         const linkText = link.textContent || link.getAttribute('aria-label');
-        expect(linkText).toBeTruthy();
+        // Also check for images with alt text within the link
+        const imageAlt = link.querySelector('img')?.getAttribute('alt');
+        expect(linkText || imageAlt).toBeTruthy();
       });
     });
   });

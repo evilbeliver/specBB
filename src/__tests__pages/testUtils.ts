@@ -95,7 +95,10 @@ export const checkLinkAccessibility = (container: Element) => {
                     link.getAttribute('aria-label') ||
                     link.getAttribute('title');
     
-    if (!linkText) {
+    // Also check for images with alt text within the link
+    const imageAlt = link.querySelector('img')?.getAttribute('alt')?.trim();
+    
+    if (!linkText && !imageAlt) {
       issues.push(`Link ${index + 1} has no accessible name`);
     }
   });

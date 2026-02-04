@@ -17,7 +17,7 @@ describe('Header Component', () => {
   describe('Rendering', () => {
     it('renders the logo', () => {
       render(<Header />);
-      const logo = screen.getAllByText(/buck & beard/i)[0];
+      const logo = screen.getByAltText(/buck & beard hunt club/i);
       expect(logo).toBeInTheDocument();
     });
 
@@ -56,9 +56,9 @@ describe('Header Component', () => {
       
       fireEvent.click(menuButton);
       
-      // Drawer should contain navigation items
-      const drawerLogo = screen.getAllByText(/buck & beard/i);
-      expect(drawerLogo.length).toBeGreaterThan(1); // One in header, one in drawer
+      // Drawer should contain the logo image
+      const drawerLogos = screen.getAllByAltText(/buck & beard hunt club/i);
+      expect(drawerLogos.length).toBeGreaterThanOrEqual(2); // One in header, one in drawer
     });
   });
 
@@ -69,10 +69,10 @@ describe('Header Component', () => {
       expect(results).toHaveNoViolations();
     });
 
-    it('logo link has proper aria-label', () => {
+    it('logo link has proper alt text', () => {
       render(<Header />);
-      const logoDiv = screen.getByLabelText(/buck & beard hunt club - home/i);
-      expect(logoDiv).toBeInTheDocument();
+      const logoImage = screen.getByAltText(/pursue your passion for the wild/i);
+      expect(logoImage).toBeInTheDocument();
     });
 
     it('current page link has aria-current attribute', () => {
