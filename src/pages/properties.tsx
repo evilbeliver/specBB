@@ -112,7 +112,7 @@ export default function Properties() {
         <title>Properties | Buck & Beard Hunt Club</title>
         <meta 
           name="description" 
-          content="Explore Buck & Beard Hunt Club's 5 premium hunting properties across South Carolina, totaling over 2,600 acres of prime deer and turkey hunting land." 
+          content="Explore Buck & Beard Hunt Club's 5 premium hunting properties across Saluda and Edgefield Counties in South Carolina, totaling over 2,600 acres of prime deer and turkey hunting land." 
         />
       </Head>
 
