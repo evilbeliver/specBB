@@ -42,7 +42,7 @@ export default function Header() {
                     color: 'inherit',
                     fontWeight: 'bold',
                     fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem', lg: '1.5rem' },
-                    display: { xs: 'none', sm: 'block' }, // Hide on mobile to save space
+                    display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' }, // Only show on large screens to prevent collision
                   }}
                 >
                   Buck & Beard Hunt Club
