@@ -17,11 +17,12 @@ export default function Header() {
 
   return (
     <AppBar position="sticky" component="header" role="banner">
-      <Container maxWidth="lg">
-        <Toolbar disableGutters sx={{ justifyContent: 'space-between', pl: 0 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 0 }}>
+      <Box sx={{ position: 'relative', width: '100%' }}>
+        <Toolbar disableGutters sx={{ justifyContent: 'center', px: 0, minHeight: { xs: '60px', sm: '70px', md: '80px', lg: '90px' } }}>
+          {/* Logo positioned to far left */}
+          <Box sx={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 1 }}>
             <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', pl: 1, gap: 2 }}>
                 <Box
                   component="img"
                   src={navLogoSrc}
@@ -34,11 +35,23 @@ export default function Header() {
                     objectFit: 'contain',
                   }}
                 />
+                <Typography
+                  variant="h6"
+                  component="span"
+                  sx={{
+                    color: 'inherit',
+                    fontWeight: 'bold',
+                    fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem', lg: '1.5rem' },
+                    display: { xs: 'none', sm: 'block' }, // Hide on mobile to save space
+                  }}
+                >
+                  Buck & Beard Hunt Club
+                </Typography>
               </Box>
             </Link>
           </Box>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - centered */}
           <Box
             component="nav"
             role="navigation"
@@ -46,6 +59,8 @@ export default function Header() {
             sx={{
               display: { xs: 'none', md: 'flex' },
               gap: 2,
+              position: 'relative',
+              zIndex: 2,
             }}
           >
             <Button component={Link} href="/" color="inherit" aria-current="page">
@@ -65,18 +80,25 @@ export default function Header() {
             </Button>
           </Box>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - positioned to far right */}
           <IconButton
             color="inherit"
             aria-label="open navigation menu"
             edge="end"
             onClick={handleDrawerToggle}
-            sx={{ display: { xs: 'block', md: 'none' } }}
+            sx={{ 
+              display: { xs: 'block', md: 'none' },
+              position: 'absolute',
+              right: 16,
+              top: '50%',
+              transform: 'translateY(-50%)',
+              zIndex: 2,
+            }}
           >
             <MenuIcon />
           </IconButton>
         </Toolbar>
-      </Container>
+      </Box>
 
       {/* Mobile Drawer */}
       <Drawer
