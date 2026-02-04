@@ -163,21 +163,24 @@ export default function Contact() {
           <Grid container spacing={4}>
             {contactInfo.map((info, index) => (
               <Grid item key={index} xs={12} sm={4} md={4}>
-                <Card
+                <Box
                   sx={{
                     height: '100%',
                     textAlign: 'center',
                     p: 3,
+                    borderRadius: 2,
+                    backgroundColor: 'white',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                     transition: 'transform 0.2s, box-shadow 0.2s',
                     cursor: info.link ? 'pointer' : 'default',
+                    textDecoration: 'none',
                     '&:hover': {
                       transform: info.link ? 'translateY(-4px)' : 'none',
-                      boxShadow: info.link ? '0 8px 24px rgba(0,0,0,0.15)' : 'inherit',
+                      boxShadow: info.link ? '0 8px 24px rgba(0,0,0,0.15)' : '0 2px 8px rgba(0,0,0,0.1)',
                     },
                   }}
                   component={info.link ? 'a' : 'div'}
                   href={info.link || undefined}
-                  onClick={info.link ? undefined : (e: React.MouseEvent) => e.preventDefault()}
                 >
                   <Box
                     sx={{
@@ -205,7 +208,7 @@ export default function Contact() {
                   <Typography variant="body2" color="text.secondary">
                     {info.description}
                   </Typography>
-                </Card>
+                </Box>
               </Grid>
             ))}
           </Grid>
