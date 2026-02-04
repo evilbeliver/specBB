@@ -3,7 +3,7 @@
 
 **Feature Branch**: `001-hunt-club-website`  
 **Created**: 2026-01-20  
-**Updated**: 2026-01-31  
+**Updated**: 2026-02-04  
 **Status**: Complete  
 **Input**: User description: "I am building a sleek and modern hunt club website that will have a standard header and footer, a home page. The site will also need to be mobile ready. As this is a rewrite of the existing site to a more modern and updated use the following for how the existing site looks today (https://www.buckandbeard.com/)."
 
@@ -21,13 +21,14 @@ A visitor lands on the home page and sees a visually appealing, modern, and mobi
 
 1. **Given** a visitor on any device, **When** they navigate to the home page, **Then** the layout is modern, visually appealing, and adapts responsively.
 2. **Given** a visitor using assistive technology, **When** they navigate the home page, **Then** all content is accessible and navigable.
-3. **Given** a visitor viewing the hero section, **When** they scroll down, **Then** they see featured content about the club, hunting grounds, and atmosphere.
+3. **Given** a visitor viewing the hero section, **When** they view the page, **Then** the hero image fills the entire hero area completely using cover positioning for optimal visual impact.
+4. **Given** a visitor viewing the hero section, **When** they scroll down, **Then** they see featured content about the club, hunting grounds, and atmosphere.
 
 ---
 
 ### User Story 2 - Consistent Header and Footer (Priority: P1)
 
-A visitor sees a standard header (with logo, navigation to Home, About, Properties, Resources, Contact) and footer (with contact info, copyright, and quick links) on every page.
+A visitor sees a standard header (with Buck & Beard logo image, "Buck & Beard Hunt Club" text, navigation to Home, About, Properties, Resources, Contact) and footer (with contact info, copyright, and quick links) on every page.
 
 **Why this priority**: Consistency and navigation are essential for usability and professionalism.
 
@@ -36,7 +37,9 @@ A visitor sees a standard header (with logo, navigation to Home, About, Properti
 **Acceptance Scenarios**:
 
 1. **Given** a visitor on any page, **When** they view the site, **Then** the header and footer are present and consistent.
-2. **Given** a visitor on mobile, **When** they tap the menu button, **Then** a responsive mobile menu opens with all navigation links.
+2. **Given** a visitor on desktop or tablet, **When** they view the header, **Then** they see the Buck & Beard logo image positioned to the far left with "Buck & Beard Hunt Club" text alongside it.
+3. **Given** a visitor on mobile, **When** they view the header, **Then** they see only the Buck & Beard logo image (text hidden to save space) and can tap the menu button to open navigation.
+4. **Given** a visitor on mobile, **When** they tap the menu button, **Then** a responsive mobile menu opens with all navigation links and the logo image.
 
 ---
 
@@ -150,6 +153,10 @@ A visitor or member navigates to the Resources page to download essential club d
 - **FR-015**: System MUST provide Resources page with downloadable club documents.
 - **FR-016**: System MUST be deployed to GitHub Pages with proper basePath configuration.
 - **FR-017**: System MUST handle router-based navigation with fallbacks for test environments.
+- **FR-018**: System MUST display Buck & Beard logo image in navigation header positioned to the far left of the screen.
+- **FR-019**: System MUST include "Buck & Beard Hunt Club" text alongside the logo on desktop and tablet, hidden on mobile for optimal space usage.
+- **FR-020**: System MUST ensure hero image fills the entire hero section area using cover positioning for maximum visual impact.
+- **FR-021**: System MUST implement responsive logo sizing that scales appropriately across all screen sizes (60px-90px height).
 
 ### Non-Functional Requirements
 
@@ -172,7 +179,7 @@ A visitor or member navigates to the Resources page to download essential club d
 ### Core Components
 
 - **Page**: Represents a single view (Home, About, Properties, Contact, Resources) with content, layout, and metadata.
-- **Header**: Contains logo, responsive navigation links (Home, About, Properties, Resources, Contact), and mobile menu.
+- **Header**: Contains Buck & Beard logo image positioned to far left, "Buck & Beard Hunt Club" text (responsive - hidden on mobile), navigation links (Home, About, Properties, Resources, Contact), and mobile menu with logo.
 - **Footer**: Contains contact info, copyright, quick links, and additional information.
 - **Property**: Represents a hunting property with attributes: name, location, acreage, brief description, features array, image, and full description.
 - **PropertyModal**: Interactive dialog for detailed property information display.
@@ -228,6 +235,10 @@ interface ResourceDocument {
 - **SC-009**: About page FAQ accordion functions correctly with keyboard and mouse interaction.
 - **SC-010**: Mobile navigation menu functions properly across all screen sizes.
 - **SC-011**: Site successfully deploys to GitHub Pages with working asset links.
+- **SC-012**: Buck & Beard logo displays correctly in navigation header with proper responsive sizing across all devices.
+- **SC-013**: "Buck & Beard Hunt Club" text displays alongside logo on desktop/tablet and hides appropriately on mobile devices.
+- **SC-014**: Hero image fills entire hero section area with cover positioning on all screen sizes.
+- **SC-015**: Logo positioning remains flush to far left of screen across all viewport widths.
 
 ### Implementation Status
 
@@ -243,6 +254,11 @@ interface ResourceDocument {
 - ✅ **Complete**: GitHub Pages deployment with basePath configuration
 - ✅ **Complete**: Unit and integration test coverage
 - ✅ **Complete**: E2E test coverage with Cypress
+- ✅ **Complete**: Buck & Beard logo image integration in navigation header
+- ✅ **Complete**: Responsive logo sizing and far-left positioning
+- ✅ **Complete**: "Buck & Beard Hunt Club" text with responsive behavior
+- ✅ **Complete**: Hero image optimization with cover positioning
+- ✅ **Complete**: Navigation accessibility updates for image-based logo
 
 ### Quality Metrics
 
@@ -268,6 +284,7 @@ interface ResourceDocument {
 ```
 public/
 ├── images/           # Property and hero images
+│   └── nav-logo.png  # Buck & Beard navigation logo
 ├── downloads/        # Club document PDFs
 │   ├── buck-beard-rules-regulations.pdf
 │   ├── buck-beard-membership-application.pdf
