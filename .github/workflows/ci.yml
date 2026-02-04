@@ -71,8 +71,10 @@ jobs:
           cache: 'npm'
       
       - name: Install dependencies
-        run: npm ci
-        timeout-minutes: 5
+        run: npm ci --prefer-offline --no-audit
+        timeout-minutes: 10
+        env:
+          NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
       
       - name: Build project (for production validation)
         run: npm run build
