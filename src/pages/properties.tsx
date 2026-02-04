@@ -151,7 +151,8 @@ export default function Properties() {
                 opacity: 0.9,
               }}
             >
-              Explore our premium hunting properties across South Carolina, totaling over 2,600 acres of prime hunting land
+              Explore our premium hunting properties across Saluda and Edgefield Counties in South Carolina, totaling over 2,600 acres of prime hunting land
+              
             </Typography>
           </Container>
         </Box>
