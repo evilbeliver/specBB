@@ -13,37 +13,27 @@ export default function Header() {
   // Use the basePath from the Next.js config for production builds
   const isProduction = process.env.NODE_ENV === 'production';
   const basePath = isProduction ? '/specBB' : '';
-  const logoSrc = `${basePath}/images/logo.svg`;
+  const navLogoSrc = `${basePath}/images/nav-logo.png`;
 
   return (
     <AppBar position="sticky" component="header" role="banner">
       <Container maxWidth="lg">
-        <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Toolbar disableGutters sx={{ justifyContent: 'space-between', pl: 0 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 0 }}>
             <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor: 'pointer' }}>
-                <img
-                  src={logoSrc}
-                  alt="Buck & Beard Hunt Club Logo"
-                  width={40}
-                  height={40}
-                  style={{
-                    display: 'block',
+              <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+                <Box
+                  component="img"
+                  src={navLogoSrc}
+                  alt="Buck & Beard Hunt Club - Pursue Your Passion for the Wild"
+                  sx={{
+                    height: 'auto',
+                    width: 'auto',
+                    maxHeight: { xs: '60px', sm: '70px', md: '80px', lg: '90px' },
+                    maxWidth: { xs: '280px', sm: '320px', md: '360px', lg: '400px' },
+                    objectFit: 'contain',
                   }}
                 />
-                <Typography
-                  variant="h6"
-                  component="div"
-                  sx={{
-                    fontWeight: 700,
-                    color: 'inherit',
-                    textDecoration: 'none',
-                    fontSize: { xs: '1rem', sm: '1.25rem' },
-                  }}
-                  aria-label="Buck & Beard Hunt Club - Home"
-                >
-                  Buck & Beard
-                </Typography>
               </Box>
             </Link>
           </Box>
@@ -101,17 +91,15 @@ export default function Header() {
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 1, my: 2 }}>
             <img
-              src={logoSrc}
+              src={navLogoSrc}
               alt="Buck & Beard Hunt Club Logo"
-              width={30}
-              height={30}
               style={{
                 display: 'block',
+                maxHeight: '50px',
+                maxWidth: '200px',
+                objectFit: 'contain',
               }}
             />
-            <Typography variant="h6">
-              Buck & Beard
-            </Typography>
           </Box>
           <List>
             <ListItem disablePadding>
