@@ -7,7 +7,9 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <link rel="icon" href={`${basePath}/favicon.ico`} />
+        <link rel="icon" type="image/png" sizes="32x32" href={`${basePath}/favicon.png`} />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${basePath}/favicon.png`} />
+        <link rel="shortcut icon" href={`${basePath}/favicon.png`} />
       </Head>
       <body>
         <a href="#main-content" className="skip-to-main">
