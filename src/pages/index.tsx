@@ -50,10 +50,9 @@ export default function Home() {
             position: 'relative',
             height: { xs: '400px', sm: '450px', md: '500px', lg: '550px' },
             backgroundImage: `url(${heroImageUrl})`,
-            backgroundSize: 'contain',
+            backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
-            backgroundColor: '#2c5530', // Forest green background to complement the image
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -66,7 +65,7 @@ export default function Home() {
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: 'rgba(0, 0, 0, 0.4)', // Reduced opacity to let more image show through
+              backgroundColor: 'rgba(0, 0, 0, 0.4)', // Overlay for text readability
             },
           }}
         >
