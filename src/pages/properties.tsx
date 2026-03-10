@@ -85,7 +85,7 @@ const properties: Property[] = [
     id: 5,
     name: 'Piney Wood Property',
     location: 'Saluda County',
-    acreage: 275,
+    acreage: 130,
     description: 'Our Piney Wood Tract is 130 acre property has 12+ stands and has a few food plots on the property..',
     features: ['Deer', 'Turkey',],
     image: '/images/piney-wood-deer.jpg',
