@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
-const repoSubpath = 'specBB';
 
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  assetPrefix: isProd ? `/${repoSubpath}/` : '',
-  basePath: isProd ? `/${repoSubpath}` : '',
+  trailingSlash: true,
+  assetPrefix: '',
+  basePath: '',
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
     unoptimized: true,
@@ -26,7 +26,5 @@ const nextConfig = {
     removeConsole: isProd,
   },
 };
-
-module.exports = nextConfig;
 
 module.exports = nextConfig;

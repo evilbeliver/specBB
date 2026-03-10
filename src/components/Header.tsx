@@ -10,19 +10,17 @@ export default function Header() {
     setMobileOpen(!mobileOpen);
   };
 
-  // Use the basePath from the Next.js config for production builds
-  const isProduction = process.env.NODE_ENV === 'production';
-  const basePath = isProduction ? '/specBB' : '';
-  const navLogoSrc = `${basePath}/images/nav-logo.png`;
+  // Use root-relative paths for all environments
+  const navLogoSrc = '/images/nav-logo.png';
 
   return (
     <AppBar position="sticky" component="header" role="banner">
-      <Box sx={{ position: 'relative', width: '100%' }}>
-        <Toolbar disableGutters sx={{ justifyContent: 'center', px: 0, minHeight: { xs: '60px', sm: '70px', md: '80px', lg: '90px' } }}>
-          {/* Logo positioned to far left */}
-          <Box sx={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 1 }}>
+      <Box sx={{ width: '100%' }}>
+        <Toolbar disableGutters sx={{ justifyContent: 'space-between', px: 2, minHeight: { xs: '60px', sm: '70px', md: '80px', lg: '90px' } }}>
+          {/* Logo positioned to left */}
+          <Box sx={{ flexShrink: 0 }}>
             <Link href="/" passHref style={{ textDecoration: 'none', color: 'inherit' }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', pl: 1, gap: 2 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', gap: 2 }}>
                 <Box
                   component="img"
                   src={navLogoSrc}
@@ -30,8 +28,8 @@ export default function Header() {
                   sx={{
                     height: 'auto',
                     width: 'auto',
-                    maxHeight: { xs: '60px', sm: '70px', md: '80px', lg: '90px' },
-                    maxWidth: { xs: '280px', sm: '320px', md: '360px', lg: '400px' },
+                    maxHeight: { xs: '50px', sm: '60px', md: '70px', lg: '80px' },
+                    maxWidth: { xs: '200px', sm: '240px', md: '280px', lg: '320px' },
                     objectFit: 'contain',
                   }}
                 />
@@ -42,7 +40,7 @@ export default function Header() {
                     color: 'inherit',
                     fontWeight: 'bold',
                     fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem', lg: '1.5rem' },
-                    display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' }, // Only show on large screens to prevent collision
+                    display: { xs: 'none', sm: 'none', md: 'none', lg: 'none', xl: 'block' }, // Only show on extra large screens
                   }}
                 >
                   Buck & Beard Hunt Club
@@ -51,16 +49,15 @@ export default function Header() {
             </Link>
           </Box>
 
-          {/* Desktop Navigation - centered */}
+          {/* Desktop Navigation - positioned to right */}
           <Box
             component="nav"
             role="navigation"
             aria-label="Main navigation"
             sx={{
               display: { xs: 'none', md: 'flex' },
-              gap: 2,
-              position: 'relative',
-              zIndex: 2,
+              gap: { md: 1, lg: 2 },
+              alignItems: 'center',
             }}
           >
             <Button component={Link} href="/" color="inherit" aria-current="page">
@@ -80,7 +77,7 @@ export default function Header() {
             </Button>
           </Box>
 
-          {/* Mobile Menu Button - positioned to far right */}
+          {/* Mobile Menu Button - positioned to right */}
           <IconButton
             color="inherit"
             aria-label="open navigation menu"
@@ -88,11 +85,6 @@ export default function Header() {
             onClick={handleDrawerToggle}
             sx={{ 
               display: { xs: 'block', md: 'none' },
-              position: 'absolute',
-              right: 16,
-              top: '50%',
-              transform: 'translateY(-50%)',
-              zIndex: 2,
             }}
           >
             <MenuIcon />

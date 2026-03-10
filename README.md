@@ -14,19 +14,15 @@ A modern, accessible hunt club website built with Next.js, TypeScript, and Mater
 - **Modern UI/UX** - Clean, professional design with smooth animations
 - **SEO Optimized** - Proper meta tags, semantic HTML, and performance optimization
 
-## 🚀 Live Demo
+## � Tech Stack
 
-**Production Site**: [https://evilbeliver.github.io/specBB/](https://evilbeliver.github.io/specBB/)
-
-## 🛠 Tech Stack
-
-- **Framework**: [Next.js 16.1.4](https://nextjs.org/) with static export
+- **Framework**: [Next.js](https://nextjs.org/) with static export
 - **Language**: [TypeScript](https://www.typescriptlang.org/) (strict mode)
 - **UI Library**: [Material-UI (MUI)](https://mui.com/) with Emotion styling
 - **Testing**: [Jest](https://jestjs.io/) + [React Testing Library](https://testing-library.com/) + [Cypress](https://www.cypress.io/)
 - **Code Quality**: [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) + [Husky](https://typicode.github.io/husky/)
 - **Accessibility**: [axe-core](https://github.com/dequelabs/axe-core) automated testing
-- **Deployment**: GitHub Pages with automated CI/CD
+- **Deployment**: SiteGround static hosting
 
 ## 📋 Prerequisites
 
@@ -38,8 +34,8 @@ A modern, accessible hunt club website built with Next.js, TypeScript, and Mater
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/evilbeliver/specBB.git
-   cd specBB
+   git clone <repository-url>
+   cd buck-beard-hunt-club
    ```
 
 2. **Install dependencies**
@@ -131,18 +127,40 @@ npm run test:accessibility  # Run axe accessibility tests
 
 ## 🚀 Deployment
 
-The site is automatically deployed to GitHub Pages via CI/CD pipeline:
+### SiteGround Deployment
 
-1. **Push to branch** triggers GitHub Actions workflow
-2. **Quality Gates**: Linting, testing, and accessibility checks
-3. **Build**: Next.js static export generation
-4. **Deploy**: Automatic deployment to GitHub Pages
+1. **Build the production bundle**
+   ```bash
+   npm run build
+   ```
 
-### Manual Deployment
+2. **Locate the output**
+   - The static files will be generated in the `./out/` directory
+
+3. **Upload to SiteGround**
+   - Log in to your SiteGround account
+   - Navigate to **Site Tools** → **Site** → **File Manager**
+   - Go to your domain's `public_html` folder
+   - Upload all contents from the `./out/` directory to `public_html`
+   - Ensure all files and folders are copied, including the `_next` folder
+
+4. **Verify deployment**
+   - Visit your domain to confirm the site is working
+   - Test all navigation links and pages
+   - Verify images load correctly
+
+### Alternative: FTP Upload
 ```bash
-npm run build              # Generate static export
-# Files are output to ./out/ directory
+npm run build
+# Use an FTP client (FileZilla, Cyberduck, etc.)
+# Connect to your SiteGround server
+# Upload the contents of ./out/ to public_html
 ```
+
+### Important Notes for SiteGround
+- The site uses `trailingSlash: true` for clean URLs
+- All routes are pre-rendered as static HTML files
+- No server-side rendering required - pure static hosting
 
 ## 🛡 Code Quality Standards
 
@@ -157,11 +175,10 @@ npm run build              # Generate static export
 ### Environment Variables
 ```bash
 # .env.local (for local development)
-NEXT_PUBLIC_BASE_PATH=          # Leave empty for local dev
 NODE_ENV=development
 
-# Production (GitHub Pages)
-NEXT_PUBLIC_BASE_PATH=/specBB   # Repository name for proper routing
+# Production (SiteGround)
+# No environment variables needed - site is deployed as static files
 ```
 
 ### Key Configuration Files
@@ -197,7 +214,6 @@ This project is proprietary and confidential. All rights reserved to Buck & Bear
 
 ## 📞 Support & Contact
 
-- **Website**: [Buck & Beard Hunt Club](https://evilbeliver.github.io/specBB/)
 - **Email**: buckandbeard@gmail.com
 - **Phone**: (803) 727-5111
 - **Service Area**: Saluda & Edgefield Counties, South Carolina
