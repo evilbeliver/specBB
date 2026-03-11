@@ -28,8 +28,8 @@ export default function Header() {
                   sx={{
                     height: 'auto',
                     width: 'auto',
-                    maxHeight: { xs: '50px', sm: '60px', md: '70px', lg: '80px' },
-                    maxWidth: { xs: '200px', sm: '240px', md: '280px', lg: '320px' },
+                    maxHeight: { xs: '40px', sm: '50px', md: '60px', lg: '70px' },
+                    maxWidth: { xs: '40px', sm: '50px', md: '60px', lg: '70px' },
                     objectFit: 'contain',
                   }}
                 />
@@ -39,8 +39,9 @@ export default function Header() {
                   sx={{
                     color: 'inherit',
                     fontWeight: 'bold',
-                    fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem', lg: '1.5rem' },
-                    display: { xs: 'none', sm: 'none', md: 'none', lg: 'none', xl: 'block' }, // Only show on extra large screens
+                    fontSize: { xs: '0.9rem', sm: '1rem', md: '1.15rem', lg: '1.35rem' },
+                    display: 'block',
+                    whiteSpace: 'nowrap',
                   }}
                 >
                   Buck & Beard Hunt Club
