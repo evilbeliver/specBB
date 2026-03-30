@@ -1,0 +1,636 @@
+total 248
+-rw-r--r--@  1 davidcristinzio  staff     21 Mar 30 08:23 BUILD_ID
+-rw-r--r--@  1 davidcristinzio  staff   2512 Mar 30 08:23 build-manifest.json
+drwxr-xr-x@  5 davidcristinzio  staff    160 Mar 30 08:23 cache
+drwx------  13 davidcristinzio  staff    416 Mar 30 08:23 dev
+drwxr-xr-x@  4 davidcristinzio  staff    128 Mar 30 08:23 diagnostics
+-rw-r--r--@  1 davidcristinzio  staff    110 Mar 30 08:23 export-marker.json
+-rw-r--r--@  1 davidcristinzio  staff    798 Mar 30 08:23 fallback-build-manifest.json
+-rw-r--r--@  1 davidcristinzio  staff   1556 Mar 30 08:23 images-manifest.json
+-rw-rw-r--@  1 davidcristinzio  staff   9199 Mar 30 08:23 next-minimal-server.js.nft.json
+-rw-rw-r--@  1 davidcristinzio  staff  43177 Mar 30 08:23 next-server.js.nft.json
+-rw-r--r--@  1 davidcristinzio  staff     20 Mar 30 08:23 package.json
+-rw-r--r--@  1 davidcristinzio  staff    354 Mar 30 08:23 prerender-manifest.json
+-rw-r--r--@  1 davidcristinzio  staff   8877 Mar 30 08:23 required-server-files.js
+-rw-r--r--@  1 davidcristinzio  staff   8848 Mar 30 08:23 required-server-files.json
+-rw-r--r--@  1 davidcristinzio  staff   2241 Mar 30 08:23 routes-manifest.json
+drwxr-xr-x@ 14 davidcristinzio  staff    448 Mar 30 08:23 server
+drwxr-xr-x@  4 davidcristinzio  staff    128 Mar 30 08:23 static
+-rw-r--r--@  1 davidcristinzio  staff   6964 Mar 30 08:23 trace
+-rw-r--r--@  1 davidcristinzio  staff   1048 Mar 30 08:23 trace-build
+-rw-r--r--@  1 davidcristinzio  staff      0 Mar 30 08:23 turbopack
+drwxr-xr-x@  4 davidcristinzio  staff    128 Mar 30 08:23 types
+
+.next/cache:
+total 0
+
+.next/dev:
+total 56
+-rw-r--r--@  1 davidcristinzio  staff  4519 Mar 30 08:17 build-manifest.json
+drwxr-xr-x@  5 davidcristinzio  staff   160 Mar 30 08:14 cache
+-rw-r--r--@  1 davidcristinzio  staff   881 Mar 30 08:17 fallback-build-manifest.json
+drwxr-xr-x@  3 davidcristinzio  staff    96 Mar 30 08:14 logs
+-rw-r--r--@  1 davidcristinzio  staff    24 Mar 30 08:14 package.json
+-rw-r--r--@  1 davidcristinzio  staff   354 Mar 30 08:14 prerender-manifest.json
+-rw-r--r--@  1 davidcristinzio  staff   623 Mar 30 08:14 routes-manifest.json
+drwx------  13 davidcristinzio  staff   416 Mar 30 08:17 server
+drwx------   4 davidcristinzio  staff   128 Mar 30 08:17 static
+-rw-r--r--@  1 davidcristinzio  staff  2404 Mar 30 08:17 trace
+drwxr-xr-x@  5 davidcristinzio  staff   160 Mar 30 08:14 types
+
+.next/dev/cache:
+total 8
+-rw-r--r--@ 1 davidcristinzio  staff   2 Mar 30 08:14 next-devtools-config.json
+drwxr-xr-x@ 3 davidcristinzio  staff  96 Mar 30 08:14 turbopack
+
+.next/dev/cache/turbopack:
+total 0
+drwxr-xr-x@ 68 davidcristinzio  staff  2176 Mar 30 08:19 v16.1.0-canary.19-88-gda605e0c4
+
+.next/dev/cache/turbopack/v16.1.0-canary.19-88-gda605e0c4:
+total 271288
+-rw-r--r--@ 1 davidcristinzio  staff     12674 Mar 30 08:14 00000002.sst
+-rw-r--r--@ 1 davidcristinzio  staff        79 Mar 30 08:14 00000003.sst
+-rw-r--r--@ 1 davidcristinzio  staff     10246 Mar 30 08:14 00000004.sst
+-rw-r--r--@ 1 davidcristinzio  staff     10670 Mar 30 08:14 00000005.sst
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:14 00000006.meta
+-rw-r--r--@ 1 davidcristinzio  staff      1172 Mar 30 08:14 00000007.meta
+-rw-r--r--@ 1 davidcristinzio  staff      1172 Mar 30 08:14 00000009.meta
+-rw-r--r--@ 1 davidcristinzio  staff      1172 Mar 30 08:14 00000010.meta
+-rw-r--r--@ 1 davidcristinzio  staff   7920419 Mar 30 08:14 00000015.sst
+-rw-r--r--@ 1 davidcristinzio  staff        79 Mar 30 08:14 00000016.sst
+-rw-r--r--@ 1 davidcristinzio  staff   4593679 Mar 30 08:14 00000017.sst
+-rw-r--r--@ 1 davidcristinzio  staff   4363590 Mar 30 08:14 00000018.sst
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:14 00000019.meta
+-rw-r--r--@ 1 davidcristinzio  staff    150096 Mar 30 08:14 00000020.meta
+-rw-r--r--@ 1 davidcristinzio  staff    150096 Mar 30 08:14 00000022.meta
+-rw-r--r--@ 1 davidcristinzio  staff    150096 Mar 30 08:14 00000023.meta
+-rw-r--r--@ 1 davidcristinzio  staff   4711041 Mar 30 08:16 00000028.sst
+-rw-r--r--@ 1 davidcristinzio  staff        79 Mar 30 08:16 00000029.sst
+-rw-r--r--@ 1 davidcristinzio  staff    355705 Mar 30 08:16 00000030.sst
+-rw-r--r--@ 1 davidcristinzio  staff    374022 Mar 30 08:16 00000031.sst
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:16 00000032.meta
+-rw-r--r--@ 1 davidcristinzio  staff     75342 Mar 30 08:16 00000033.meta
+-rw-r--r--@ 1 davidcristinzio  staff     19276 Mar 30 08:16 00000035.meta
+-rw-r--r--@ 1 davidcristinzio  staff     19276 Mar 30 08:16 00000036.meta
+-rw-r--r--@ 1 davidcristinzio  staff   6390981 Mar 30 08:16 00000041.sst
+-rw-r--r--@ 1 davidcristinzio  staff        79 Mar 30 08:16 00000042.sst
+-rw-r--r--@ 1 davidcristinzio  staff    998949 Mar 30 08:16 00000043.sst
+-rw-r--r--@ 1 davidcristinzio  staff   1018315 Mar 30 08:16 00000044.sst
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:16 00000045.meta
+-rw-r--r--@ 1 davidcristinzio  staff    150094 Mar 30 08:16 00000046.meta
+-rw-r--r--@ 1 davidcristinzio  staff     37964 Mar 30 08:16 00000048.meta
+-rw-r--r--@ 1 davidcristinzio  staff     37964 Mar 30 08:16 00000049.meta
+-rw-r--r--@ 1 davidcristinzio  staff  59095084 Mar 30 08:16 00000050.sst
+-rw-r--r--@ 1 davidcristinzio  staff    299146 Mar 30 08:16 00000051.meta
+-rw-r--r--@ 1 davidcristinzio  staff        68 Mar 30 08:16 00000052.del
+-rw-r--r--@ 1 davidcristinzio  staff   5491612 Mar 30 08:17 00000053.sst
+-rw-r--r--@ 1 davidcristinzio  staff   5292020 Mar 30 08:17 00000054.sst
+-rw-r--r--@ 1 davidcristinzio  staff   9815298 Mar 30 08:17 00000055.sst
+-rw-r--r--@ 1 davidcristinzio  staff   9106977 Mar 30 08:17 00000056.sst
+-rw-r--r--@ 1 davidcristinzio  staff   4789155 Mar 30 08:17 00000057.sst
+-rw-r--r--@ 1 davidcristinzio  staff        79 Mar 30 08:17 00000058.sst
+-rw-r--r--@ 1 davidcristinzio  staff    270580 Mar 30 08:17 00000059.sst
+-rw-r--r--@ 1 davidcristinzio  staff    256586 Mar 30 08:17 00000060.sst
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:17 00000061.meta
+-rw-r--r--@ 1 davidcristinzio  staff     75342 Mar 30 08:17 00000062.meta
+-rw-r--r--@ 1 davidcristinzio  staff     75526 Mar 30 08:17 00000063.meta
+-rw-r--r--@ 1 davidcristinzio  staff      9932 Mar 30 08:17 00000064.meta
+-rw-r--r--@ 1 davidcristinzio  staff      9932 Mar 30 08:17 00000065.meta
+-rw-r--r--@ 1 davidcristinzio  staff    987056 Mar 30 08:19 00000066.sst
+-rw-r--r--@ 1 davidcristinzio  staff  11554127 Mar 30 08:19 00000067.sst
+-rw-r--r--@ 1 davidcristinzio  staff        79 Mar 30 08:19 00000068.sst
+-rw-r--r--@ 1 davidcristinzio  staff       354 Mar 30 08:19 00000069.sst
+-rw-r--r--@ 1 davidcristinzio  staff       348 Mar 30 08:19 00000070.sst
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:19 00000071.meta
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:19 00000072.meta
+-rw-r--r--@ 1 davidcristinzio  staff      5260 Mar 30 08:19 00000073.meta
+-rw-r--r--@ 1 davidcristinzio  staff      5260 Mar 30 08:19 00000074.meta
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:19 00000075.meta
+-rw-r--r--@ 1 davidcristinzio  staff       146 Mar 30 08:19 00000076.sst
+-rw-r--r--@ 1 davidcristinzio  staff      5000 Mar 30 08:19 00000077.sst
+-rw-r--r--@ 1 davidcristinzio  staff        79 Mar 30 08:19 00000078.sst
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:19 00000079.meta
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:19 00000080.meta
+-rw-r--r--@ 1 davidcristinzio  staff       657 Mar 30 08:19 00000081.meta
+-rw-r--r--@ 1 davidcristinzio  staff         4 Mar 30 08:19 CURRENT
+-rw-r--r--@ 1 davidcristinzio  staff     12374 Mar 30 08:19 LOG
+
+.next/dev/logs:
+total 8
+-rw-r--r--@ 1 davidcristinzio  staff  434 Mar 30 08:19 next-development.log
+
+.next/dev/server:
+total 80
+-rw-r--r--@  1 davidcristinzio  staff     2 Mar 30 08:14 app-paths-manifest.json
+drwxr-xr-x@  3 davidcristinzio  staff    96 Mar 30 08:14 chunks
+-rw-r--r--@  1 davidcristinzio  staff    48 Mar 30 08:14 interception-route-rewrite-manifest.js
+-rw-r--r--@  1 davidcristinzio  staff  4641 Mar 30 08:17 middleware-build-manifest.js
+-rw-r--r--@  1 davidcristinzio  staff    83 Mar 30 08:14 middleware-manifest.json
+-rw-r--r--@  1 davidcristinzio  staff   135 Mar 30 08:17 next-font-manifest.js
+-rw-r--r--@  1 davidcristinzio  staff    94 Mar 30 08:17 next-font-manifest.json
+drwx------  25 davidcristinzio  staff   800 Mar 30 08:17 pages
+-rw-r--r--@  1 davidcristinzio  staff   235 Mar 30 08:17 pages-manifest.json
+-rw-r--r--@  1 davidcristinzio  staff   138 Mar 30 08:14 server-reference-manifest.js
+-rw-r--r--@  1 davidcristinzio  staff    97 Mar 30 08:14 server-reference-manifest.json
+
+.next/dev/server/chunks:
+total 0
+drwxr-xr-x@ 54 davidcristinzio  staff  1728 Mar 30 08:17 ssr
+
+.next/dev/server/chunks/ssr:
+total 34912
+-rw-rw-r--@ 1 davidcristinzio  staff   319798 Mar 30 08:14 _7121c25b._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   384149 Mar 30 08:14 _7121c25b._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   125894 Mar 30 08:16 [root-of-the-server]__00c37728._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    31443 Mar 30 08:16 [root-of-the-server]__00c37728._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff     7598 Mar 30 08:14 [root-of-the-server]__3e68dee3._.js
+-rw-rw-r--@ 1 davidcristinzio  staff     4604 Mar 30 08:14 [root-of-the-server]__3e68dee3._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   151137 Mar 30 08:17 [root-of-the-server]__61523611._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    38571 Mar 30 08:17 [root-of-the-server]__61523611._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff     8816 Mar 30 08:14 [root-of-the-server]__7afaf0a9._.js
+-rw-rw-r--@ 1 davidcristinzio  staff     1589 Mar 30 08:14 [root-of-the-server]__7afaf0a9._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   162048 Mar 30 08:16 [root-of-the-server]__ca569e76._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    40532 Mar 30 08:16 [root-of-the-server]__ca569e76._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   134125 Mar 30 08:19 [root-of-the-server]__db234e00._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    34659 Mar 30 08:19 [root-of-the-server]__db234e00._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   103147 Mar 30 08:14 [root-of-the-server]__f7e59ecd._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    27721 Mar 30 08:14 [root-of-the-server]__f7e59ecd._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff    29896 Mar 30 08:14 [turbopack]_runtime.js
+-rw-rw-r--@ 1 davidcristinzio  staff    50481 Mar 30 08:14 [turbopack]_runtime.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   635867 Mar 30 08:16 7c918_@mui_material_362c491e._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   408566 Mar 30 08:16 7c918_@mui_material_362c491e._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff  1194570 Mar 30 08:16 7c918_@mui_material_6ba7244a._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   769737 Mar 30 08:16 7c918_@mui_material_6ba7244a._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   712853 Mar 30 08:17 7c918_@mui_material_bd6579a2._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   453315 Mar 30 08:17 7c918_@mui_material_bd6579a2._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   625918 Mar 30 08:14 7c918_@mui_material_cd4da6e8._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   398801 Mar 30 08:14 7c918_@mui_material_cd4da6e8._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   780705 Mar 30 08:15 7c918_@mui_material_e5692393._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   490654 Mar 30 08:15 7c918_@mui_material_e5692393._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   216372 Mar 30 08:16 7c918_0173c074._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   181385 Mar 30 08:16 7c918_0173c074._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   214433 Mar 30 08:16 7c918_06c05f3f._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   179991 Mar 30 08:16 7c918_06c05f3f._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   213516 Mar 30 08:15 7c918_158dfe02._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   178956 Mar 30 08:15 7c918_158dfe02._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   218304 Mar 30 08:17 7c918_41cb2852._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   184231 Mar 30 08:17 7c918_41cb2852._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   523237 Mar 30 08:14 7c918_67e64eec._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   453641 Mar 30 08:14 7c918_67e64eec._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   210702 Mar 30 08:14 7c918_8fd3c877._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   175776 Mar 30 08:14 7c918_8fd3c877._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   431808 Mar 30 08:15 7c918_next_2b7c0927._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   575696 Mar 30 08:15 7c918_next_2b7c0927._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   588998 Mar 30 08:16 7c918_next_2f873561._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   815670 Mar 30 08:16 7c918_next_2f873561._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   589036 Mar 30 08:16 7c918_next_5dfc8925._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   815670 Mar 30 08:16 7c918_next_5dfc8925._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   588960 Mar 30 08:17 7c918_next_7b297ea0._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   815670 Mar 30 08:17 7c918_next_7b297ea0._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   588955 Mar 30 08:14 7c918_next_9641d852._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   815670 Mar 30 08:14 7c918_next_9641d852._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff     6909 Mar 30 08:14 Desktop_specBB_src_fe9cb79e._.js
+-rw-rw-r--@ 1 davidcristinzio  staff     4603 Mar 30 08:14 Desktop_specBB_src_fe9cb79e._.js.map
+
+.next/dev/server/pages:
+total 112
+drwx------  7 davidcristinzio  staff   224 Feb  1 20:05 _app
+-rw-rw-r--@ 1 davidcristinzio  staff   347 Mar 30 08:14 _app.js
+-rw-rw-r--@ 1 davidcristinzio  staff    53 Mar 30 08:14 _app.js.map
+drwx------  5 davidcristinzio  staff   160 Feb  1 20:05 _document
+-rw-rw-r--@ 1 davidcristinzio  staff   357 Mar 30 08:14 _document.js
+-rw-rw-r--@ 1 davidcristinzio  staff    53 Mar 30 08:14 _document.js.map
+drwx------  7 davidcristinzio  staff   224 Feb 17 22:12 _error
+-rw-------  1 davidcristinzio  staff    53 Feb  4 11:33 _error.js.map
+drwxr-xr-x@ 7 davidcristinzio  staff   224 Mar 30 08:17 about
+-rw-rw-r--@ 1 davidcristinzio  staff  1243 Mar 30 08:17 about.js
+-rw-rw-r--@ 1 davidcristinzio  staff    53 Mar 30 08:17 about.js.map
+drwxr-xr-x@ 7 davidcristinzio  staff   224 Mar 30 08:16 contact
+-rw-rw-r--@ 1 davidcristinzio  staff  1249 Mar 30 08:16 contact.js
+-rw-rw-r--@ 1 davidcristinzio  staff    53 Mar 30 08:16 contact.js.map
+drwxr-xr-x@ 7 davidcristinzio  staff   224 Mar 30 08:14 index
+-rw-rw-r--@ 1 davidcristinzio  staff  1243 Mar 30 08:14 index.js
+-rw-rw-r--@ 1 davidcristinzio  staff    53 Mar 30 08:14 index.js.map
+drwxr-xr-x@ 7 davidcristinzio  staff   224 Mar 30 08:16 properties
+-rw-rw-r--@ 1 davidcristinzio  staff  1258 Mar 30 08:15 properties.js
+-rw-rw-r--@ 1 davidcristinzio  staff    53 Mar 30 08:15 properties.js.map
+drwxr-xr-x@ 7 davidcristinzio  staff   224 Mar 30 08:16 resources
+-rw-rw-r--@ 1 davidcristinzio  staff  1255 Mar 30 08:16 resources.js
+-rw-rw-r--@ 1 davidcristinzio  staff    53 Mar 30 08:16 resources.js.map
+
+.next/dev/server/pages/_app:
+total 40
+-rw-------  1 davidcristinzio  staff  837 Feb  1 20:05 build-manifest.json
+-rw-------  1 davidcristinzio  staff   54 Feb  1 20:05 client-build-manifest.json
+-rw-------  1 davidcristinzio  staff   94 Feb  1 20:05 next-font-manifest.json
+-rw-------  1 davidcristinzio  staff   30 Feb  1 20:05 pages-manifest.json
+-rw-------  1 davidcristinzio  staff    2 Feb  1 20:05 react-loadable-manifest.json
+
+.next/dev/server/pages/_document:
+total 24
+-rw-------  1 davidcristinzio  staff  94 Feb  1 20:05 next-font-manifest.json
+-rw-------  1 davidcristinzio  staff  40 Feb  1 20:05 pages-manifest.json
+-rw-------  1 davidcristinzio  staff   2 Feb  1 20:05 react-loadable-manifest.json
+
+.next/dev/server/pages/_error:
+total 0
+-rw-------  1 davidcristinzio  staff  835 Feb  4 11:33 build-manifest.json
+-rw-------  1 davidcristinzio  staff   58 Feb  4 11:33 client-build-manifest.json
+-rw-------  1 davidcristinzio  staff   94 Feb  4 11:33 next-font-manifest.json
+-rw-------  1 davidcristinzio  staff   34 Feb  4 11:33 pages-manifest.json
+-rw-------  1 davidcristinzio  staff    2 Feb  4 11:33 react-loadable-manifest.json
+
+.next/dev/server/pages/about:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  875 Mar 30 08:17 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   56 Mar 30 08:17 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:17 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   32 Mar 30 08:17 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:17 react-loadable-manifest.json
+
+.next/dev/server/pages/contact:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  881 Mar 30 08:16 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   60 Mar 30 08:16 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:16 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   36 Mar 30 08:16 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:16 react-loadable-manifest.json
+
+.next/dev/server/pages/index:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  870 Mar 30 08:14 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   51 Mar 30 08:14 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:14 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   27 Mar 30 08:14 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:14 react-loadable-manifest.json
+
+.next/dev/server/pages/properties:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  890 Mar 30 08:15 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   66 Mar 30 08:15 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:15 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   42 Mar 30 08:15 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:15 react-loadable-manifest.json
+
+.next/dev/server/pages/resources:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  887 Mar 30 08:16 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   64 Mar 30 08:16 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:16 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   40 Mar 30 08:16 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:16 react-loadable-manifest.json
+
+.next/dev/static:
+total 0
+drwx------  103 davidcristinzio  staff  3296 Mar 30 08:17 chunks
+drwxr-xr-x@   5 davidcristinzio  staff   160 Mar 30 08:17 development
+
+.next/dev/static/chunks:
+total 50072
+-rw-rw-r--@ 1 davidcristinzio  staff   180471 Mar 30 08:16 [root-of-the-server]__2a4a2958._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    66258 Mar 30 08:16 [root-of-the-server]__2a4a2958._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   152809 Mar 30 08:19 [root-of-the-server]__3f8f53b3._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    60388 Mar 30 08:19 [root-of-the-server]__3f8f53b3._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   143705 Mar 30 08:16 [root-of-the-server]__59145509._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    57164 Mar 30 08:16 [root-of-the-server]__59145509._.js.map
+-rw-------  1 davidcristinzio  staff    16638 Feb  4 13:39 [root-of-the-server]__7be56e8e._.js
+-rw-------  1 davidcristinzio  staff    23687 Feb  1 20:05 [root-of-the-server]__cfba1038._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    30296 Mar 30 08:14 [root-of-the-server]__cfba1038._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   169225 Mar 30 08:17 [root-of-the-server]__d268b890._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    64288 Mar 30 08:17 [root-of-the-server]__d268b890._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   120629 Mar 30 08:14 [root-of-the-server]__fedff04e._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    53433 Mar 30 08:14 [root-of-the-server]__fedff04e._.js.map
+-rw-------  1 davidcristinzio  staff   447529 Feb  4 11:41 7c918_@mui_material_03770011._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff  1322985 Mar 30 08:16 7c918_@mui_material_297cd1c3._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   821067 Mar 30 08:16 7c918_@mui_material_297cd1c3._.js.map
+-rw-------  1 davidcristinzio  staff   731070 Feb  3 10:54 7c918_@mui_material_56cd864a._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   457291 Mar 30 08:16 7c918_@mui_material_56cd864a._.js.map
+-rw-------  1 davidcristinzio  staff   721047 Feb  4 11:57 7c918_@mui_material_7ee4a1c8._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   447529 Mar 30 08:14 7c918_@mui_material_7ee4a1c8._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   882218 Mar 30 08:15 7c918_@mui_material_cbd43f39._.js
+-rw-------  1 davidcristinzio  staff   539446 Feb  3 10:54 7c918_@mui_material_cbd43f39._.js.map
+-rw-------  1 davidcristinzio  staff   811540 Feb  1 20:38 7c918_@mui_material_f9a0f9e2._.js
+-rw-------  1 davidcristinzio  staff   502080 Feb  1 20:38 7c918_@mui_material_f9a0f9e2._.js.map
+-rw-------  1 davidcristinzio  staff   187637 Feb  1 20:38 7c918_@mui_system_0d2e46cf._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   146931 Mar 30 08:15 7c918_@mui_system_0d2e46cf._.js.map
+-rw-------  1 davidcristinzio  staff   195252 Feb  3 10:54 7c918_@mui_system_0fa63217._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   150798 Mar 30 08:16 7c918_@mui_system_0fa63217._.js.map
+-rw-------  1 davidcristinzio  staff   187637 Feb  1 20:05 7c918_@mui_system_3075dad7._.js
+-rw-------  1 davidcristinzio  staff   187637 Feb  4 11:53 7c918_@mui_system_ad8264b4._.js
+-rw-------  1 davidcristinzio  staff   146931 Feb  4 11:53 7c918_@mui_system_ad8264b4._.js.map
+-rw-------  1 davidcristinzio  staff   143793 Feb  1 20:05 7c918_@mui_system_c5103f17._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   108619 Mar 30 08:14 7c918_@mui_system_c5103f17._.js.map
+-rw-------  1 davidcristinzio  staff   112551 Feb  4 11:33 7c918_04830402._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   535537 Mar 30 08:15 7c918_0d5f4352._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   523610 Mar 30 08:15 7c918_0d5f4352._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   532651 Mar 30 08:14 7c918_53e3279c._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   520430 Mar 30 08:14 7c918_53e3279c._.js.map
+-rw-------  1 davidcristinzio  staff   474638 Feb  1 20:05 7c918_9879da66._.js
+-rw-------  1 davidcristinzio  staff   462290 Feb  1 20:05 7c918_9879da66._.js.map
+-rw-------  1 davidcristinzio  staff   540421 Feb  1 20:38 7c918_d2eb3b2d._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   528886 Mar 30 08:17 7c918_d2eb3b2d._.js.map
+-rw-------  1 davidcristinzio  staff   536478 Feb  3 10:54 7c918_fa381b51._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   524649 Mar 30 08:16 7c918_fa381b51._.js.map
+-rw-------  1 davidcristinzio  staff   539231 Feb  3 10:54 7c918_fc4f158c._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   526043 Mar 30 08:16 7c918_fc4f158c._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff      701 Mar 30 08:15 7c918_next_a5e52d37._.js
+-rw-rw-r--@ 1 davidcristinzio  staff      606 Mar 30 08:15 7c918_next_a5e52d37._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff      963 Mar 30 08:14 7c918_next_cd11d1dd._.js
+-rw-------  1 davidcristinzio  staff      886 Feb  1 20:05 7c918_next_cd11d1dd._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff    85093 Mar 30 08:14 7c918_next_dist_39aabbf4._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   110845 Mar 30 08:14 7c918_next_dist_39aabbf4._.js.map
+-rw-------  1 davidcristinzio  staff    93166 Feb  4 11:33 7c918_next_dist_9880fae1._.js
+-rw-------  1 davidcristinzio  staff    84772 Feb  4 13:39 7c918_next_dist_a57f8bb2._.js
+-rw-------  1 davidcristinzio  staff   110328 Feb  4 13:39 7c918_next_dist_a57f8bb2._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   213191 Mar 30 08:14 7c918_next_dist_client_3aef6471._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   284043 Mar 30 08:14 7c918_next_dist_client_3aef6471._.js.map
+-rw-------  1 davidcristinzio  staff   230786 Feb  1 20:37 7c918_next_dist_client_644f45bf._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   184203 Mar 30 08:14 7c918_next_dist_client_cb45ec6b._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   237198 Mar 30 08:14 7c918_next_dist_client_cb45ec6b._.js.map
+-rw-------  1 davidcristinzio  staff   979416 Feb  1 20:37 7c918_next_dist_compiled_732a97f7._.js
+-rw-------  1 davidcristinzio  staff   914026 Feb  1 20:05 7c918_next_dist_compiled_fe72deaf._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  2646181 Mar 30 08:14 7c918_next_dist_compiled_fe72deaf._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   255371 Mar 30 08:14 7c918_next_dist_shared_lib_5074ce11._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   374270 Mar 30 08:14 7c918_next_dist_shared_lib_5074ce11._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   243686 Mar 30 08:14 7c918_next_dist_shared_lib_6487ebe5._.js
+-rw-------  1 davidcristinzio  staff   360275 Feb  1 20:05 7c918_next_dist_shared_lib_6487ebe5._.js.map
+-rw-------  1 davidcristinzio  staff   373426 Feb  4 11:33 7c918_next_dist_shared_lib_c4e40c7f._.js.map
+-rw-------  1 davidcristinzio  staff      329 Feb  4 11:33 7c918_next_error_b0ec0773.js.map
+-rw-------  1 davidcristinzio  staff   965201 Feb  1 20:05 7c918_react-dom_92efe0a0._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  1547923 Mar 30 08:14 7c918_react-dom_92efe0a0._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff      687 Mar 30 08:14 Desktop_specBB_src_pages__app_2da965e7._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   117474 Mar 30 08:14 Desktop_specBB_src_pages__app_4f3da1e2._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff      718 Mar 30 08:17 Desktop_specBB_src_pages_about_2da965e7._.js
+-rw-------  1 davidcristinzio  staff   117474 Feb  3 10:54 Desktop_specBB_src_pages_about_8d690fd7._.js.map
+-rw-------  1 davidcristinzio  staff      718 Feb  4 13:39 Desktop_specBB_src_pages_contact_2da965e7._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   117474 Mar 30 08:16 Desktop_specBB_src_pages_contact_5e6765aa._.js.map
+-rw-------  1 davidcristinzio  staff   117474 Feb  4 13:39 Desktop_specBB_src_pages_contact_ea2278d7._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff      718 Mar 30 08:14 Desktop_specBB_src_pages_index_2da965e7._.js
+-rw-------  1 davidcristinzio  staff   117474 Feb  1 20:37 Desktop_specBB_src_pages_index_5cda4e66._.js.map
+-rw-------  1 davidcristinzio  staff   117474 Feb  4 11:41 Desktop_specBB_src_pages_index_5fbebab0._.js.map
+-rw-------  1 davidcristinzio  staff   117474 Feb  4 11:53 Desktop_specBB_src_pages_index_652ef28c._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   117474 Mar 30 08:14 Desktop_specBB_src_pages_index_78d13baa._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff      718 Mar 30 08:15 Desktop_specBB_src_pages_properties_2da965e7._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   117474 Mar 30 08:15 Desktop_specBB_src_pages_properties_5e3c6fa2._.js.map
+-rw-------  1 davidcristinzio  staff   117474 Feb  4 11:55 Desktop_specBB_src_pages_properties_c9cf7383._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff      718 Mar 30 08:16 Desktop_specBB_src_pages_resources_2da965e7._.js
+-rw-------  1 davidcristinzio  staff   117474 Feb  4 11:55 Desktop_specBB_src_pages_resources_a7fe0ecc._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   117474 Mar 30 08:16 Desktop_specBB_src_pages_resources_aa250e9e._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff     2586 Mar 30 08:14 Desktop_specBB_src_styles_globals_9cacc58d.css
+-rw-rw-r--@ 1 davidcristinzio  staff     3301 Mar 30 08:14 Desktop_specBB_src_styles_globals_9cacc58d.css.map
+drwxr-xr-x@ 8 davidcristinzio  staff      256 Mar 30 08:17 pages
+-rw-rw-r--@ 1 davidcristinzio  staff    75093 Mar 30 08:14 turbopack-Desktop_specBB_src_pages__app_4f3da1e2._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    75036 Mar 30 08:17 turbopack-Desktop_specBB_src_pages_about_8d690fd7._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    75040 Mar 30 08:16 turbopack-Desktop_specBB_src_pages_contact_5e6765aa._.js
+-rw-------  1 davidcristinzio  staff    74901 Feb  4 13:39 turbopack-Desktop_specBB_src_pages_contact_ea2278d7._.js
+-rw-------  1 davidcristinzio  staff    75036 Feb  1 20:05 turbopack-Desktop_specBB_src_pages_index_0f4cd98a._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    75036 Mar 30 08:14 turbopack-Desktop_specBB_src_pages_index_78d13baa._.js
+-rw-------  1 davidcristinzio  staff    75046 Feb  3 10:54 turbopack-Desktop_specBB_src_pages_properties_5e3c6fa2._.js
+-rw-------  1 davidcristinzio  staff    75046 Feb  4 11:55 turbopack-Desktop_specBB_src_pages_properties_c9cf7383._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    75044 Mar 30 08:16 turbopack-Desktop_specBB_src_pages_resources_aa250e9e._.js
+
+.next/dev/static/chunks/pages:
+total 48
+-rw-rw-r--@ 1 davidcristinzio  staff  663 Mar 30 08:14 _app.js
+-rw-rw-r--@ 1 davidcristinzio  staff  697 Mar 30 08:17 about.js
+-rw-rw-r--@ 1 davidcristinzio  staff  703 Mar 30 08:16 contact.js
+-rw-rw-r--@ 1 davidcristinzio  staff  692 Mar 30 08:14 index.js
+-rw-rw-r--@ 1 davidcristinzio  staff  712 Mar 30 08:15 properties.js
+-rw-rw-r--@ 1 davidcristinzio  staff  709 Mar 30 08:16 resources.js
+
+.next/dev/static/development:
+total 24
+-rw-r--r--@ 1 davidcristinzio  staff  582 Mar 30 08:17 _buildManifest.js
+-rw-r--r--@ 1 davidcristinzio  staff    2 Mar 30 08:14 _clientMiddlewareManifest.json
+-rw-r--r--@ 1 davidcristinzio  staff   76 Mar 30 08:17 _ssgManifest.js
+
+.next/dev/types:
+total 32
+-rw-r--r--@ 1 davidcristinzio  staff  5854 Mar 30 08:19 cache-life.d.ts
+-rw-r--r--@ 1 davidcristinzio  staff  1570 Mar 30 08:19 routes.d.ts
+-rw-r--r--@ 1 davidcristinzio  staff  2749 Mar 30 08:19 validator.ts
+
+.next/diagnostics:
+total 16
+-rw-r--r--@ 1 davidcristinzio  staff  93 Mar 30 08:23 build-diagnostics.json
+-rw-r--r--@ 1 davidcristinzio  staff  37 Mar 30 08:23 framework.json
+
+.next/server:
+total 80
+-rw-r--r--@  1 davidcristinzio  staff     2 Mar 30 08:23 app-paths-manifest.json
+drwxr-xr-x@  3 davidcristinzio  staff    96 Mar 30 08:23 chunks
+-rw-r--r--@  1 davidcristinzio  staff    37 Mar 30 08:23 functions-config-manifest.json
+-rw-r--r--@  1 davidcristinzio  staff    48 Mar 30 08:23 interception-route-rewrite-manifest.js
+-rw-r--r--@  1 davidcristinzio  staff  2614 Mar 30 08:23 middleware-build-manifest.js
+-rw-r--r--@  1 davidcristinzio  staff    83 Mar 30 08:23 middleware-manifest.json
+-rw-r--r--@  1 davidcristinzio  staff   135 Mar 30 08:23 next-font-manifest.js
+-rw-r--r--@  1 davidcristinzio  staff    94 Mar 30 08:23 next-font-manifest.json
+drwxr-xr-x@ 36 davidcristinzio  staff  1152 Mar 30 08:23 pages
+-rw-r--r--@  1 davidcristinzio  staff   305 Mar 30 08:23 pages-manifest.json
+-rw-r--r--@  1 davidcristinzio  staff   138 Mar 30 08:23 server-reference-manifest.js
+-rw-r--r--@  1 davidcristinzio  staff    97 Mar 30 08:23 server-reference-manifest.json
+
+.next/server/chunks:
+total 0
+drwxr-xr-x@ 42 davidcristinzio  staff  1344 Mar 30 08:23 ssr
+
+.next/server/chunks/ssr:
+total 12928
+-rw-rw-r--@ 1 davidcristinzio  staff     224 Mar 30 08:23 [externals]_react_82e7a549._.js
+-rw-rw-r--@ 1 davidcristinzio  staff      51 Mar 30 08:23 [externals]_react_82e7a549._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff  153266 Mar 30 08:23 [root-of-the-server]__0765490b._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  701426 Mar 30 08:23 [root-of-the-server]__0765490b._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff  153266 Mar 30 08:23 [root-of-the-server]__30c5454b._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  701431 Mar 30 08:23 [root-of-the-server]__30c5454b._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   47241 Mar 30 08:23 [root-of-the-server]__5c91d4ce._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  219101 Mar 30 08:23 [root-of-the-server]__5c91d4ce._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff  153266 Mar 30 08:23 [root-of-the-server]__a01f90b5._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  701403 Mar 30 08:23 [root-of-the-server]__a01f90b5._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff  153266 Mar 30 08:23 [root-of-the-server]__b0d480cd._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  701375 Mar 30 08:23 [root-of-the-server]__b0d480cd._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff  153266 Mar 30 08:23 [root-of-the-server]__b4a10768._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  701407 Mar 30 08:23 [root-of-the-server]__b4a10768._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   40014 Mar 30 08:23 [root-of-the-server]__c1cde73b._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  273677 Mar 30 08:23 [root-of-the-server]__c1cde73b._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   86456 Mar 30 08:23 [root-of-the-server]__cf8bd83f._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  335399 Mar 30 08:23 [root-of-the-server]__cf8bd83f._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   29893 Mar 30 08:23 [turbopack]_runtime.js
+-rw-rw-r--@ 1 davidcristinzio  staff   50481 Mar 30 08:23 [turbopack]_runtime.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff    1723 Mar 30 08:23 7c918_@mui_1af8f8c5._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    7127 Mar 30 08:23 7c918_@mui_1af8f8c5._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff    1503 Mar 30 08:23 7c918_@mui_33d16c22._.js
+-rw-rw-r--@ 1 davidcristinzio  staff    6859 Mar 30 08:23 7c918_@mui_33d16c22._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff    5613 Mar 30 08:23 7c918_@mui_ca1b7a1c._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   20657 Mar 30 08:23 7c918_@mui_ca1b7a1c._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   24231 Mar 30 08:23 7c918_0eea5d56._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   81990 Mar 30 08:23 7c918_0eea5d56._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   72595 Mar 30 08:23 7c918_23a3c78e._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  351972 Mar 30 08:23 7c918_23a3c78e._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff    6376 Mar 30 08:23 7c918_b071d5b1._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   18935 Mar 30 08:23 7c918_b071d5b1._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   29973 Mar 30 08:23 7c918_d753caf0._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  107952 Mar 30 08:23 7c918_d753caf0._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   12821 Mar 30 08:23 7c918_e22c8edf._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   36615 Mar 30 08:23 7c918_e22c8edf._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff    4245 Mar 30 08:23 7c918_next_eb5d0688._.js
+-rw-rw-r--@ 1 davidcristinzio  staff   21996 Mar 30 08:23 7c918_next_eb5d0688._.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   61307 Mar 30 08:23 Desktop_specBB_f88d0feb._.js
+-rw-rw-r--@ 1 davidcristinzio  staff  297292 Mar 30 08:23 Desktop_specBB_f88d0feb._.js.map
+
+.next/server/pages:
+total 824
+drwxr-xr-x@ 7 davidcristinzio  staff    224 Mar 30 08:23 _app
+-rw-rw-r--@ 1 davidcristinzio  staff    234 Mar 30 08:23 _app.js
+-rw-rw-r--@ 1 davidcristinzio  staff     53 Mar 30 08:23 _app.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff    611 Mar 30 08:23 _app.js.nft.json
+drwxr-xr-x@ 5 davidcristinzio  staff    160 Mar 30 08:23 _document
+-rw-rw-r--@ 1 davidcristinzio  staff    244 Mar 30 08:23 _document.js
+-rw-rw-r--@ 1 davidcristinzio  staff     53 Mar 30 08:23 _document.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   7860 Mar 30 08:23 _document.js.nft.json
+drwxr-xr-x@ 7 davidcristinzio  staff    224 Mar 30 08:23 _error
+-rw-rw-r--@ 1 davidcristinzio  staff    408 Mar 30 08:23 _error.js
+-rw-rw-r--@ 1 davidcristinzio  staff     53 Mar 30 08:23 _error.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   8070 Mar 30 08:23 _error.js.nft.json
+-rw-r--r--@ 1 davidcristinzio  staff   3258 Mar 30 08:23 404.html
+-rw-r--r--@ 1 davidcristinzio  staff   3244 Mar 30 08:23 500.html
+drwxr-xr-x@ 7 davidcristinzio  staff    224 Mar 30 08:23 about
+-rw-r--r--@ 1 davidcristinzio  staff  68406 Mar 30 08:23 about.html
+-rw-rw-r--@ 1 davidcristinzio  staff     53 Mar 30 08:23 about.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   8209 Mar 30 08:23 about.js.nft.json
+drwxr-xr-x@ 7 davidcristinzio  staff    224 Mar 30 08:23 contact
+-rw-r--r--@ 1 davidcristinzio  staff  72637 Mar 30 08:23 contact.html
+-rw-rw-r--@ 1 davidcristinzio  staff     53 Mar 30 08:23 contact.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   8211 Mar 30 08:23 contact.js.nft.json
+drwxr-xr-x@ 7 davidcristinzio  staff    224 Mar 30 08:23 index
+-rw-r--r--@ 1 davidcristinzio  staff  37128 Mar 30 08:23 index.html
+-rw-rw-r--@ 1 davidcristinzio  staff     53 Mar 30 08:23 index.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   8168 Mar 30 08:23 index.js.nft.json
+drwxr-xr-x@ 7 davidcristinzio  staff    224 Mar 30 08:23 properties
+-rw-r--r--@ 1 davidcristinzio  staff  61247 Mar 30 08:23 properties.html
+-rw-rw-r--@ 1 davidcristinzio  staff     53 Mar 30 08:23 properties.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   8162 Mar 30 08:23 properties.js.nft.json
+drwxr-xr-x@ 7 davidcristinzio  staff    224 Mar 30 08:23 resources
+-rw-r--r--@ 1 davidcristinzio  staff  49769 Mar 30 08:23 resources.html
+-rw-rw-r--@ 1 davidcristinzio  staff     53 Mar 30 08:23 resources.js.map
+-rw-rw-r--@ 1 davidcristinzio  staff   8172 Mar 30 08:23 resources.js.nft.json
+
+.next/server/pages/_app:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  486 Mar 30 08:23 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   60 Mar 30 08:23 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:23 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   30 Mar 30 08:23 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:23 react-loadable-manifest.json
+
+.next/server/pages/_document:
+total 24
+-rw-rw-r--@ 1 davidcristinzio  staff  94 Mar 30 08:23 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff  40 Mar 30 08:23 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   2 Mar 30 08:23 react-loadable-manifest.json
+
+.next/server/pages/_error:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  401 Mar 30 08:23 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   62 Mar 30 08:23 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:23 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   34 Mar 30 08:23 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:23 react-loadable-manifest.json
+
+.next/server/pages/about:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  486 Mar 30 08:23 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   61 Mar 30 08:23 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:23 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   32 Mar 30 08:23 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:23 react-loadable-manifest.json
+
+.next/server/pages/contact:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  531 Mar 30 08:23 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   63 Mar 30 08:23 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:23 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   36 Mar 30 08:23 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:23 react-loadable-manifest.json
+
+.next/server/pages/index:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  481 Mar 30 08:23 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   56 Mar 30 08:23 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:23 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   27 Mar 30 08:23 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:23 react-loadable-manifest.json
+
+.next/server/pages/properties:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  491 Mar 30 08:23 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   66 Mar 30 08:23 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:23 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   42 Mar 30 08:23 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:23 react-loadable-manifest.json
+
+.next/server/pages/resources:
+total 40
+-rw-rw-r--@ 1 davidcristinzio  staff  490 Mar 30 08:23 build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   65 Mar 30 08:23 client-build-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   94 Mar 30 08:23 next-font-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff   40 Mar 30 08:23 pages-manifest.json
+-rw-rw-r--@ 1 davidcristinzio  staff    2 Mar 30 08:23 react-loadable-manifest.json
+
+.next/static:
+total 0
+drwxr-xr-x@ 41 davidcristinzio  staff  1312 Mar 30 08:23 chunks
+drwxr-xr-x@  5 davidcristinzio  staff   160 Mar 30 08:23 cN79Hc4Tpa-HJhJmA9QFG
+
+.next/static/chunks:
+total 3152
+-rw-rw-r--@ 1 davidcristinzio  staff   48107 Mar 30 08:23 09e66f0f0dc8a23f.js
+-rw-rw-r--@ 1 davidcristinzio  staff  118047 Mar 30 08:23 0bf9a9c1545b27eb.js
+-rw-rw-r--@ 1 davidcristinzio  staff   55939 Mar 30 08:23 0f1031e0e9955104.js
+-rw-rw-r--@ 1 davidcristinzio  staff     328 Mar 30 08:23 166ab40d44b8e7bd.js
+-rw-rw-r--@ 1 davidcristinzio  staff     813 Mar 30 08:23 2278edfe7e561fec.js
+-rw-rw-r--@ 1 davidcristinzio  staff     369 Mar 30 08:23 24238c966988366a.js
+-rw-rw-r--@ 1 davidcristinzio  staff     333 Mar 30 08:23 303e02b5d3c7b500.js
+-rw-rw-r--@ 1 davidcristinzio  staff  118047 Mar 30 08:23 456d7be51d20372a.js
+-rw-rw-r--@ 1 davidcristinzio  staff   71583 Mar 30 08:23 4a7ddd45e9cb6d13.js
+-rw-rw-r--@ 1 davidcristinzio  staff   22536 Mar 30 08:23 4e557de61dc09047.js
+-rw-rw-r--@ 1 davidcristinzio  staff  118047 Mar 30 08:23 5375c37b1ad174bd.js
+-rw-rw-r--@ 1 davidcristinzio  staff     328 Mar 30 08:23 53bef7a932b4a079.js
+-rw-rw-r--@ 1 davidcristinzio  staff   21564 Mar 30 08:23 5cf79519a18fa6de.js
+-rw-rw-r--@ 1 davidcristinzio  staff   28011 Mar 30 08:23 5daa927739fded67.js
+-rw-rw-r--@ 1 davidcristinzio  staff    3112 Mar 30 08:23 5f1588327796ae2c.js
+-rw-rw-r--@ 1 davidcristinzio  staff    5658 Mar 30 08:23 5fac348a1f21e902.js
+-rw-rw-r--@ 1 davidcristinzio  staff   55939 Mar 30 08:23 6175017ebb4f0922.js
+-rw-rw-r--@ 1 davidcristinzio  staff  118047 Mar 30 08:23 632ff42c055a5328.js
+-rw-rw-r--@ 1 davidcristinzio  staff   55939 Mar 30 08:23 6369d0537d37518a.js
+-rw-rw-r--@ 1 davidcristinzio  staff   19373 Mar 30 08:23 6acea9c84edcfb26.js
+-rw-rw-r--@ 1 davidcristinzio  staff     332 Mar 30 08:23 71ef30d194c55cce.js
+-rw-rw-r--@ 1 davidcristinzio  staff   55939 Mar 30 08:23 9c70b5ceebfbed58.js
+-rw-rw-r--@ 1 davidcristinzio  staff   19278 Mar 30 08:23 a042b0c9e36a2e3b.js
+-rw-rw-r--@ 1 davidcristinzio  staff   41044 Mar 30 08:23 a8140e48ff3937d3.js
+-rw-rw-r--@ 1 davidcristinzio  staff   55939 Mar 30 08:23 ad1f92dbee760d5f.js
+-rw-rw-r--@ 1 davidcristinzio  staff     323 Mar 30 08:23 aef0692b39d1f6ab.js
+-rw-rw-r--@ 1 davidcristinzio  staff  118047 Mar 30 08:23 b533dd432431f505.js
+-rw-rw-r--@ 1 davidcristinzio  staff     251 Mar 30 08:23 cdedd64ebf2de4a1.js
+-rw-rw-r--@ 1 davidcristinzio  staff   46520 Mar 30 08:23 d5e493df07d820b0.js
+-rw-rw-r--@ 1 davidcristinzio  staff  211472 Mar 30 08:23 e06d1de6f634cca0.js
+-rw-rw-r--@ 1 davidcristinzio  staff    1978 Mar 30 08:23 eadf136f0fd273ce.css
+-rw-rw-r--@ 1 davidcristinzio  staff   46698 Mar 30 08:23 fc9753d97824b494.js
+-rw-rw-r--@ 1 davidcristinzio  staff   10238 Mar 30 08:23 turbopack-0f4f239cf2bd41bd.js
+-rw-rw-r--@ 1 davidcristinzio  staff   10346 Mar 30 08:23 turbopack-17f3fbff56193ff4.js
+-rw-rw-r--@ 1 davidcristinzio  staff   10310 Mar 30 08:23 turbopack-5efe4ee03ac481fb.js
+-rw-rw-r--@ 1 davidcristinzio  staff   10310 Mar 30 08:23 turbopack-5f62ddc6d70afab8.js
+-rw-rw-r--@ 1 davidcristinzio  staff   10311 Mar 30 08:23 turbopack-669bf2fdb7d3ea49.js
+-rw-rw-r--@ 1 davidcristinzio  staff   10310 Mar 30 08:23 turbopack-9a6a7ab95595300f.js
+-rw-rw-r--@ 1 davidcristinzio  staff   10310 Mar 30 08:23 turbopack-d28bb017e89d43f1.js
+
+.next/static/cN79Hc4Tpa-HJhJmA9QFG:
+total 24
+-rw-r--r--@ 1 davidcristinzio  staff  656 Mar 30 08:23 _buildManifest.js
+-rw-r--r--@ 1 davidcristinzio  staff    2 Mar 30 08:23 _clientMiddlewareManifest.json
+-rw-r--r--@ 1 davidcristinzio  staff   76 Mar 30 08:23 _ssgManifest.js
+
+.next/types:
+total 16
+-rw-r--r--@ 1 davidcristinzio  staff  1512 Mar 30 08:23 routes.d.ts
+-rw-r--r--@ 1 davidcristinzio  staff  2177 Mar 30 08:23 validator.ts
