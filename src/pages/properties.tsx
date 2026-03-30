@@ -72,7 +72,7 @@ const properties: Property[] = [
   {
     id: 4,
     name: 'Old Charleston Property',
-    location: 'Edgefield County',
+    location: 'Saluda County',
     acreage: 440,
     description: 'Our Old Charleston Tract is 440 acre property has 10+ stands and is broken up into multiple sections',
     features: ['Deer', 'Turkey', 'Camping'],
@@ -112,7 +112,7 @@ export default function Properties() {
         <title>Properties | Buck & Beard Hunt Club</title>
         <meta 
           name="description" 
-          content="Explore Buck & Beard Hunt Club's 5 premium hunting properties across Saluda and Edgefield Counties in South Carolina, totaling over 2,600 acres of prime deer and turkey hunting land." 
+          content="Explore Buck & Beard Hunt Club's 5 premium hunting properties across Saluda and Edgefield Counties in South Carolina, totaling over 2,000 acres of prime deer and turkey hunting land." 
         />
       </Head>
 
@@ -151,7 +151,7 @@ export default function Properties() {
                 opacity: 0.9,
               }}
             >
-              Explore our premium hunting properties across Saluda and Edgefield Counties in South Carolina, totaling over 2,600 acres of prime hunting land
+              Explore our premium hunting properties across Saluda and Edgefield Counties in South Carolina, totaling over 2,000 acres of prime hunting land
               
             </Typography>
           </Container>
